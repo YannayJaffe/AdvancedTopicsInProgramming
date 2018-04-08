@@ -13,6 +13,12 @@ C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoard.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoard.h
 GamePiece.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
+vector
+-
+memory
+-
+ostream
+-
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.cpp
 GamePiece.h
@@ -33,4 +39,6 @@ GamePiece.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
 GeneralDefinitions.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
+GameBoard.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoard.h
 

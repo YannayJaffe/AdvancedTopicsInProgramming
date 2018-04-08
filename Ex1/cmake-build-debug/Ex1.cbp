@@ -95,6 +95,12 @@
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h">
 			<Option target="Ex1"/>
 		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/Player.cpp">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/Player.h">
+			<Option target="Ex1"/>
+		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/main.cpp">
 			<Option target="Ex1"/>
 		</Unit>

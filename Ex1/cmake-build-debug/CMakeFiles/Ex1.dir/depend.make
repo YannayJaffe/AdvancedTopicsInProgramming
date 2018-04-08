@@ -10,6 +10,7 @@ CMakeFiles/Ex1.dir/GamePiece.cpp.obj: ../GamePiece.cpp
 CMakeFiles/Ex1.dir/GamePiece.cpp.obj: ../GamePiece.h
 CMakeFiles/Ex1.dir/GamePiece.cpp.obj: ../GeneralDefinitions.h
 
+CMakeFiles/Ex1.dir/main.cpp.obj: ../GameBoard.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../GamePiece.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../GeneralDefinitions.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../main.cpp

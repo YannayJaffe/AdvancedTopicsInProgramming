@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ex1.dir/main.cpp.obj"
   "CMakeFiles/Ex1.dir/GameBoard.cpp.obj"
   "CMakeFiles/Ex1.dir/GamePiece.cpp.obj"
+  "CMakeFiles/Ex1.dir/Player.cpp.obj"
   "Ex1.pdb"
   "Ex1.exe"
   "Ex1.exe.manifest"

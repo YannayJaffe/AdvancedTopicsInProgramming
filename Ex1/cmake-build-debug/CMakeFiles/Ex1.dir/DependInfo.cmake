@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoard.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex1/cmake-build-debug/CMakeFiles/Ex1.dir/GameBoard.cpp.obj"
   "C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex1/cmake-build-debug/CMakeFiles/Ex1.dir/GamePiece.cpp.obj"
+  "C:/Git/AdvancedTopicsInProgramming/Ex1/Player.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex1/cmake-build-debug/CMakeFiles/Ex1.dir/Player.cpp.obj"
   "C:/Git/AdvancedTopicsInProgramming/Ex1/main.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex1/cmake-build-debug/CMakeFiles/Ex1.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
