@@ -15,6 +15,8 @@ private:
     static const int B = 2; // number of Bomb pieces
     static const int J = 2; // number of Joker pieces
     static const int F = 1; // number of Flag pieces
+    
+    
 };
 
 

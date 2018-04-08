@@ -1,15 +1,16 @@
 
 
+
 #include "GamePiece.h"
 
-GamePiece::GamePiece(int ownerId, PieceType type) : ownerId(ownerId), type(type)
+GamePiece::GamePiece(PlayerID ownerId, PieceType type) : ownerId(ownerId), type(type)
 {
-
+    effectiveType = type;
 }
 
-GamePiece::GamePiece(int ownerId, GamePiece::PieceType type, GamePiece::PieceType effectiveType) : GamePiece(ownerId, type)
+GamePiece::GamePiece(PlayerID ownerId, PieceType type, PieceType effectiveType) : GamePiece(ownerId, type)
 {
-    if (this->type == GamePiece::PieceType::Joker)
+    if (this->type == PieceType::Joker)
         this->effectiveType = effectiveType;
     else
         this->effectiveType = this->type;
@@ -21,20 +22,20 @@ bool operator>(const GamePiece& lPiece, const GamePiece& rPiece)
         return false;
     switch (lPiece.effectiveType)
     {
-        case GamePiece::PieceType::Bomb: // bomb always wins
+        case PieceType::Bomb: // bomb always wins
             return true;
-        case GamePiece::PieceType::Flag: // flag always loses
+        case PieceType::Flag: // flag always loses
             return false;
-        case GamePiece::PieceType::Rock: // rock wins over scissors or flag
-            if (rPiece.effectiveType == GamePiece::PieceType::Scissors || rPiece.effectiveType == GamePiece::PieceType::Flag)
+        case PieceType::Rock: // rock wins over scissors or flag
+            if (rPiece.effectiveType == PieceType::Scissors || rPiece.effectiveType == PieceType::Flag)
                 return true;
             return false;
-        case GamePiece::PieceType::Paper: // paper wins over rock or flag
-            if (rPiece.effectiveType == GamePiece::PieceType::Rock || rPiece.effectiveType == GamePiece::PieceType::Flag)
+        case PieceType::Paper: // paper wins over rock or flag
+            if (rPiece.effectiveType == PieceType::Rock || rPiece.effectiveType == PieceType::Flag)
                 return true;
             return false;
-        case GamePiece::PieceType::Scissors: //scissors wins over paper or flag
-            if (rPiece.effectiveType == GamePiece::PieceType::Paper || rPiece.effectiveType == GamePiece::PieceType::Flag)
+        case PieceType::Scissors: //scissors wins over paper or flag
+            if (rPiece.effectiveType == PieceType::Paper || rPiece.effectiveType == PieceType::Flag)
                 return true;
             return false;
         default:
@@ -61,7 +62,7 @@ bool GamePiece::isLegal() const
     return false;
 }
 
-bool GamePiece::changeType(GamePiece::PieceType newType)
+bool GamePiece::changeType(PieceType newType)
 {
     PieceType oldType = effectiveType;
     effectiveType = newType;
@@ -71,7 +72,36 @@ bool GamePiece::changeType(GamePiece::PieceType newType)
     return legal;
 }
 
-int GamePiece::getOwnerId() const
+PlayerID GamePiece::getOwnerId() const
 {
     return ownerId;
+}
+
+char GamePiece::toChar() const
+{
+    char c;
+    switch (type)
+    {
+        case PieceType::Rock:
+            c = 'r';
+            break;
+        case PieceType::Paper:
+            c = 'p';
+            break;
+        case PieceType::Scissors:
+            c = 's';
+            break;
+        case PieceType::Bomb:
+            c = 'b';
+            break;
+        case PieceType::Joker:
+            c = 'j';
+            break;
+        case PieceType::Flag:
+            c = 'f';
+            break;
+    }
+    if (ownerId == PlayerID::Player1)
+        return static_cast<char>(toupper(c));
+    return c;
 }
