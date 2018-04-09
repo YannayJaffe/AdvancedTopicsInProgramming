@@ -2,25 +2,23 @@
 #define EX1_PLAYER_H
 
 #include "GeneralDefinitions.h"
-#include "GameBoard.h"
+#include "GameBoardForPlayers.h"
 #include "GamePiece.h"
-#include <istream>
-
+#include "GameMove.h"
 class Player
 {
 public:
-    Player(PlayerID id,GameBoard& board,std::istream& initialPositions,std::istream& moves);
+    Player(PlayerID id, GameBoardForPlayers& board);
     bool playerInit();//assume that bomb conflict (against not bomb) during init keeps the bomb
     bool isLost();
-    bool playNextMove();//assume that bomb conflict during the match kills both pieces
+    bool playMove(const GameMove& gameMove);//assume that bomb conflict during the match kills both pieces
 private:
     
     bool isLegalInitCommand();
-    bool isLegalMove(int fromX,int fromY,int toX,int toY);
-    bool isLegalJokerMove();
+    bool isLegalMove(const GameMove& gameMove);
     
     const PlayerID id;
-    GameBoard& board;
+    GameBoardForPlayers& board;
     
     static const int R = 2; // total Rocks
     static const int P = 5; // total Papers
@@ -40,8 +38,6 @@ private:
     
     int points;
     
-    std::istream& initialPositions;
-    std::istream& moves;
 };
 
 

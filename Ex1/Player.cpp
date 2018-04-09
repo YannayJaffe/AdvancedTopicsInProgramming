@@ -1,7 +1,6 @@
 #include "Player.h"
 
-Player::Player(PlayerID id, GameBoard& board, std::istream& initialPositions, std::istream& moves) : id(id), board(board),
-                                                                                                     initialPositions(initialPositions), moves(moves)
+Player::Player(PlayerID id, GameBoardForPlayers& board) : id(id), board(board)
 {
     rCount = 0;
     pCount = 0;

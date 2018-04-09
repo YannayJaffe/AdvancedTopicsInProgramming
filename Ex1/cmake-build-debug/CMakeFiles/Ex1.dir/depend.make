@@ -6,12 +6,38 @@ CMakeFiles/Ex1.dir/GameBoard.cpp.obj: ../GameBoard.h
 CMakeFiles/Ex1.dir/GameBoard.cpp.obj: ../GamePiece.h
 CMakeFiles/Ex1.dir/GameBoard.cpp.obj: ../GeneralDefinitions.h
 
+CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.obj: ../GameBoard.h
+CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.obj: ../GameBoardForPlayers.cpp
+CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.obj: ../GameBoardForPlayers.h
+CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.obj: ../GamePiece.h
+CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.obj: ../GeneralDefinitions.h
+
+CMakeFiles/Ex1.dir/GameMove.cpp.obj: ../GameMove.cpp
+CMakeFiles/Ex1.dir/GameMove.cpp.obj: ../GameMove.h
+CMakeFiles/Ex1.dir/GameMove.cpp.obj: ../GeneralDefinitions.h
+
 CMakeFiles/Ex1.dir/GamePiece.cpp.obj: ../GamePiece.cpp
 CMakeFiles/Ex1.dir/GamePiece.cpp.obj: ../GamePiece.h
 CMakeFiles/Ex1.dir/GamePiece.cpp.obj: ../GeneralDefinitions.h
 
+CMakeFiles/Ex1.dir/MoveFactory.cpp.obj: ../GameMove.h
+CMakeFiles/Ex1.dir/MoveFactory.cpp.obj: ../GeneralDefinitions.h
+CMakeFiles/Ex1.dir/MoveFactory.cpp.obj: ../MoveFactory.cpp
+CMakeFiles/Ex1.dir/MoveFactory.cpp.obj: ../MoveFactory.h
+
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../GameBoard.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../GameBoardForPlayers.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../GameMove.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../GamePiece.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../GeneralDefinitions.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../Player.cpp
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../Player.h
+
 CMakeFiles/Ex1.dir/main.cpp.obj: ../GameBoard.h
+CMakeFiles/Ex1.dir/main.cpp.obj: ../GameBoardForPlayers.h
+CMakeFiles/Ex1.dir/main.cpp.obj: ../GameMove.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../GamePiece.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../GeneralDefinitions.h
+CMakeFiles/Ex1.dir/main.cpp.obj: ../Player.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../main.cpp
 

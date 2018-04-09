@@ -149,6 +149,60 @@ GameBoard.cpp.s:
 	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/GameBoard.cpp.s
 .PHONY : GameBoard.cpp.s
 
+GameBoardForPlayers.obj: GameBoardForPlayers.cpp.obj
+
+.PHONY : GameBoardForPlayers.obj
+
+# target to build an object file
+GameBoardForPlayers.cpp.obj:
+	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.obj
+.PHONY : GameBoardForPlayers.cpp.obj
+
+GameBoardForPlayers.i: GameBoardForPlayers.cpp.i
+
+.PHONY : GameBoardForPlayers.i
+
+# target to preprocess a source file
+GameBoardForPlayers.cpp.i:
+	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.i
+.PHONY : GameBoardForPlayers.cpp.i
+
+GameBoardForPlayers.s: GameBoardForPlayers.cpp.s
+
+.PHONY : GameBoardForPlayers.s
+
+# target to generate assembly for a file
+GameBoardForPlayers.cpp.s:
+	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.s
+.PHONY : GameBoardForPlayers.cpp.s
+
+GameMove.obj: GameMove.cpp.obj
+
+.PHONY : GameMove.obj
+
+# target to build an object file
+GameMove.cpp.obj:
+	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/GameMove.cpp.obj
+.PHONY : GameMove.cpp.obj
+
+GameMove.i: GameMove.cpp.i
+
+.PHONY : GameMove.i
+
+# target to preprocess a source file
+GameMove.cpp.i:
+	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/GameMove.cpp.i
+.PHONY : GameMove.cpp.i
+
+GameMove.s: GameMove.cpp.s
+
+.PHONY : GameMove.s
+
+# target to generate assembly for a file
+GameMove.cpp.s:
+	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/GameMove.cpp.s
+.PHONY : GameMove.cpp.s
+
 GamePiece.obj: GamePiece.cpp.obj
 
 .PHONY : GamePiece.obj
@@ -175,6 +229,33 @@ GamePiece.s: GamePiece.cpp.s
 GamePiece.cpp.s:
 	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/GamePiece.cpp.s
 .PHONY : GamePiece.cpp.s
+
+MoveFactory.obj: MoveFactory.cpp.obj
+
+.PHONY : MoveFactory.obj
+
+# target to build an object file
+MoveFactory.cpp.obj:
+	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/MoveFactory.cpp.obj
+.PHONY : MoveFactory.cpp.obj
+
+MoveFactory.i: MoveFactory.cpp.i
+
+.PHONY : MoveFactory.i
+
+# target to preprocess a source file
+MoveFactory.cpp.i:
+	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/MoveFactory.cpp.i
+.PHONY : MoveFactory.cpp.i
+
+MoveFactory.s: MoveFactory.cpp.s
+
+.PHONY : MoveFactory.s
+
+# target to generate assembly for a file
+MoveFactory.cpp.s:
+	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/MoveFactory.cpp.s
+.PHONY : MoveFactory.cpp.s
 
 Player.obj: Player.cpp.obj
 
@@ -242,9 +323,18 @@ help:
 	@echo ... GameBoard.obj
 	@echo ... GameBoard.i
 	@echo ... GameBoard.s
+	@echo ... GameBoardForPlayers.obj
+	@echo ... GameBoardForPlayers.i
+	@echo ... GameBoardForPlayers.s
+	@echo ... GameMove.obj
+	@echo ... GameMove.i
+	@echo ... GameMove.s
 	@echo ... GamePiece.obj
 	@echo ... GamePiece.i
 	@echo ... GamePiece.s
+	@echo ... MoveFactory.obj
+	@echo ... MoveFactory.i
+	@echo ... MoveFactory.s
 	@echo ... Player.obj
 	@echo ... Player.i
 	@echo ... Player.s

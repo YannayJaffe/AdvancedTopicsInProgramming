@@ -20,6 +20,24 @@ memory
 ostream
 -
 
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.cpp
+GameBoardForPlayers.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.h
+
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.h
+GameBoard.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoard.h
+
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.cpp
+GameMove.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
+
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
+utility
+-
+GeneralDefinitions.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
+
 C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.cpp
 GamePiece.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
@@ -32,6 +50,38 @@ cctype
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
 
+C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.cpp
+MoveFactory.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.h
+sstream
+-
+backward/strstream
+-
+
+C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.h
+GameMove.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
+istream
+-
+string
+-
+vector
+-
+
+C:/Git/AdvancedTopicsInProgramming/Ex1/Player.cpp
+Player.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/Player.h
+
+C:/Git/AdvancedTopicsInProgramming/Ex1/Player.h
+GeneralDefinitions.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
+GameBoardForPlayers.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.h
+GamePiece.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
+GameMove.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
+
 C:/Git/AdvancedTopicsInProgramming/Ex1/main.cpp
 iostream
 -
@@ -39,6 +89,8 @@ GamePiece.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
 GeneralDefinitions.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
-GameBoard.h
-C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoard.h
+GameBoardForPlayers.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.h
+Player.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/Player.h
 

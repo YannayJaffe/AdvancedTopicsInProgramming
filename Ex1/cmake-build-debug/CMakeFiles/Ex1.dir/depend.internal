@@ -6,12 +6,38 @@ CMakeFiles/Ex1.dir/GameBoard.cpp.obj
  C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoard.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
+CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.obj
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoard.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.cpp
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
+CMakeFiles/Ex1.dir/GameMove.cpp.obj
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.cpp
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
 CMakeFiles/Ex1.dir/GamePiece.cpp.obj
  C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.cpp
  C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
-CMakeFiles/Ex1.dir/main.cpp.obj
+CMakeFiles/Ex1.dir/MoveFactory.cpp.obj
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.cpp
+ C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.h
+CMakeFiles/Ex1.dir/Player.cpp.obj
  C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoard.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/Player.cpp
+ C:/Git/AdvancedTopicsInProgramming/Ex1/Player.h
+CMakeFiles/Ex1.dir/main.cpp.obj
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoard.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/Player.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/main.cpp
