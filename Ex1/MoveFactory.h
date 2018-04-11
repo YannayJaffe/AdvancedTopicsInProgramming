@@ -2,29 +2,40 @@
 #define EX1_MOVEFACTORY_H
 
 #include "GameMove.h"
-#include <ifstream>
 #include <string>
 #include <vector>
+#include <fstream>
 
 class MoveFactory
 {
 public:
     MoveFactory(const std::string& fileName);
     
+    ~MoveFactory();
+    
     bool anyMovesLeft() const;
     
-    bool nextMoveParseable() const;
+    bool init();
     
-    GameMove getNext();
+    bool clear();
+    
+    GameMove getNext(bool& isValidMove) const;
 
 private:
     
-    void clearSpaces();
-    bool isInteger(const std::string& s) const;
+    std::vector<std::string> splitToTokens(const std::string& line) const;
+    
+    bool isLegalTokens(const std::vector<std::string>& tokens);
+    
+    void resetMove();
+    
     const std::string fileName;
-    std::ifstream moveStream;
-    std::string nextMove;
-    std::vector<std::string> nextMoveTokens;
+    mutable std::ifstream moveStream;
+    
+    int prevX, prevY, newX, newY;
+    bool jokerMove;
+    int jokerX, jokerY;
+    PieceType newType;
     
 };
 

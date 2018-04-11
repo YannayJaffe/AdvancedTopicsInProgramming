@@ -59,11 +59,11 @@ regex
 C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.h
 GameMove.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
-istream
--
 string
 -
 vector
+-
+fstream
 -
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/Player.cpp
