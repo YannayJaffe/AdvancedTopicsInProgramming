@@ -2,14 +2,14 @@
 #define EX1_MOVEFACTORY_H
 
 #include "GameMove.h"
-#include <istream>
+#include <ifstream>
 #include <string>
 #include <vector>
 
 class MoveFactory
 {
 public:
-    MoveFactory(std::istream& moveStream);
+    MoveFactory(const std::string& fileName);
     
     bool anyMovesLeft() const;
     
@@ -21,7 +21,8 @@ private:
     
     void clearSpaces();
     bool isInteger(const std::string& s) const;
-    std::istream& moveStream;
+    const std::string fileName;
+    std::ifstream moveStream;
     std::string nextMove;
     std::vector<std::string> nextMoveTokens;
     
