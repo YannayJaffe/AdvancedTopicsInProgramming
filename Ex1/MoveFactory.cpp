@@ -9,6 +9,11 @@ MoveFactory::MoveFactory(const std::string& fileName) : fileName(fileName), move
 
 }
 
+MoveFactory::~MoveFactory()
+{
+    clear();
+}
+
 bool MoveFactory::init()
 {
     try
@@ -37,7 +42,7 @@ bool MoveFactory::clear()
     return true;
 }
 
-GameMove MoveFactory::getNext(bool& isValidMove) const
+GameMove MoveFactory::getNext(bool& isValidMove)
 {
     if (!anyMovesLeft())
     {
@@ -47,7 +52,13 @@ GameMove MoveFactory::getNext(bool& isValidMove) const
     std::string newLine;
     std::getline(moveStream, newLine);
     std::vector<std::string> tokens = splitToTokens(newLine);
-    return GameMove();
+    if (!isLegalTokens(tokens))
+    {
+        isValidMove = false;
+        return GameMove();
+    }
+    isValidMove = true;
+    return GameMove(prevX,prevY,newX,newY,jokerMove,jokerX,jokerY,newType);
 }
 
 std::vector<std::string> MoveFactory::splitToTokens(const std::string& line) const
@@ -97,8 +108,7 @@ bool MoveFactory::isLegalTokens(const std::vector<std::string>& tokens)
                 {
                     resetMove();
                     return false;
-                }
-                else
+                } else
                 {
                     jokerMove = true;
                 }

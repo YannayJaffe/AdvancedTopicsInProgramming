@@ -20,6 +20,14 @@ GameMove::GameMove(int prevX, int prevY, int newX, int newY, bool jokerMove, int
 
 }
 
+GameMove::GameMove(GameMove&& other) : prevLocation(std::move(const_cast<std::pair<int, int>&&>(other.prevLocation))),
+                                       newLocation(std::move(const_cast<std::pair<int, int>&&>(other.newLocation))),
+                                       jokerMove(other.jokerMove), jokerLocation(std::move(const_cast<std::pair<int,int>&&>(other.jokerLocation))),
+                                       newType(other.newType)
+{
+
+}
+
 bool GameMove::isJokerMove() const
 {
     return jokerMove;
@@ -44,3 +52,4 @@ const std::pair<int, int>& GameMove::getJokerLocation() const
 {
     return jokerLocation;
 }
+

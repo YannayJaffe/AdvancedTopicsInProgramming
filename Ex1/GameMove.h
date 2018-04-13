@@ -14,6 +14,8 @@ public:
     
     GameMove();
     
+    GameMove(GameMove&& other);
+    
     bool isJokerMove() const;
     
     const std::pair<int, int>& getPrevLocation() const;

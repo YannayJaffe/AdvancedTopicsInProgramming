@@ -19,7 +19,7 @@ public:
     
     bool clear();
     
-    GameMove getNext(bool& isValidMove) const;
+    GameMove getNext(bool& isValidMove);
 
 private:
     
