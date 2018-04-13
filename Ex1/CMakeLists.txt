@@ -3,4 +3,4 @@ project(Ex1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Ex1 main.cpp GameBoard.cpp GameBoard.h GamePiece.cpp GamePiece.h GeneralDefinitions.h Player.cpp Player.h GameBoardForPlayers.cpp GameBoardForPlayers.h GameMove.cpp GameMove.h MoveFactory.cpp MoveFactory.h)
+add_executable(Ex1 main.cpp GameBoard.cpp GameBoard.h GamePiece.cpp GamePiece.h GeneralDefinitions.h Player.cpp Player.h GameBoardForPlayers.cpp GameBoardForPlayers.h GameMove.cpp GameMove.h MoveFactory.cpp MoveFactory.h Playable.h GameInit.cpp GameInit.h PlayableFactory.cpp PlayableFactory.h InitFactory.cpp InitFactory.h)

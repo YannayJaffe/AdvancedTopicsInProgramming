@@ -1,79 +1,31 @@
 
 
 #include "MoveFactory.h"
-#include <regex>
 
-MoveFactory::MoveFactory(const std::string& fileName) : fileName(fileName), moveStream()
+MoveFactory::MoveFactory(const std::string& fileName) : PlayableFactory(fileName)
 {
 
 
 }
 
-MoveFactory::~MoveFactory()
-{
-    clear();
-}
 
-bool MoveFactory::init()
+std::unique_ptr<Playable> MoveFactory::getNext(bool& isValidMove)
 {
-    try
-    {
-        moveStream.open(fileName);
-    } catch (...)
-    {
-        return false;
-    }
-    return true;
-}
-
-bool MoveFactory::clear()
-{
-    if (moveStream.is_open())
-    {
-        try
-        {
-            moveStream.close();
-        } catch (...)
-        {
-            return false;
-        }
-        
-    }
-    return true;
-}
-
-GameMove MoveFactory::getNext(bool& isValidMove)
-{
-    if (!anyMovesLeft())
+    if (!anyLeft())
     {
         isValidMove = false;
-        return GameMove();
+        return std::make_unique<GameMove>();
     }
     std::string newLine;
-    std::getline(moveStream, newLine);
+    std::getline(stream, newLine);
     std::vector<std::string> tokens = splitToTokens(newLine);
     if (!isLegalTokens(tokens))
     {
         isValidMove = false;
-        return GameMove();
+        return std::make_unique<GameMove>();
     }
     isValidMove = true;
-    return GameMove(prevX,prevY,newX,newY,jokerMove,jokerX,jokerY,newType);
-}
-
-std::vector<std::string> MoveFactory::splitToTokens(const std::string& line) const
-{
-    std::vector<std::string> tokens;
-    std::stringstream ss(line);
-    std::string token;
-    while (!ss.eof())
-    {
-        std::getline(ss, token);
-        if (token.length() > 0)
-            tokens.push_back(std::move(token));
-    }
-    
-    return tokens; // not returning using std::move in order to utilize RVO
+    return std::make_unique<GameMove>(prevX,prevY,newX,newY,jokerMove,jokerX,jokerY,newType);
 }
 
 bool MoveFactory::isLegalTokens(const std::vector<std::string>& tokens)
@@ -135,14 +87,10 @@ bool MoveFactory::isLegalTokens(const std::vector<std::string>& tokens)
             }
             break;
         default:
+            resetMove();
             return false;
     }
     return true;
-}
-
-bool MoveFactory::anyMovesLeft() const
-{
-    return !moveStream.eof();
 }
 
 void MoveFactory::resetMove()

@@ -28,7 +28,7 @@ GameMove::GameMove(GameMove&& other) : prevLocation(std::move(const_cast<std::pa
 
 }
 
-bool GameMove::isJokerMove() const
+bool GameMove::isJoker() const
 {
     return jokerMove;
 }

@@ -224,6 +224,78 @@ CMakeFiles/Ex1.dir/MoveFactory.cpp.obj.provides: CMakeFiles/Ex1.dir/MoveFactory.
 CMakeFiles/Ex1.dir/MoveFactory.cpp.obj.provides.build: CMakeFiles/Ex1.dir/MoveFactory.cpp.obj
 
 
+CMakeFiles/Ex1.dir/GameInit.cpp.obj: CMakeFiles/Ex1.dir/flags.make
+CMakeFiles/Ex1.dir/GameInit.cpp.obj: ../GameInit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Ex1.dir/GameInit.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Ex1.dir\GameInit.cpp.obj -c C:\Git\AdvancedTopicsInProgramming\Ex1\GameInit.cpp
+
+CMakeFiles/Ex1.dir/GameInit.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ex1.dir/GameInit.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Git\AdvancedTopicsInProgramming\Ex1\GameInit.cpp > CMakeFiles\Ex1.dir\GameInit.cpp.i
+
+CMakeFiles/Ex1.dir/GameInit.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex1.dir/GameInit.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Git\AdvancedTopicsInProgramming\Ex1\GameInit.cpp -o CMakeFiles\Ex1.dir\GameInit.cpp.s
+
+CMakeFiles/Ex1.dir/GameInit.cpp.obj.requires:
+
+.PHONY : CMakeFiles/Ex1.dir/GameInit.cpp.obj.requires
+
+CMakeFiles/Ex1.dir/GameInit.cpp.obj.provides: CMakeFiles/Ex1.dir/GameInit.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/GameInit.cpp.obj.provides.build
+.PHONY : CMakeFiles/Ex1.dir/GameInit.cpp.obj.provides
+
+CMakeFiles/Ex1.dir/GameInit.cpp.obj.provides.build: CMakeFiles/Ex1.dir/GameInit.cpp.obj
+
+
+CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj: CMakeFiles/Ex1.dir/flags.make
+CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj: ../PlayableFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Ex1.dir\PlayableFactory.cpp.obj -c C:\Git\AdvancedTopicsInProgramming\Ex1\PlayableFactory.cpp
+
+CMakeFiles/Ex1.dir/PlayableFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ex1.dir/PlayableFactory.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Git\AdvancedTopicsInProgramming\Ex1\PlayableFactory.cpp > CMakeFiles\Ex1.dir\PlayableFactory.cpp.i
+
+CMakeFiles/Ex1.dir/PlayableFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex1.dir/PlayableFactory.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Git\AdvancedTopicsInProgramming\Ex1\PlayableFactory.cpp -o CMakeFiles\Ex1.dir\PlayableFactory.cpp.s
+
+CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj.requires:
+
+.PHONY : CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj.requires
+
+CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj.provides: CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj.provides.build
+.PHONY : CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj.provides
+
+CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj.provides.build: CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj
+
+
+CMakeFiles/Ex1.dir/InitFactory.cpp.obj: CMakeFiles/Ex1.dir/flags.make
+CMakeFiles/Ex1.dir/InitFactory.cpp.obj: ../InitFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Ex1.dir/InitFactory.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Ex1.dir\InitFactory.cpp.obj -c C:\Git\AdvancedTopicsInProgramming\Ex1\InitFactory.cpp
+
+CMakeFiles/Ex1.dir/InitFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ex1.dir/InitFactory.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Git\AdvancedTopicsInProgramming\Ex1\InitFactory.cpp > CMakeFiles\Ex1.dir\InitFactory.cpp.i
+
+CMakeFiles/Ex1.dir/InitFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex1.dir/InitFactory.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Git\AdvancedTopicsInProgramming\Ex1\InitFactory.cpp -o CMakeFiles\Ex1.dir\InitFactory.cpp.s
+
+CMakeFiles/Ex1.dir/InitFactory.cpp.obj.requires:
+
+.PHONY : CMakeFiles/Ex1.dir/InitFactory.cpp.obj.requires
+
+CMakeFiles/Ex1.dir/InitFactory.cpp.obj.provides: CMakeFiles/Ex1.dir/InitFactory.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/InitFactory.cpp.obj.provides.build
+.PHONY : CMakeFiles/Ex1.dir/InitFactory.cpp.obj.provides
+
+CMakeFiles/Ex1.dir/InitFactory.cpp.obj.provides.build: CMakeFiles/Ex1.dir/InitFactory.cpp.obj
+
+
 # Object files for target Ex1
 Ex1_OBJECTS = \
 "CMakeFiles/Ex1.dir/main.cpp.obj" \
@@ -232,7 +304,10 @@ Ex1_OBJECTS = \
 "CMakeFiles/Ex1.dir/Player.cpp.obj" \
 "CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.obj" \
 "CMakeFiles/Ex1.dir/GameMove.cpp.obj" \
-"CMakeFiles/Ex1.dir/MoveFactory.cpp.obj"
+"CMakeFiles/Ex1.dir/MoveFactory.cpp.obj" \
+"CMakeFiles/Ex1.dir/GameInit.cpp.obj" \
+"CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj" \
+"CMakeFiles/Ex1.dir/InitFactory.cpp.obj"
 
 # External object files for target Ex1
 Ex1_EXTERNAL_OBJECTS =
@@ -244,11 +319,14 @@ Ex1.exe: CMakeFiles/Ex1.dir/Player.cpp.obj
 Ex1.exe: CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.obj
 Ex1.exe: CMakeFiles/Ex1.dir/GameMove.cpp.obj
 Ex1.exe: CMakeFiles/Ex1.dir/MoveFactory.cpp.obj
+Ex1.exe: CMakeFiles/Ex1.dir/GameInit.cpp.obj
+Ex1.exe: CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj
+Ex1.exe: CMakeFiles/Ex1.dir/InitFactory.cpp.obj
 Ex1.exe: CMakeFiles/Ex1.dir/build.make
 Ex1.exe: CMakeFiles/Ex1.dir/linklibs.rsp
 Ex1.exe: CMakeFiles/Ex1.dir/objects1.rsp
 Ex1.exe: CMakeFiles/Ex1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Ex1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Ex1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Ex1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -263,6 +341,9 @@ CMakeFiles/Ex1.dir/requires: CMakeFiles/Ex1.dir/Player.cpp.obj.requires
 CMakeFiles/Ex1.dir/requires: CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.obj.requires
 CMakeFiles/Ex1.dir/requires: CMakeFiles/Ex1.dir/GameMove.cpp.obj.requires
 CMakeFiles/Ex1.dir/requires: CMakeFiles/Ex1.dir/MoveFactory.cpp.obj.requires
+CMakeFiles/Ex1.dir/requires: CMakeFiles/Ex1.dir/GameInit.cpp.obj.requires
+CMakeFiles/Ex1.dir/requires: CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj.requires
+CMakeFiles/Ex1.dir/requires: CMakeFiles/Ex1.dir/InitFactory.cpp.obj.requires
 
 .PHONY : CMakeFiles/Ex1.dir/requires
 

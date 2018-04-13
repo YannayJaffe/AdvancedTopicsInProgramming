@@ -28,6 +28,14 @@ C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.h
 GameBoard.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoard.h
 
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameInit.cpp
+GameInit.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameInit.h
+
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameInit.h
+Playable.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/Playable.h
+
 C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.cpp
 GameMove.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
@@ -37,6 +45,8 @@ utility
 -
 GeneralDefinitions.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
+Playable.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/Playable.h
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.cpp
 GamePiece.h
@@ -50,21 +60,57 @@ cctype
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
 
+C:/Git/AdvancedTopicsInProgramming/Ex1/InitFactory.cpp
+InitFactory.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/InitFactory.h
+
+C:/Git/AdvancedTopicsInProgramming/Ex1/InitFactory.h
+PlayableFactory.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/PlayableFactory.h
+GeneralDefinitions.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
+
 C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.cpp
 MoveFactory.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.h
-regex
--
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.h
 GameMove.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
+PlayableFactory.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/PlayableFactory.h
 string
+-
+memory
 -
 vector
 -
 fstream
 -
+
+C:/Git/AdvancedTopicsInProgramming/Ex1/Playable.h
+utility
+-
+GeneralDefinitions.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
+
+C:/Git/AdvancedTopicsInProgramming/Ex1/PlayableFactory.cpp
+PlayableFactory.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/PlayableFactory.h
+
+C:/Git/AdvancedTopicsInProgramming/Ex1/PlayableFactory.h
+string
+-
+vector
+-
+memory
+-
+fstream
+-
+sstream
+-
+Playable.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/Playable.h
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/Player.cpp
 Player.h
@@ -79,9 +125,13 @@ GamePiece.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
 GameMove.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
+MoveFactory.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.h
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/main.cpp
 iostream
+-
+string
 -
 GamePiece.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h

@@ -5,13 +5,14 @@
 #include "GameBoardForPlayers.h"
 #include "GamePiece.h"
 #include "GameMove.h"
+#include "MoveFactory.h"
 class Player
 {
 public:
     Player(PlayerID id, GameBoardForPlayers& board);
-    bool playerInit();//assume that bomb conflict (against not bomb) during init keeps the bomb
+    bool init(const std::string& playerBoard, const std::string& playerMoves);//assume that bomb conflict (against not bomb) during init keeps the bomb
     bool isLost();
-    bool playMove(const GameMove& gameMove);//assume that bomb conflict during the match kills both pieces
+    bool playNextMove();//assume that bomb conflict during the match kills both pieces
 private:
     
     bool isLegalInitCommand();
