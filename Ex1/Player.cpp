@@ -179,6 +179,7 @@ bool Player::hasRemainingPieces(PieceType pieceType) const
         case PieceType::Joker:
             return jCountInFile < J;
     }
+    return false;
 }
 
 const std::string& Player::getLastErrorString() const
