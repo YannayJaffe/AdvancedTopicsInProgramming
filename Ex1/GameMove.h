@@ -32,8 +32,8 @@ public:
 private:
     const std::pair<int, int> prevLocation;
     const std::pair<int, int> newLocation;
-    const std::pair<int, int> jokerLocation;
     const bool jokerMove;
+    const std::pair<int, int> jokerLocation;
     const PieceType newType;
     
 };
