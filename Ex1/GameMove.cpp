@@ -43,7 +43,7 @@ const std::pair<int, int>& GameMove::getNewLocation() const
     return newLocation;
 }
 
-const PieceType GameMove::getNewType() const
+PieceType GameMove::getNewType() const
 {
     return newType;
 }

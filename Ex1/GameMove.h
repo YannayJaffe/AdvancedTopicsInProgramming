@@ -15,7 +15,7 @@ public:
     
     GameMove();
     
-    GameMove(GameMove&& other) noexcept;
+    GameMove(GameMove&& other);
     
     ~GameMove() override = default;
     

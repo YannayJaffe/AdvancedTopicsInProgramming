@@ -4,7 +4,7 @@
 #include <string>
 #include <ostream>
 #include "Player.h"
-#include "GameBoardForPlayers.h"
+//#include "GameBoardForPlayers.h"
 
 class Match
 {
@@ -35,8 +35,8 @@ private:
     int badMoveInput;
     
     bool matchFinished;
-    bool openedInitFiles;
-    bool openedMoveFiles;
+    //bool openedInitFiles;
+    //bool openedMoveFiles;
     
 };
 

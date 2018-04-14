@@ -6,8 +6,8 @@ Match::Match(const std::string& player1Board, const std::string& player2Board, c
 {
     winner = 0;
     matchFinished = false;
-    openedInitFiles = false;
-    openedMoveFiles = false;
+    //openedInitFiles = false;
+    //openedMoveFiles = false;
     player1BadLineInit = 0;
     player2BadLineInit = 0;
     badMoveInput = 0;
@@ -25,7 +25,7 @@ void Match::loadBoard()
         std::cout << "Couldn't open board init file for " << player1.toString() << std::endl;
         winner = 0;
         matchFinished = true;
-        openedInitFiles = false;
+        //openedInitFiles = false;
         return;
     }
     if (player2.getState() == Player::PlayerState::UNINIT)
@@ -33,10 +33,10 @@ void Match::loadBoard()
         std::cout << "Couldn't open board init file for " << player1.toString() << std::endl;
         winner = 0;
         matchFinished = true;
-        openedInitFiles = false;
+        //openedInitFiles = false;
         return;
     }
-    openedInitFiles = true;
+    //openedInitFiles = true;
     // both init files got scanned, check if init succeeded
     if (player1BadLineInit != 0 && player2BadLineInit != 0)
     {
@@ -97,14 +97,14 @@ void Match::playMoves()
     {
         std::cout << "Couldn't open moves file for player 1" << std::endl;
         matchFinished = true;
-        openedMoveFiles = false;
+        //openedMoveFiles = false;
         winner = 0;
         return;
     }
     if (!player2.initMoves())
     {
         matchFinished = true;
-        openedMoveFiles = false;
+        //openedMoveFiles = false;
         std::cout << "Couldn't open moves file for player 2" << std::endl;
         winner = 0;
         return;

@@ -83,8 +83,6 @@ ostream
 -
 Player.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/Player.h
-GameBoardForPlayers.h
-C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.h
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.cpp
 MoveFactory.h
@@ -151,4 +149,6 @@ iostream
 C:/Git/AdvancedTopicsInProgramming/Ex1/main.cpp
 Match.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/Match.h
+fstream
+-
 

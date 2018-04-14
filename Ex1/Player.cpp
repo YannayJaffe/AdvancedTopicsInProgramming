@@ -186,7 +186,7 @@ const std::string& Player::getLastErrorString() const
     return lastErrorString;
 }
 
-const PlayerID Player::getId() const
+ PlayerID Player::getId() const
 {
     return id;
 }
