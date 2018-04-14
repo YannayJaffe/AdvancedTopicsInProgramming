@@ -31,9 +31,10 @@ public:
     bool isMovable() const;
 
 private:
+    const PlayerID owner;
     const PieceType type;
     PieceType effectiveType;
-    const PlayerID owner;
+    
     
 };
 

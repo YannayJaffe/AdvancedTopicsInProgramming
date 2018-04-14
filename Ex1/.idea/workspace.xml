@@ -13,14 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fa5fc58f-4edb-4989-8182-c11c8e22a1e8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameMove.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameMove.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameMove.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameMove.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Match.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Match.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Match.h" beforeDir="false" afterPath="$PROJECT_DIR$/Match.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Playable.h" beforeDir="false" afterPath="$PROJECT_DIR$/Playable.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex1.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex1.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GamePiece.h" beforeDir="false" afterPath="$PROJECT_DIR$/GamePiece.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,14 +26,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameMove.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GameMove.h">
+      <file leaf-file-name="GamePiece.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GamePiece.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
-              <folding>
-                <element signature="e#48#66#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="506">
+              <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -70,7 +60,6 @@
         <option value="$PROJECT_DIR$/GameBoard.cpp" />
         <option value="$PROJECT_DIR$/GameInit.cpp" />
         <option value="$PROJECT_DIR$/GameInit.h" />
-        <option value="$PROJECT_DIR$/GamePiece.h" />
         <option value="$PROJECT_DIR$/GamePiece.cpp" />
         <option value="$PROJECT_DIR$/InitFactory.cpp" />
         <option value="$PROJECT_DIR$/InitFactory.h" />
@@ -82,6 +71,7 @@
         <option value="$PROJECT_DIR$/Match.h" />
         <option value="$PROJECT_DIR$/Match.cpp" />
         <option value="$PROJECT_DIR$/GameMove.h" />
+        <option value="$PROJECT_DIR$/GamePiece.h" />
       </list>
     </option>
   </component>
@@ -92,11 +82,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="46" />
-    <option name="y" value="-8" />
-    <option name="width" value="1400" />
-    <option name="height" value="1019" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -156,24 +145,24 @@
       <option name="presentableId" value="Default" />
       <updated>1523137672109</updated>
       <workItem from="1523137674842" duration="58040000" />
-      <workItem from="1523660381704" duration="38929000" />
+      <workItem from="1523660381704" duration="39405000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96969000" />
+    <option name="totallyTimeSpent" value="97445000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.165625" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.33194155" />
       <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="bottom" id="Messages" order="0" visible="true" weight="0.32943678" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32943678" />
       <window_info anchor="bottom" id="CMake" order="4" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.32943678" />
+      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.33261803" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -554,13 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GamePiece.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GameBoard.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -590,11 +572,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GameMove.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
+        <state relative-caret-position="362">
           <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
           <folding>
             <element signature="e#48#66#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GamePiece.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
         </state>
       </provider>
     </entry>
