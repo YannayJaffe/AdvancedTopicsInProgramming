@@ -49,14 +49,14 @@ Playable.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/Playable.h
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.cpp
+cctype
+-
 GamePiece.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
 GeneralDefinitions.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
-cctype
--
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
 
@@ -71,6 +71,20 @@ GeneralDefinitions.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
 GameInit.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GameInit.h
+
+C:/Git/AdvancedTopicsInProgramming/Ex1/Match.cpp
+Match.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/Match.h
+
+C:/Git/AdvancedTopicsInProgramming/Ex1/Match.h
+string
+-
+ostream
+-
+Player.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/Player.h
+GameBoardForPlayers.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.h
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.cpp
 MoveFactory.h
@@ -123,28 +137,18 @@ GeneralDefinitions.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
 GameBoardForPlayers.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.h
-GamePiece.h
-C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
 GameMove.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
 MoveFactory.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.h
 InitFactory.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/InitFactory.h
+memory
+-
 iostream
 -
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/main.cpp
-iostream
--
-string
--
-GamePiece.h
-C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
-GeneralDefinitions.h
-C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
-GameBoardForPlayers.h
-C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.h
-Player.h
-C:/Git/AdvancedTopicsInProgramming/Ex1/Player.h
+Match.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/Match.h
 

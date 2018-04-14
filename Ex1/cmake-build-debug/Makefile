@@ -284,6 +284,33 @@ InitFactory.cpp.s:
 	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/InitFactory.cpp.s
 .PHONY : InitFactory.cpp.s
 
+Match.obj: Match.cpp.obj
+
+.PHONY : Match.obj
+
+# target to build an object file
+Match.cpp.obj:
+	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/Match.cpp.obj
+.PHONY : Match.cpp.obj
+
+Match.i: Match.cpp.i
+
+.PHONY : Match.i
+
+# target to preprocess a source file
+Match.cpp.i:
+	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/Match.cpp.i
+.PHONY : Match.cpp.i
+
+Match.s: Match.cpp.s
+
+.PHONY : Match.s
+
+# target to generate assembly for a file
+Match.cpp.s:
+	$(MAKE) -f CMakeFiles\Ex1.dir\build.make CMakeFiles/Ex1.dir/Match.cpp.s
+.PHONY : Match.cpp.s
+
 MoveFactory.obj: MoveFactory.cpp.obj
 
 .PHONY : MoveFactory.obj
@@ -419,6 +446,9 @@ help:
 	@echo ... InitFactory.obj
 	@echo ... InitFactory.i
 	@echo ... InitFactory.s
+	@echo ... Match.obj
+	@echo ... Match.i
+	@echo ... Match.s
 	@echo ... MoveFactory.obj
 	@echo ... MoveFactory.i
 	@echo ... MoveFactory.s

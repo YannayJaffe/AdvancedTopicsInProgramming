@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ex1.dir/GameInit.cpp.obj"
   "CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj"
   "CMakeFiles/Ex1.dir/InitFactory.cpp.obj"
+  "CMakeFiles/Ex1.dir/Match.cpp.obj"
   "Ex1.pdb"
   "Ex1.exe"
   "Ex1.exe.manifest"

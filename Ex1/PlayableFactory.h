@@ -19,11 +19,11 @@ public:
     
     virtual bool init();
     
-    virtual bool clear();
     
-    virtual std::unique_ptr<Playable> getNext(bool& isValidPlay);
+    virtual std::unique_ptr<Playable> getNext(bool& isValidPlay, bool& isEmptyLine);
 
 protected:
+    virtual bool clear();
     
     virtual std::vector<std::string> splitToTokens(const std::string& line) const;
     

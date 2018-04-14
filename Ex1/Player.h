@@ -3,32 +3,57 @@
 
 #include "GeneralDefinitions.h"
 #include "GameBoardForPlayers.h"
-#include "GamePiece.h"
 #include "GameMove.h"
 #include "MoveFactory.h"
 #include "InitFactory.h"
+#include <memory>
 #include <iostream>
 
 class Player
 {
 public:
-    Player(PlayerID id, GameBoardForPlayers& board, const std::string& playerBoard);
+    Player(PlayerID id, GameBoardForPlayers& board, const std::string& playerBoard, const std::string& playerMoves);
     
-    bool initBoard();
+    int initBoard(); // returns 0 if succeeded or line number if got error
     
-    bool canMove();
+    bool initMoves();
     
-    bool anyFlagsLeft();
+    bool hasMoreMoves() const;
     
-    bool playNextMove();
+    bool playMove();
+    
+    bool hasMovablePieces() const;
+    
+    bool hasMoreFlags() const;
     
     std::string toString();
+    
+    enum class PlayerState
+    {
+        UNINIT, INIT_OPENED, INIT_DONE, MOVE_OPENED, MOVE_DONE
+        
+    };
+    
+    PlayerState getState() const;
+    
+    const std::string& getLastErrorString() const;
+    
+    const PlayerID getId() const;
+    
+    void addPoint();
+    
+    int getPoints() const;
 
 private:
+    
+    
+    bool hasRemainingPieces(PieceType pieceType) const;
+    
     const PlayerID id;
     GameBoardForPlayers& board;
     const std::string playerBoard;
-    
+    const std::string playerMoves;
+    PlayerState state;
     
     static const int R = 2; // total Rocks
     static const int P = 5; // total Papers
@@ -37,16 +62,19 @@ private:
     static const int J = 2; // total Jokers
     static const int F = 1; // total Flags
     
-    int rCount;
-    int pCount;
-    int sCount;
-    int bCount;
-    int jCount;
-    int fCount;
+    int rCountInFile;
+    int pCountInFile;
+    int sCountInFile;
+    int bCountInFile;
+    int jCountInFile;
+    int fCountInFile;
+    
     int movablePiecesCount;
     int points;
+    std::string lastErrorString;
     
-    
+    MoveFactory moveFactory;
+    int lineCnt;
     
 };
 

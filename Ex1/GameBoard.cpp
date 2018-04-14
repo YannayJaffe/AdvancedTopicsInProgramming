@@ -32,12 +32,12 @@ std::ostream& operator<<(std::ostream& os, const GameBoard& board)
 const GamePiece* GameBoard::at(int xCoor, int yCoor) const
 {
     
-    return board[boardIdxToVecIdx(xCoor,yCoor)].get();
+    return board[boardIdxToVecIdx(xCoor, yCoor)].get();
 }
 
 void GameBoard::changePiece(std::unique_ptr<GamePiece> newPiece, int xCoor, int yCoor)
 {
-    board[boardIdxToVecIdx(xCoor,yCoor)].swap(newPiece);
+    board[boardIdxToVecIdx(xCoor, yCoor)].swap(newPiece);
 }
 
 
@@ -46,4 +46,31 @@ int GameBoard::boardIdxToVecIdx(int xCoor, int yCoor) const
     xCoor--;
     yCoor--;
     return yCoor * M + xCoor;
+}
+
+int GameBoard::getMovableCount(PlayerID player) const
+{
+    int cnt = 0;
+    for (const auto& piece : board)
+    {
+        if (piece != nullptr && piece->getEffectiveType() != PieceType::Flag && piece->getEffectiveType() != PieceType::Bomb && piece->getOwner() == player)
+            cnt++;
+    }
+    return cnt;
+}
+
+int GameBoard::getFlagCount(PlayerID player) const
+{
+    int cnt = 0;
+    for (const auto& piece : board)
+    {
+        if (piece != nullptr && piece->getEffectiveType() == PieceType::Flag && piece->getOwner() == player)
+            cnt++;
+    }
+    return cnt;
+}
+
+bool GameBoard::isLegalLocation(const std::pair<int, int>& loc) const
+{
+    return isLegalLocation(loc.first,loc.second);
 }

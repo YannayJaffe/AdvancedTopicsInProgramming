@@ -7,6 +7,7 @@ PlayableFactory::PlayableFactory(const std::string& fileName) : fileName(fileNam
 
 bool PlayableFactory::init()
 {
+    stream.exceptions(std::ifstream::failbit);
     try
     {
         stream.open(fileName);
@@ -50,7 +51,7 @@ std::vector<std::string> PlayableFactory::splitToTokens(const std::string& line)
     std::string token;
     while (!ss.eof())
     {
-        std::getline(ss, token);
+        std::getline(ss, token, ' ');
         if (token.length() > 0)
             tokens.push_back(std::move(token));
     }
@@ -58,20 +59,29 @@ std::vector<std::string> PlayableFactory::splitToTokens(const std::string& line)
     return tokens; // not returning using std::move in order to utilize RVO
 }
 
-std::unique_ptr<Playable> PlayableFactory::getNext(bool& isValidPlay)
+std::unique_ptr<Playable> PlayableFactory::getNext(bool& isValidPlay, bool& isEmptyLine)
 {
-    if (!anyLeft())
-    {
-        isValidPlay = false;
-        return get();
-    }
     std::string newLine;
-    std::getline(stream, newLine);
+    try
+    {
+        std::getline(stream, newLine);
+    } catch (const std::ios::failure& f)
+    {
+        //read last line
+        isEmptyLine = true;
+    }
+    isEmptyLine = newLine.empty();
+    if (isEmptyLine)
+    {
+        isValidPlay = true;
+        return nullptr;
+    }
+    
     std::vector<std::string> tokens = splitToTokens(newLine);
     if (!isLegalTokens(tokens))
     {
         isValidPlay = false;
-        return get();
+        return nullptr;
     }
     isValidPlay = true;
     return get();

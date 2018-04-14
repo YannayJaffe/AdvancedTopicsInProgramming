@@ -33,6 +33,20 @@ CMakeFiles/Ex1.dir/InitFactory.cpp.obj: ../InitFactory.h
 CMakeFiles/Ex1.dir/InitFactory.cpp.obj: ../Playable.h
 CMakeFiles/Ex1.dir/InitFactory.cpp.obj: ../PlayableFactory.h
 
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../GameBoard.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../GameBoardForPlayers.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../GameInit.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../GameMove.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../GamePiece.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../GeneralDefinitions.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../InitFactory.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../Match.cpp
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../Match.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../MoveFactory.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../Playable.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../PlayableFactory.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../Player.h
+
 CMakeFiles/Ex1.dir/MoveFactory.cpp.obj: ../GameMove.h
 CMakeFiles/Ex1.dir/MoveFactory.cpp.obj: ../GeneralDefinitions.h
 CMakeFiles/Ex1.dir/MoveFactory.cpp.obj: ../MoveFactory.cpp
@@ -65,6 +79,7 @@ CMakeFiles/Ex1.dir/main.cpp.obj: ../GameMove.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../GamePiece.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../GeneralDefinitions.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../InitFactory.h
+CMakeFiles/Ex1.dir/main.cpp.obj: ../Match.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../MoveFactory.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../Playable.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../PlayableFactory.h

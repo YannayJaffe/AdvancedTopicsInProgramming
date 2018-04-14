@@ -25,6 +25,7 @@ bool InitFactory::isLegalTokens(const std::vector<std::string>& tokens)
         case 3:
             try
             {
+                joker = false;
                 pieceChar = &tokens[0];
                 x = std::stoi(tokens[1]);
                 y = std::stoi(tokens[2]);
@@ -43,9 +44,15 @@ bool InitFactory::isLegalTokens(const std::vector<std::string>& tokens)
                     resetMove();
                     return false;
                 }
+                joker = true;
                 x = std::stoi(tokens[1]);
                 y = std::stoi(tokens[2]);
                 pieceChar = &tokens[3];
+                if (*pieceChar == "F")
+                {
+                    resetMove();
+                    return false;
+                }
             } catch (...)
             {
                 resetMove();
@@ -78,12 +85,12 @@ bool InitFactory::isLegalTokens(const std::vector<std::string>& tokens)
         return true;
     } else
     {
-    resetMove();
-    return false;
+        resetMove();
+        return false;
     }
 }
 
 std::unique_ptr<Playable> InitFactory::get()
 {
-    return std::make_unique<GameInit>(x,y,joker,type);
+    return std::make_unique<GameInit>(x, y, joker, type);
 }

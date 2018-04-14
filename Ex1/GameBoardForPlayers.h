@@ -1,13 +1,10 @@
-//
-// Created by yanna on 04/09/18.
-//
-
 #ifndef EX1_GAMEBOARDFORPLAYERS_H
 #define EX1_GAMEBOARDFORPLAYERS_H
 
 #include "GameBoard.h"
 
 class Player;
+
 class GameBoardForPlayers : public GameBoard
 {
 public:

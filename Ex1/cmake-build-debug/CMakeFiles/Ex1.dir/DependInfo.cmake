@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex1/cmake-build-debug/CMakeFiles/Ex1.dir/GameMove.cpp.obj"
   "C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex1/cmake-build-debug/CMakeFiles/Ex1.dir/GamePiece.cpp.obj"
   "C:/Git/AdvancedTopicsInProgramming/Ex1/InitFactory.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex1/cmake-build-debug/CMakeFiles/Ex1.dir/InitFactory.cpp.obj"
+  "C:/Git/AdvancedTopicsInProgramming/Ex1/Match.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex1/cmake-build-debug/CMakeFiles/Ex1.dir/Match.cpp.obj"
   "C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex1/cmake-build-debug/CMakeFiles/Ex1.dir/MoveFactory.cpp.obj"
   "C:/Git/AdvancedTopicsInProgramming/Ex1/PlayableFactory.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex1/cmake-build-debug/CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj"
   "C:/Git/AdvancedTopicsInProgramming/Ex1/Player.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex1/cmake-build-debug/CMakeFiles/Ex1.dir/Player.cpp.obj"

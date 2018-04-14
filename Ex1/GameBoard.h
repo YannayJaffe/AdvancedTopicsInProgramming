@@ -18,12 +18,18 @@ protected:
     
     bool isLegalLocation(int xCoor, int yCoor) const;
     
+    bool isLegalLocation(const std::pair<int,int>& loc) const;
+    
     //pre-condition: isLegalLocation(xCoor,yCoor)
     const GamePiece* at(int xCoor, int yCoor) const;
     
     //pre-condition: isLegalLocation(xCoor,yCoor)
     //pre-condition: newPiece==nullptr or newPiece->isLegal()
     void changePiece(std::unique_ptr<GamePiece> newPiece, int xCoor, int yCoor);
+    
+    int getMovableCount(PlayerID player) const;
+    
+    int getFlagCount(PlayerID player) const;
 
 private:
     //pre-condition: isLegalLocation(xCoor,yCoor)

@@ -1,14 +1,12 @@
-
-
-
+#include <cctype>
 #include "GamePiece.h"
 
-GamePiece::GamePiece(PlayerID ownerId, PieceType type) : ownerId(ownerId), type(type)
+GamePiece::GamePiece(PlayerID owner, PieceType type) : owner(owner), type(type)
 {
     effectiveType = type;
 }
 
-GamePiece::GamePiece(PlayerID ownerId, PieceType type, PieceType effectiveType) : GamePiece(ownerId, type)
+GamePiece::GamePiece(PlayerID owner, PieceType type, PieceType effectiveType) : GamePiece(owner, type)
 {
     if (this->type == PieceType::Joker)
         this->effectiveType = effectiveType;
@@ -72,11 +70,6 @@ bool GamePiece::changeType(PieceType newType)
     return legal;
 }
 
-PlayerID GamePiece::getOwnerId() const
-{
-    return ownerId;
-}
-
 char GamePiece::toChar() const
 {
     char c;
@@ -101,7 +94,22 @@ char GamePiece::toChar() const
             c = 'f';
             break;
     }
-    if (ownerId == PlayerID::Player1)
+    if (owner == PlayerID::Player1)
         return static_cast<char>(toupper(c));
     return c;
+}
+
+PieceType GamePiece::getEffectiveType() const
+{
+    return effectiveType;
+}
+
+const PlayerID GamePiece::getOwner() const
+{
+    return owner;
+}
+
+const PieceType GamePiece::getType() const
+{
+    return type;
 }

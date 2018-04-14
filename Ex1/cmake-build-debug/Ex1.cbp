@@ -119,6 +119,12 @@
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/InitFactory.h">
 			<Option target="Ex1"/>
 		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/Match.cpp">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/Match.h">
+			<Option target="Ex1"/>
+		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.cpp">
 			<Option target="Ex1"/>
 		</Unit>
