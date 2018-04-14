@@ -16,6 +16,11 @@ public:
     void printMoveErrors(std::ostream& os);
     void printWinner(std::ostream& os);
     void printBoard(std::ostream& os);
+    
+    bool isOpenedInitFiles() const;
+    
+    bool isOpenedMoveFiles() const;
+
 private:
     void checkFlags();
     
@@ -35,8 +40,8 @@ private:
     int badMoveInput;
     
     bool matchFinished;
-    //bool openedInitFiles;
-    //bool openedMoveFiles;
+    bool openedInitFiles;
+    bool openedMoveFiles;
     
 };
 

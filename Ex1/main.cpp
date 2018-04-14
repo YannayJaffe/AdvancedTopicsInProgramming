@@ -13,8 +13,18 @@ int main()
     Match match(player1Board, player2Board, player1Moves, player2Moves);
     match.loadBoard();
     match.printInitErrors(std::cout);
+    if (!match.isOpenedInitFiles())
+    {
+        ofs.close();
+        return 0;
+    }
     match.playMoves();
     match.printMoveErrors(std::cout);
+    if (!match.isOpenedMoveFiles())
+    {
+        ofs.close();
+        return 0;
+    }
     match.printWinner(ofs);
     ofs.flush();
     ofs.close();
