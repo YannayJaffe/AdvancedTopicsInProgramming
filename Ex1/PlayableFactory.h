@@ -21,13 +21,15 @@ public:
     
     virtual bool clear();
     
-    virtual std::unique_ptr<Playable> getNext(bool& isValidPlay) = 0;
+    virtual std::unique_ptr<Playable> getNext(bool& isValidPlay);
 
 protected:
     
     virtual std::vector<std::string> splitToTokens(const std::string& line) const;
     
     virtual bool isLegalTokens(const std::vector<std::string>& tokens) = 0;
+    
+    virtual std::unique_ptr<Playable> get() = 0;
     
     virtual void resetMove() = 0;
     

@@ -69,6 +69,8 @@ PlayableFactory.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/PlayableFactory.h
 GeneralDefinitions.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
+GameInit.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/GameInit.h
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.cpp
 MoveFactory.h
@@ -127,6 +129,10 @@ GameMove.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
 MoveFactory.h
 C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.h
+InitFactory.h
+C:/Git/AdvancedTopicsInProgramming/Ex1/InitFactory.h
+iostream
+-
 
 C:/Git/AdvancedTopicsInProgramming/Ex1/main.cpp
 iostream

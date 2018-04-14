@@ -27,6 +27,7 @@ CMakeFiles/Ex1.dir/GamePiece.cpp.obj
  C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
 CMakeFiles/Ex1.dir/InitFactory.cpp.obj
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GameInit.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/InitFactory.cpp
  C:/Git/AdvancedTopicsInProgramming/Ex1/InitFactory.h
@@ -47,9 +48,11 @@ CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj
 CMakeFiles/Ex1.dir/Player.cpp.obj
  C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoard.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GameInit.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/InitFactory.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/Playable.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/PlayableFactory.h
@@ -58,9 +61,11 @@ CMakeFiles/Ex1.dir/Player.cpp.obj
 CMakeFiles/Ex1.dir/main.cpp.obj
  C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoard.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/GameInit.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h
+ C:/Git/AdvancedTopicsInProgramming/Ex1/InitFactory.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/Playable.h
  C:/Git/AdvancedTopicsInProgramming/Ex1/PlayableFactory.h

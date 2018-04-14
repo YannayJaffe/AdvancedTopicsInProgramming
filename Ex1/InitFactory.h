@@ -3,20 +3,21 @@
 
 #include "PlayableFactory.h"
 #include "GeneralDefinitions.h"
+#include "GameInit.h"
 
 class InitFactory : public PlayableFactory
 {
 public:
     InitFactory(const std::string& fileName);
-    
-    std::unique_ptr<Playable> getNext(bool& isValidPlay) override;
+
 
 private:
     void resetMove() override;
     
     bool isLegalTokens(const std::vector<std::string>& tokens) override;
-
-private:
+    
+    std::unique_ptr<Playable> get() override;
+    
     int x, y;
     bool joker;
     PieceType type;

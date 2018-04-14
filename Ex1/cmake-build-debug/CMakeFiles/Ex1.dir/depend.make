@@ -26,6 +26,7 @@ CMakeFiles/Ex1.dir/GamePiece.cpp.obj: ../GamePiece.cpp
 CMakeFiles/Ex1.dir/GamePiece.cpp.obj: ../GamePiece.h
 CMakeFiles/Ex1.dir/GamePiece.cpp.obj: ../GeneralDefinitions.h
 
+CMakeFiles/Ex1.dir/InitFactory.cpp.obj: ../GameInit.h
 CMakeFiles/Ex1.dir/InitFactory.cpp.obj: ../GeneralDefinitions.h
 CMakeFiles/Ex1.dir/InitFactory.cpp.obj: ../InitFactory.cpp
 CMakeFiles/Ex1.dir/InitFactory.cpp.obj: ../InitFactory.h
@@ -46,9 +47,11 @@ CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj: ../PlayableFactory.h
 
 CMakeFiles/Ex1.dir/Player.cpp.obj: ../GameBoard.h
 CMakeFiles/Ex1.dir/Player.cpp.obj: ../GameBoardForPlayers.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../GameInit.h
 CMakeFiles/Ex1.dir/Player.cpp.obj: ../GameMove.h
 CMakeFiles/Ex1.dir/Player.cpp.obj: ../GamePiece.h
 CMakeFiles/Ex1.dir/Player.cpp.obj: ../GeneralDefinitions.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../InitFactory.h
 CMakeFiles/Ex1.dir/Player.cpp.obj: ../MoveFactory.h
 CMakeFiles/Ex1.dir/Player.cpp.obj: ../Playable.h
 CMakeFiles/Ex1.dir/Player.cpp.obj: ../PlayableFactory.h
@@ -57,9 +60,11 @@ CMakeFiles/Ex1.dir/Player.cpp.obj: ../Player.h
 
 CMakeFiles/Ex1.dir/main.cpp.obj: ../GameBoard.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../GameBoardForPlayers.h
+CMakeFiles/Ex1.dir/main.cpp.obj: ../GameInit.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../GameMove.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../GamePiece.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../GeneralDefinitions.h
+CMakeFiles/Ex1.dir/main.cpp.obj: ../InitFactory.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../MoveFactory.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../Playable.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../PlayableFactory.h

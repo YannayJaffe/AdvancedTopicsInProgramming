@@ -6,20 +6,29 @@
 #include "GamePiece.h"
 #include "GameMove.h"
 #include "MoveFactory.h"
+#include "InitFactory.h"
+#include <iostream>
+
 class Player
 {
 public:
-    Player(PlayerID id, GameBoardForPlayers& board);
-    bool init(const std::string& playerBoard, const std::string& playerMoves);//assume that bomb conflict (against not bomb) during init keeps the bomb
-    bool isLost();
-    bool playNextMove();//assume that bomb conflict during the match kills both pieces
+    Player(PlayerID id, GameBoardForPlayers& board, const std::string& playerBoard);
+    
+    bool initBoard();
+    
+    bool canMove();
+    
+    bool anyFlagsLeft();
+    
+    bool playNextMove();
+    
+    std::string toString();
+
 private:
-    
-    bool isLegalInitCommand();
-    bool isLegalMove(const GameMove& gameMove);
-    
     const PlayerID id;
     GameBoardForPlayers& board;
+    const std::string playerBoard;
+    
     
     static const int R = 2; // total Rocks
     static const int P = 5; // total Papers
@@ -34,10 +43,10 @@ private:
     int bCount;
     int jCount;
     int fCount;
-    
     int movablePiecesCount;
-    
     int points;
+    
+    
     
 };
 

@@ -8,26 +8,6 @@ MoveFactory::MoveFactory(const std::string& fileName) : PlayableFactory(fileName
 
 }
 
-
-std::unique_ptr<Playable> MoveFactory::getNext(bool& isValidMove)
-{
-    if (!anyLeft())
-    {
-        isValidMove = false;
-        return std::make_unique<GameMove>();
-    }
-    std::string newLine;
-    std::getline(stream, newLine);
-    std::vector<std::string> tokens = splitToTokens(newLine);
-    if (!isLegalTokens(tokens))
-    {
-        isValidMove = false;
-        return std::make_unique<GameMove>();
-    }
-    isValidMove = true;
-    return std::make_unique<GameMove>(prevX,prevY,newX,newY,jokerMove,jokerX,jokerY,newType);
-}
-
 bool MoveFactory::isLegalTokens(const std::vector<std::string>& tokens)
 {
     switch (tokens.size())
@@ -103,5 +83,10 @@ void MoveFactory::resetMove()
     jokerX = -1;
     jokerY = -1;
     newType = PieceType::Joker;
+}
+
+std::unique_ptr<Playable> MoveFactory::get()
+{
+    return std::make_unique<GameMove>(prevX, prevY, newX, newY, jokerMove, jokerX, jokerY, newType);
 }
 

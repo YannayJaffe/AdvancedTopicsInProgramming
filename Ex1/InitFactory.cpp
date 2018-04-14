@@ -83,7 +83,7 @@ bool InitFactory::isLegalTokens(const std::vector<std::string>& tokens)
     }
 }
 
-std::unique_ptr<Playable> InitFactory::getNext(bool& isValidPlay)
+std::unique_ptr<Playable> InitFactory::get()
 {
-    return std::unique_ptr<Playable>();
+    return std::make_unique<GameInit>(x,y,joker,type);
 }

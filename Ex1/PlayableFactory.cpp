@@ -57,3 +57,22 @@ std::vector<std::string> PlayableFactory::splitToTokens(const std::string& line)
     
     return tokens; // not returning using std::move in order to utilize RVO
 }
+
+std::unique_ptr<Playable> PlayableFactory::getNext(bool& isValidPlay)
+{
+    if (!anyLeft())
+    {
+        isValidPlay = false;
+        return get();
+    }
+    std::string newLine;
+    std::getline(stream, newLine);
+    std::vector<std::string> tokens = splitToTokens(newLine);
+    if (!isLegalTokens(tokens))
+    {
+        isValidPlay = false;
+        return get();
+    }
+    isValidPlay = true;
+    return get();
+}

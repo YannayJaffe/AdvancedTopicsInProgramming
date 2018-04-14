@@ -12,13 +12,11 @@ class MoveFactory : public PlayableFactory
 {
 public:
     MoveFactory(const std::string& fileName);
-    
-    std::unique_ptr<Playable> getNext(bool& isValidMove) override;
-
+ 
 private:
-    
-    
     bool isLegalTokens(const std::vector<std::string>& tokens) override;
+
+    std::unique_ptr<Playable> get() override;
     
     void resetMove() override;
     
