@@ -86,6 +86,24 @@
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoard.h">
 			<Option target="Ex1"/>
 		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.cpp">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/GameBoardForPlayers.h">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/GameInit.cpp">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/GameInit.h">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.cpp">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/GameMove.h">
+			<Option target="Ex1"/>
+		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/GamePiece.cpp">
 			<Option target="Ex1"/>
 		</Unit>
@@ -93,6 +111,39 @@
 			<Option target="Ex1"/>
 		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/GeneralDefinitions.h">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/InitFactory.cpp">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/InitFactory.h">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/Match.cpp">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/Match.h">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.cpp">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/MoveFactory.h">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/Playable.h">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/PlayableFactory.cpp">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/PlayableFactory.h">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/Player.cpp">
+			<Option target="Ex1"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/Player.h">
 			<Option target="Ex1"/>
 		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex1/main.cpp">

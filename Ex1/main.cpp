@@ -1,13 +1,32 @@
-#include <iostream>
-#include "GamePiece.h"
-#include "GeneralDefinitions.h"
+#include "Match.h"
+#include <fstream>
 
 int main()
 {
-    GamePiece s(PlayerID::Player1, PieceType::Scissors);
-    GamePiece r(PlayerID::Player2, PieceType::Rock);
-    std::cout << (r == s) << std::endl;
-    
-    std::cout << s.toChar() << std::endl << r.toChar() << std::endl;
+    const std::string player1Board("player1.rps_board");
+    const std::string player2Board("player2.rps_board");
+    const std::string player1Moves("player1.rps_moves");
+    const std::string player2Moves("player2.rps_moves");
+    const std::string outputFileName("rps.output");
+    std::ofstream ofs;
+    ofs.open(outputFileName);
+    Match match(player1Board, player2Board, player1Moves, player2Moves);
+    match.loadBoard();
+    match.printInitErrors(std::cout);
+    if (!match.isOpenedInitFiles())
+    {
+        ofs.close();
+        return 0;
+    }
+    match.playMoves();
+    match.printMoveErrors(std::cout);
+    if (!match.isOpenedMoveFiles())
+    {
+        ofs.close();
+        return 0;
+    }
+    match.printWinner(ofs);
+    ofs.flush();
+    ofs.close();
     return 0;
 }

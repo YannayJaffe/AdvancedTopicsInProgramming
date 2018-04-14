@@ -6,11 +6,83 @@ CMakeFiles/Ex1.dir/GameBoard.cpp.obj: ../GameBoard.h
 CMakeFiles/Ex1.dir/GameBoard.cpp.obj: ../GamePiece.h
 CMakeFiles/Ex1.dir/GameBoard.cpp.obj: ../GeneralDefinitions.h
 
+CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.obj: ../GameBoard.h
+CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.obj: ../GameBoardForPlayers.cpp
+CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.obj: ../GameBoardForPlayers.h
+CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.obj: ../GamePiece.h
+CMakeFiles/Ex1.dir/GameBoardForPlayers.cpp.obj: ../GeneralDefinitions.h
+
+CMakeFiles/Ex1.dir/GameInit.cpp.obj: ../GameInit.cpp
+CMakeFiles/Ex1.dir/GameInit.cpp.obj: ../GameInit.h
+CMakeFiles/Ex1.dir/GameInit.cpp.obj: ../GeneralDefinitions.h
+CMakeFiles/Ex1.dir/GameInit.cpp.obj: ../Playable.h
+
+CMakeFiles/Ex1.dir/GameMove.cpp.obj: ../GameMove.cpp
+CMakeFiles/Ex1.dir/GameMove.cpp.obj: ../GameMove.h
+CMakeFiles/Ex1.dir/GameMove.cpp.obj: ../GeneralDefinitions.h
+CMakeFiles/Ex1.dir/GameMove.cpp.obj: ../Playable.h
+
 CMakeFiles/Ex1.dir/GamePiece.cpp.obj: ../GamePiece.cpp
 CMakeFiles/Ex1.dir/GamePiece.cpp.obj: ../GamePiece.h
 CMakeFiles/Ex1.dir/GamePiece.cpp.obj: ../GeneralDefinitions.h
 
+CMakeFiles/Ex1.dir/InitFactory.cpp.obj: ../GameInit.h
+CMakeFiles/Ex1.dir/InitFactory.cpp.obj: ../GeneralDefinitions.h
+CMakeFiles/Ex1.dir/InitFactory.cpp.obj: ../InitFactory.cpp
+CMakeFiles/Ex1.dir/InitFactory.cpp.obj: ../InitFactory.h
+CMakeFiles/Ex1.dir/InitFactory.cpp.obj: ../Playable.h
+CMakeFiles/Ex1.dir/InitFactory.cpp.obj: ../PlayableFactory.h
+
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../GameBoard.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../GameBoardForPlayers.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../GameInit.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../GameMove.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../GamePiece.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../GeneralDefinitions.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../InitFactory.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../Match.cpp
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../Match.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../MoveFactory.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../Playable.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../PlayableFactory.h
+CMakeFiles/Ex1.dir/Match.cpp.obj: ../Player.h
+
+CMakeFiles/Ex1.dir/MoveFactory.cpp.obj: ../GameMove.h
+CMakeFiles/Ex1.dir/MoveFactory.cpp.obj: ../GeneralDefinitions.h
+CMakeFiles/Ex1.dir/MoveFactory.cpp.obj: ../MoveFactory.cpp
+CMakeFiles/Ex1.dir/MoveFactory.cpp.obj: ../MoveFactory.h
+CMakeFiles/Ex1.dir/MoveFactory.cpp.obj: ../Playable.h
+CMakeFiles/Ex1.dir/MoveFactory.cpp.obj: ../PlayableFactory.h
+
+CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj: ../GeneralDefinitions.h
+CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj: ../Playable.h
+CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj: ../PlayableFactory.cpp
+CMakeFiles/Ex1.dir/PlayableFactory.cpp.obj: ../PlayableFactory.h
+
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../GameBoard.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../GameBoardForPlayers.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../GameInit.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../GameMove.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../GamePiece.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../GeneralDefinitions.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../InitFactory.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../MoveFactory.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../Playable.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../PlayableFactory.h
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../Player.cpp
+CMakeFiles/Ex1.dir/Player.cpp.obj: ../Player.h
+
+CMakeFiles/Ex1.dir/main.cpp.obj: ../GameBoard.h
+CMakeFiles/Ex1.dir/main.cpp.obj: ../GameBoardForPlayers.h
+CMakeFiles/Ex1.dir/main.cpp.obj: ../GameInit.h
+CMakeFiles/Ex1.dir/main.cpp.obj: ../GameMove.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../GamePiece.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../GeneralDefinitions.h
+CMakeFiles/Ex1.dir/main.cpp.obj: ../InitFactory.h
+CMakeFiles/Ex1.dir/main.cpp.obj: ../Match.h
+CMakeFiles/Ex1.dir/main.cpp.obj: ../MoveFactory.h
+CMakeFiles/Ex1.dir/main.cpp.obj: ../Playable.h
+CMakeFiles/Ex1.dir/main.cpp.obj: ../PlayableFactory.h
+CMakeFiles/Ex1.dir/main.cpp.obj: ../Player.h
 CMakeFiles/Ex1.dir/main.cpp.obj: ../main.cpp
 
