@@ -25,7 +25,7 @@ bool GameInit::isJoker() const
     return jokerMove;
 }
 
-const PieceType GameInit::getNewType() const
+PieceType GameInit::getNewType() const
 {
     return newType;
 }

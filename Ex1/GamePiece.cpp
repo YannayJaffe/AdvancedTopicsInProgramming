@@ -104,12 +104,12 @@ PieceType GamePiece::getEffectiveType() const
     return effectiveType;
 }
 
-const PlayerID GamePiece::getOwner() const
+PlayerID GamePiece::getOwner() const
 {
     return owner;
 }
 
-const PieceType GamePiece::getType() const
+PieceType GamePiece::getType() const
 {
     return type;
 }

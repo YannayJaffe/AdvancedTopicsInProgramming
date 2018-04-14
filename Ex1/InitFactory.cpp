@@ -1,7 +1,3 @@
-//
-// Created by yanna on 04/13/18.
-//
-
 #include "InitFactory.h"
 
 InitFactory::InitFactory(const std::string& fileName) : PlayableFactory(fileName)

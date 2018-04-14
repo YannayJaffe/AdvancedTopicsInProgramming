@@ -1,8 +1,8 @@
-
 #ifndef EX1_GAMEINIT_H
 #define EX1_GAMEINIT_H
 
 #include "Playable.h"
+
 class GameInit : public Playable
 {
 public:
@@ -14,16 +14,16 @@ public:
     
     bool isJoker() const override;
     
-    const PieceType getNewType() const override;
+    PieceType getNewType() const override;
     
     const std::pair<int, int>& getNewLocation() const override;
-    
+
 
 private:
     const std::pair<int, int> newLocation;
     const bool jokerMove;
     const PieceType newType;
-
+    
 };
 
 

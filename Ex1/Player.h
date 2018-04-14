@@ -38,7 +38,7 @@ public:
     
     const std::string& getLastErrorString() const;
     
-    const PlayerID getId() const;
+    PlayerID getId() const;
     
     void addPoint();
     

@@ -24,9 +24,9 @@ public:
     
     PieceType getEffectiveType() const;
     
-    const PlayerID getOwner() const;
+    PlayerID getOwner() const;
     
-    const PieceType getType() const;
+    PieceType getType() const;
     
     bool isMovable() const;
 

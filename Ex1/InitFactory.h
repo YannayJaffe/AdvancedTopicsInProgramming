@@ -10,7 +10,6 @@ class InitFactory : public PlayableFactory
 public:
     InitFactory(const std::string& fileName);
 
-
 private:
     void resetMove() override;
     

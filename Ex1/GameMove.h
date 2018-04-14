@@ -15,15 +15,15 @@ public:
     
     GameMove();
     
-    GameMove(GameMove&& other);
+    GameMove(GameMove&& other) noexcept;
     
-    ~GameMove() = default;
+    ~GameMove() override = default;
     
     bool isJoker() const override;
     
     const std::pair<int, int>& getPrevLocation() const;
     
-    const PieceType getNewType() const override;
+     PieceType getNewType() const override;
     
     const std::pair<int, int>& getNewLocation() const override;
     
