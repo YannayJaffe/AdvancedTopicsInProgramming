@@ -30,7 +30,7 @@ public:
     
     enum class PlayerState
     {
-        UNINIT, INIT_OPENED, INIT_DONE, MOVE_OPENED, MOVE_DONE
+        UNINIT, INIT_OPENED, INIT_DONE, MOVE_OPENED
         
     };
     
@@ -43,6 +43,8 @@ public:
     void addPoint();
     
     int getPoints() const;
+    
+    int getLineCnt() const;
 
 private:
     

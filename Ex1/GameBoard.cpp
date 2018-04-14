@@ -53,7 +53,8 @@ int GameBoard::getMovableCount(PlayerID player) const
     int cnt = 0;
     for (const auto& piece : board)
     {
-        if (piece != nullptr && piece->getEffectiveType() != PieceType::Flag && piece->getEffectiveType() != PieceType::Bomb && piece->getOwner() == player)
+        if (piece != nullptr && piece->getEffectiveType() != PieceType::Flag && piece->getEffectiveType() != PieceType::Bomb &&
+            piece->getOwner() == player)
             cnt++;
     }
     return cnt;
@@ -72,5 +73,22 @@ int GameBoard::getFlagCount(PlayerID player) const
 
 bool GameBoard::isLegalLocation(const std::pair<int, int>& loc) const
 {
-    return isLegalLocation(loc.first,loc.second);
+    return isLegalLocation(loc.first, loc.second);
+}
+
+const GamePiece* GameBoard::at(const std::pair<int, int>& loc) const
+{
+    return at(loc.first,loc.second);
+}
+
+std::unique_ptr<GamePiece> GameBoard::removePiece(const std::pair<int, int>& loc)
+{
+    return removePiece(loc.first,loc.second);
+}
+
+std::unique_ptr<GamePiece> GameBoard::removePiece(int xCoor, int yCoor)
+{
+    std::unique_ptr<GamePiece> piece = nullptr;
+    piece.swap(board[boardIdxToVecIdx(xCoor,yCoor)]);
+    return piece;
 }

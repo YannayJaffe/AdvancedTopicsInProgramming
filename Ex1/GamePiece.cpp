@@ -113,3 +113,8 @@ const PieceType GamePiece::getType() const
 {
     return type;
 }
+
+bool GamePiece::isMovable() const
+{
+    return !(effectiveType == PieceType::Bomb || effectiveType == PieceType::Flag);
+}

@@ -32,6 +32,7 @@ private:
     int player1BadLineInit;
     int player2BadLineInit;
     std::string endMatchReason;
+    int badMoveInput;
     
     bool matchFinished;
     bool openedInitFiles;

@@ -27,6 +27,8 @@ public:
     const PlayerID getOwner() const;
     
     const PieceType getType() const;
+    
+    bool isMovable() const;
 
 private:
     const PieceType type;

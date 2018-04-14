@@ -22,10 +22,13 @@ protected:
     
     //pre-condition: isLegalLocation(xCoor,yCoor)
     const GamePiece* at(int xCoor, int yCoor) const;
+    const GamePiece* at(const std::pair<int,int>& loc) const;
     
     //pre-condition: isLegalLocation(xCoor,yCoor)
     //pre-condition: newPiece==nullptr or newPiece->isLegal()
     void changePiece(std::unique_ptr<GamePiece> newPiece, int xCoor, int yCoor);
+    std::unique_ptr<GamePiece> removePiece(int xCoor,int yCoor);
+    std::unique_ptr<GamePiece> removePiece(const std::pair<int,int>& loc);
     
     int getMovableCount(PlayerID player) const;
     

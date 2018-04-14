@@ -10,6 +10,7 @@ Match::Match(const std::string& player1Board, const std::string& player2Board, c
     openedMoveFiles = false;
     player1BadLineInit = 0;
     player2BadLineInit = 0;
+    badMoveInput = 0;
     
 }
 
@@ -133,20 +134,54 @@ void Match::playMoves()
             endMatchReason = "All moving PIECEs of the opponent are eaten";
             continue;
         }
-        turnPlayer->playMove();
-        
-        
+        if (!turnPlayer->hasMoreMoves())
+            continue;
+        if (!turnPlayer->playMove())
+        {
+            matchFinished = true;
+            winner = (turnPlayerId == PlayerID::Player1) ? 2 : 1;
+            badMoveInput = (turnPlayerId == PlayerID::Player1) ? 1 : 2;
+            if (winner == 1)
+                player1.addPoint();
+            else player2.addPoint();
+            std::stringstream ss;
+            ss << "Bad Moves input file for player ";
+            ss << (turnPlayerId == PlayerID::Player1 ? 1 : 2);
+            ss << " - line " << turnPlayer->getLineCnt();
+            endMatchReason = ss.str();
+            continue;
+        }
         checkFlags();
-        
     }
-    
-    
+}
+
+void Match::printMoveErrors(std::ostream& os)
+{
+    switch (badMoveInput)
+    {
+        case 1:
+            os << "Player 1: " << player1.getLastErrorString() << std::endl;
+            break;
+        case 2:
+            os << "Player 2:" << player2.getLastErrorString() << std::endl;
+            break;
+        default:
+            break;
+    }
+}
+
+void Match::printWinner(std::ostream& os)
+{
+    os << "Winner: " << winner << std::endl;
+    os << "Reason: " << endMatchReason << std::endl;
+    os << std::endl;
+    printBoard(os);
 }
 
 void Match::checkFlags()
 {
-    bool player1Flags = player1.hasMoreMoves();
-    bool player2Flags = player2.hasMoreMoves();
+    bool player1Flags = player1.hasMoreFlags();
+    bool player2Flags = player2.hasMoreFlags();
     
     if (!player1Flags && player2Flags)
     {

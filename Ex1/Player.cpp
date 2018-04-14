@@ -219,9 +219,13 @@ bool Player::hasMoreMoves() const
 bool Player::playMove()
 {
     bool isValidMove = true;
-    bool isEmptyLine = false;
-    std::unique_ptr<GameMove> gameMove(static_cast<GameMove*>(moveFactory.getNext(isValidMove, isEmptyLine).release()));
-    lineCnt++;
+    bool isEmptyLine = true;
+    std::unique_ptr<GameMove> gameMove;
+    while (isEmptyLine && hasMoreMoves())
+    {
+        gameMove.reset((static_cast<GameMove*>(moveFactory.getNext(isValidMove, isEmptyLine).release())));
+        lineCnt++;
+    }
     if (!isValidMove)
     {
         lastErrorString = "Bad format for move";
@@ -237,7 +241,48 @@ bool Player::playMove()
         lastErrorString = "initial/final/joker position is out of bounds";
         return false;
     }
+    const GamePiece* prevLocPiece = board.at(gameMove->getPrevLocation());
+    const GamePiece* newLocPiece = board.at(gameMove->getNewLocation());
+    if (prevLocPiece == nullptr || prevLocPiece->getOwner() != id)
+    {
+        lastErrorString = "tried to move a piece from an empty or occupied by opponent location";
+        return false;
+    }
+    if (newLocPiece != nullptr && newLocPiece->getOwner() == id)
+    {
+        lastErrorString = "tried to move a piece to a location occupied by the same player";
+        return false;
+    }
+    if (!prevLocPiece->isMovable())
+    {
+        lastErrorString = "tried to move an immobile piece";
+        return false;
+    }
+    auto piece = board.removePiece(gameMove->getPrevLocation());
+    if (newLocPiece == nullptr)
+        board.changePiece(std::move(piece), gameMove->getNewLocation().first,gameMove->getNewLocation().second);
+    else if (*piece > *newLocPiece)
+    {
+        board.changePiece(std::move(piece), gameMove->getNewLocation().first, gameMove->getNewLocation().second);
+    } else if (*newLocPiece == *piece || newLocPiece->getType() == PieceType::Bomb)
+    {
+        board.changePiece(nullptr, gameMove->getNewLocation().first, gameMove->getNewLocation().second);
+    }
     
-    
+    if (!gameMove->isJoker())
+        return true;
+    auto joker = board.removePiece(gameMove->getJokerLocation());
+    if (joker == nullptr || joker->getType() != PieceType::Joker || joker->getOwner() != id)
+    {
+        lastErrorString = "tried to switch joker representation illegally";
+        return false;
+    }
+    joker->changeType(gameMove->getNewType());
+    board.changePiece(std::move(joker), gameMove->getNewLocation().first, gameMove->getNewLocation().second);
     return true;
+}
+
+int Player::getLineCnt() const
+{
+    return lineCnt;
 }

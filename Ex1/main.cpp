@@ -11,9 +11,7 @@ int main()
     match.loadBoard();
     match.printInitErrors(std::cout);
     match.playMoves();
-    //match.printMoveErrors(std::cout);
-    
-    std::cout << std::endl;
-    match.printBoard(std::cout);
+    match.printMoveErrors(std::cout);
+    match.printWinner(std::cout);
     return 0;
 }
