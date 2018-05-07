@@ -7,7 +7,7 @@ PlayableFactory::PlayableFactory(const std::string& fileName) : fileName(fileNam
 
 bool PlayableFactory::init()
 {
-    stream.exceptions(std::ifstream::failbit);
+    //stream.exceptions(std::ifstream::failbit);
     try
     {
         stream.open(fileName);
