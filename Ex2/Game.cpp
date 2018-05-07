@@ -79,10 +79,13 @@ void Game::runGame()
     // in here we have both of the players piece vectors initialized and valid
     
     
+    //TODO: implement game moves etc.. look again at winner conditions
+    
 }
 
 bool Game::checkLegalPieces(const std::vector<std::unique_ptr<PiecePosition>>& playerPieces) const
 {
+    //TODO: implement
     return false;
 }
 
@@ -119,7 +122,7 @@ bool Game::gameInit()
         declareWinner(BOTH);
         return false;
     }
-    
+    //TODO: merge the vectors to a board and conduct fights, maybe not in here, probably better in another private method
     
     return true;
 }
