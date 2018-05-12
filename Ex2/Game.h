@@ -16,6 +16,7 @@
 #include "BoardImpl.h"
 #include "Ex2\Ex2\PieceCounter.h"
 #include "FightInfo.h"
+#include "Ex2\Ex2\FightInfoImpl.h"
 
 
 
@@ -42,12 +43,14 @@ private:
 
 	void initBoard(); // this method initializes the game board, conducts all fights, and updates the FightInfo vector
 
-	void initPlayerOnBoard(int playerId); // this method initializes only the player whos id is playeyId on the board (and conducts fights...)
+	void initPlayerOnBoard(int playerId); // this method initializes only the player whos id is playerId on the board (and conducts fights...)
 
 	std::unique_ptr<PiecePosition>& getPlayerPiece(int playerId, const Point& point); // returns the wanted player piece, nullptr if not found
 	std::unique_ptr<PiecePosition> nullPiecePosition = nullptr; // in order to return a nullptr and not throw exception from the above method
+	std::unique_ptr<FightInfo> getFightInfo(const PiecePosition& player1Piece, const PiecePosition& player2Piece); // conducts the fight between the pieces and generates the FightInfo
     
-    
+	static bool operator>(const PiecePosition& p1, const PiecePosition& p2);
+
     enum class AlgoType
     {
         FILE, AUTO

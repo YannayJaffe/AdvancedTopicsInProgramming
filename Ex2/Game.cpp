@@ -175,6 +175,8 @@ void Game::initPlayerOnBoard(int playerId)
 		else if (board.getPlayer(piece->getPosition()) == otherPlayerId)
 		{
 			// the board location is occupied, conduct fight
+			auto& otherPiece = getPlayerPiece(otherPlayerId, piece->getPosition());
+			// continue working here
 
 		}
 	}
@@ -203,6 +205,56 @@ std::unique_ptr<PiecePosition>& Game::getPlayerPiece(int playerId, const Point &
 			return playerPieces->at(i);
 	}
 	return nullPiecePosition;
+}
+
+std::unique_ptr<FightInfo> Game::getFightInfo(const PiecePosition& player1Piece, const PiecePosition& player2Piece)
+{
+	char player1Type = player1Piece.getPiece();
+	char player2Type = player2Piece.getPiece();
+	if (player1Type == 'J' || player1Type == 'j')
+		player1Type = player1Piece.getJokerRep();
+	if (player2Type == 'J' || player2Type == 'j')
+		player2Type = player2Piece.getJokerRep();
+	
+	std::unique_ptr<FightInfo> fightInfo = nullptr;
+	
+	return fightInfo;
+
+
+
+	return std::unique_ptr<FightInfo>();
+}
+
+bool Game::operator>(const PiecePosition & p1, const PiecePosition & p2)
+{
+	char piece1 = p1.getPiece();
+	if (piece1 == 'J' || piece1 == 'j')
+		piece1 = p1.getJokerRep();
+	char piece2 = p2.getPiece();
+	if (piece2 == 'J' || piece2 == 'j')
+		piece2 = p1.getJokerRep();
+
+	switch (piece1)
+	{
+	case 'R':
+	case 'r':
+
+		break;
+	case 'P':
+	case 'p':
+		break;
+	case 'S':
+	case 's':
+		break;
+	case 'B':
+	case 'b':
+		break;
+	case 'F':
+	case 'f':
+		break;
+	default:
+		return false;
+	}
 }
 
 bool Game::gameInit()

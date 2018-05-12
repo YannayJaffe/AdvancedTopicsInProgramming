@@ -1,0 +1,30 @@
+for Game:
+1. complete pieces operators >,<,=
+2. complete getFightInfo method and generate the FightInfo
+3. on initPlayerOnBoard, use getFightInfo and add the result to the fights vector,
+    update board, and players vectors according to the winner.
+4. call initPlayerOnBoard from initBoard on both players
+5. on gameInit check for flag counts.
+6. on runGame notify players on board and fights
+7. on runGame get moves from players
+8. check move validity
+9. check for fight and conduct fight and notify fight (if necessary)
+10. check for joker change and change joker rep
+11. notify oponnent on move
+12. check flags
+13. update move counter
+14. implement the winner method, add a win reason argument
+
+for FilePlayerAlgorithm:
+1. open init file and create initial vector.
+2. for any illegal placement in file, create illegal PiecePosition
+3. open moves file
+4. for every move ask provide the next move
+5. if no moves are left, provid illegal move
+6. note that the implementations for the different notify methods are empty
+
+for AutoPlayerAlgorithm:
+1. generate a dumb but legal board placement (for example, generate the locations in random, but check that the placement is legal)
+2. keep track on board, and other player known and unknown pieces
+3. from each oponnent move, update board, known pieces and unknown pieces
+4. maintain an assumed flag, and generate a move that attemps to attack this pieces
