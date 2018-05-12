@@ -73,20 +73,57 @@ void Game::runGame()
 {
     if (!gameInit())
     {
-        //game was finished because could not initialize
+        //if we got in here it means that the game is finished (bad files/bad arguments...)
+		
         return;
     }
     // in here we have both of the players piece vectors initialized and valid
     
+
+	// notify both players on initial board and fights
     
-    //TODO: implement game moves etc.. look again at winner conditions
+    // TODO: implement game moves etc.. look again at winner conditions
+	// play the game in turns (player 1 moves first): 
+	// 1. check how many moves played so far, if more than the max, declare tie.
+	// 2. get a play from player, and check validity: first try to move the requested piece, if no more movable pieces, than declare winner
+	// 3. when moving the piece, check if a fight happens.
+	// 4. update both players pieces vectors, notify both players on the fight, and update the fights vector and board placement.
+	// 5. notify other player on the move.
+	// 6. after moved the piece, check for a joker change (again, check validity).
+	// 7. if a joker change occured, update the player piece vector.
+	// 8. check for remaining flags, declare winner if neccessary
+	// 9. update moves counter
     
 }
 
-bool Game::checkLegalPieces(const std::vector<std::unique_ptr<PiecePosition>>& playerPieces) const
+bool Game::checkInitialLegalPieces(const std::vector<std::unique_ptr<PiecePosition>>& playerPieces) const
 {
-    //TODO: implement
-    return false;
+	BoardImpl tempBoard(totalXVals, totalYVals);
+	int id = 1; // in here we check for a single player legallity so the id doesnt matter
+	PieceCounter tempPieceCounter(totalRocks, totalPapers, totalScissors, totalBombs, totalJokers, totalFlags);
+	for (const auto& piece : playerPieces)
+	{
+		if (!pointInBoard(piece->getPosition()))
+			return false;//piece is out of board
+
+		if (!tempPieceCounter.addPiece(piece->getPiece()))
+			return false;//bad piece char or trying to add to many pieces
+
+		if (tempBoard.getPlayer(piece->getPosition()) != 0)
+			return false;//trying to add piece to an already occupied spot by the same player
+
+		tempBoard.setPlayer(piece->getPosition(), id);
+	}
+	return (tempPieceCounter.getRemaining('F') == 0); // need to use all flags
+}
+
+bool Game::pointInBoard(const Point & p) const
+{
+	int x = p.getX();
+	int y = p.getY();
+	if ((x >= 1 && x <= totalXVals) && (y >= 1 && y <= totalYVals))
+		return true;
+	return false;
 }
 
 bool Game::gameInit()
@@ -101,8 +138,8 @@ bool Game::gameInit()
     player1->getInitialPositions(PLAYER1, player1Pieces); //initialize player1 pieces
     player2->getInitialPositions(PLAYER2, player2Pieces); //initialize player2 pieces
     
-    bool player1InitialLegal = checkLegalPieces(player1Pieces);
-    bool player2InitialLegal = checkLegalPieces(player2Pieces);
+    bool player1InitialLegal = checkInitialLegalPieces(player1Pieces);
+    bool player2InitialLegal = checkInitialLegalPieces(player2Pieces);
     
     if (player1InitialLegal && !player2InitialLegal)
     {
@@ -122,7 +159,9 @@ bool Game::gameInit()
         declareWinner(BOTH);
         return false;
     }
-    //TODO: merge the vectors to a board and conduct fights, maybe not in here, probably better in another private method
+	initBoard();
+	//check both players flag count
+	// if any of the players dont have flags, and the other does, declare winner. if both lost all flags, declare tie
     
-    return true;
+    return true;//board init completed, can start on getting player moves
 }

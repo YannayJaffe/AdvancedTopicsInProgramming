@@ -14,6 +14,9 @@
 #include "AutoPlayerAlgorithm.h"
 #include "Board.h"
 #include "BoardImpl.h"
+#include "Ex2\Ex2\PieceCounter.h"
+#include "FightInfo.h"
+
 
 
 class Game
@@ -32,8 +35,12 @@ private:
     
     bool gameInit(); //this method performs all initialization and returns whether the game can continue or should be finished
     
-    bool checkLegalPieces(
-            const std::vector<std::unique_ptr<PiecePosition>>& playerPieces) const; //this method receives a vector of pieces, and determines if its legal
+    bool checkInitialLegalPieces(
+            const std::vector<std::unique_ptr<PiecePosition>>& playerPieces) const; //this method receives a vector of pieces, and determines if its legal. use only in initialization
+
+	bool pointInBoard(const Point& p) const; // this method varifies that a point is within the board limits
+
+	void initBoard(); // this method initializes the game board, conducts all fights, and updates the FightInfo vector
     
     
     enum class AlgoType
@@ -53,6 +60,8 @@ private:
     const int totalBombs = 2; // total Bombs
     const int totalJokers = 2; // total Jokers
     const int totalFlags = 1; // total Flags
+
+
     
     bool isLegalCommandLine;
     AlgoType player1Algo;
@@ -62,6 +71,7 @@ private:
     std::vector<std::unique_ptr<PiecePosition>> player1Pieces;
     std::vector<std::unique_ptr<PiecePosition>> player2Pieces;
     std::unique_ptr<Board> board;
+	std::vector<std::unique_ptr<FightInfo>> fights;
     int totalMoves;
     
     
