@@ -41,6 +41,11 @@ private:
 	bool pointInBoard(const Point& p) const; // this method varifies that a point is within the board limits
 
 	void initBoard(); // this method initializes the game board, conducts all fights, and updates the FightInfo vector
+
+	void initPlayerOnBoard(int playerId); // this method initializes only the player whos id is playeyId on the board (and conducts fights...)
+
+	std::unique_ptr<PiecePosition>& getPlayerPiece(int playerId, const Point& point); // returns the wanted player piece, nullptr if not found
+	std::unique_ptr<PiecePosition> nullPiecePosition = nullptr; // in order to return a nullptr and not throw exception from the above method
     
     
     enum class AlgoType
@@ -68,9 +73,9 @@ private:
     AlgoType player2Algo;
     std::unique_ptr<PlayerAlgorithm> player1;
     std::unique_ptr<PlayerAlgorithm> player2;
-    std::vector<std::unique_ptr<PiecePosition>> player1Pieces;
-    std::vector<std::unique_ptr<PiecePosition>> player2Pieces;
-    std::unique_ptr<Board> board;
+    std::vector<std::unique_ptr<PiecePosition>> player1Pieces; // an element could be nullptr
+    std::vector<std::unique_ptr<PiecePosition>> player2Pieces; //an element could be nullptr
+    BoardImpl board;
 	std::vector<std::unique_ptr<FightInfo>> fights;
     int totalMoves;
     
