@@ -30,3 +30,14 @@
 *.exe
 *.out
 *.app
+
+Ex2/cmake-build-debug/
+
+*.tlog
+*.idb
+*.vcxproj
+*.filters
+*.ipch
+*.db
+*.opendb
+*.sln
