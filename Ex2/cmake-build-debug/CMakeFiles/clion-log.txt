@@ -1,4 +1,47 @@
-"C:\Program Files\JetBrains\CLion 2018.1\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Git\AdvancedTopicsInProgramming\Ex2
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Git/AdvancedTopicsInProgramming/Ex2/cmake-build-debug
+C:\Users\Yannay\.CLion2018.1\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Git/AdvancedTopicsInProgramming/Ex2
+-- The C compiler identification is GNU 6.4.0
+-- The CXX compiler identification is GNU 7.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++.exe
+-- Check for working CXX compiler: /usr/bin/c++.exe -- broken
+CMake Error at /cygdrive/c/Users/Yannay/.CLion2018.1/system/cygwin_cmake/share/cmake-3.10.3/Modules/CMakeTestCXXCompiler.cmake:45 (message):
+  The C++ compiler
+
+    "/usr/bin/c++.exe"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: /cygdrive/c/Git/AdvancedTopicsInProgramming/Ex2/cmake-build-debug/CMakeFiles/CMakeTmp
+    
+    Run Build Command:"/usr/bin/make.exe" "cmTC_d9a61/fast"
+    /usr/bin/make -f CMakeFiles/cmTC_d9a61.dir/build.make CMakeFiles/cmTC_d9a61.dir/build
+    make[1]: Entering directory '/cygdrive/c/Git/AdvancedTopicsInProgramming/Ex2/cmake-build-debug/CMakeFiles/CMakeTmp'
+    Building CXX object CMakeFiles/cmTC_d9a61.dir/testCXXCompiler.cxx.o
+    /usr/bin/c++.exe     -o CMakeFiles/cmTC_d9a61.dir/testCXXCompiler.cxx.o -c /cygdrive/c/Git/AdvancedTopicsInProgramming/Ex2/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+    Linking CXX executable cmTC_d9a61.exe
+    /cygdrive/c/Users/Yannay/.CLion2018.1/system/cygwin_cmake/bin/cmake.exe -E cmake_link_script CMakeFiles/cmTC_d9a61.dir/link.txt --verbose=1
+    /usr/bin/c++.exe    -Wl,--enable-auto-import  CMakeFiles/cmTC_d9a61.dir/testCXXCompiler.cxx.o  -o cmTC_d9a61.exe -Wl,--out-implib,libcmTC_d9a61.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+    c++: fatal error: -fuse-linker-plugin, but cyglto_plugin.dll not found
+    compilation terminated.
+    make[1]: *** [CMakeFiles/cmTC_d9a61.dir/build.make:98: cmTC_d9a61.exe] Error 1
+    make[1]: Leaving directory '/cygdrive/c/Git/AdvancedTopicsInProgramming/Ex2/cmake-build-debug/CMakeFiles/CMakeTmp'
+    make: *** [Makefile:126: cmTC_d9a61/fast] Error 2
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/cygdrive/c/Git/AdvancedTopicsInProgramming/Ex2/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/cygdrive/c/Git/AdvancedTopicsInProgramming/Ex2/cmake-build-debug/CMakeFiles/CMakeError.log".

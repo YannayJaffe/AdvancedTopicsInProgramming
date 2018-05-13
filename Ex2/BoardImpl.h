@@ -8,6 +8,7 @@
 #include <vector>
 #include "Board.h"
 #include "Point.h"
+#include "PiecePosition.h"
 
 class BoardImpl : public Board
 {
@@ -21,8 +22,8 @@ private:
     
     int getInd(const Point& pos) const; //returns the index in the vector corresponding the Point
     
-    const totalX;
-    const totalY;
+    const int totalX;
+    const int totalY;
     std::vector<int> board;
     
 };
