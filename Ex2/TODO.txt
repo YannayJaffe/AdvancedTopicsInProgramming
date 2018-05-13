@@ -1,6 +1,6 @@
 for Game:
-1. complete pieces operators >,<,=
-2. complete getFightInfo method and generate the FightInfo
+1. complete pieces operators >,<,= - DONE!
+2. complete getFightInfo method and generate the FightInfo - DONE!
 3. on initPlayerOnBoard, use getFightInfo and add the result to the fights vector,
     update board, and players vectors according to the winner.
 4. call initPlayerOnBoard from initBoard on both players
