@@ -17,6 +17,7 @@
 #include "PieceCounter.h"
 #include "FightInfo.h"
 #include "FightInfoImpl.h"
+#include "WinReason.h"
 
 
 bool operator>(const PiecePosition& p1, const PiecePosition& p2);
@@ -35,7 +36,7 @@ public:
 private:
     
     // note: add a win reason enum and print the win reason/add more arguments so a correct win reason can be outputted
-    void declareWinner(int playerId) const; // this method is called when the game should end, and declares the winner.
+    void declareWinner(int playerId,WinReason::Reason reason) const; // this method is called when the game should end, and declares the winner.
     
     bool initPlayersPtrs(); // this method initializes the players unique_ptrs. returns false if could not init
     
@@ -44,11 +45,13 @@ private:
     bool checkInitialLegalPieces(
             const std::vector<std::unique_ptr<PiecePosition>>& playerPieces) const; //this method receives a vector of pieces, and determines if its legal. use only in initialization
     
-    bool pointInBoard(const Point& p) const; // this method varifies that a point is within the board limits
+    bool pointInBoard(const Point& p) const; // this method verifies that a point is within the board limits
     
     void initBoard(); // this method initializes the game board, conducts all fights, and updates the FightInfo vector
     
     void initPlayerOnBoard(int playerId); // this method initializes only the player whos id is playerId on the board (and conducts fights...)
+    
+    int getPieceCount(int playerId, char pieceType); //counts the remaining pieces of specified type of the specified player. if asked for jokers, count jokers. else count also joker current type
     
     std::unique_ptr<PiecePosition>& getPlayerPiece(int playerId, const Point& point); // returns the wanted player piece, nullptr if not found
     std::unique_ptr<PiecePosition> nullPiecePosition = nullptr; // in order to return a nullptr and not throw exception from the above method
@@ -68,13 +71,13 @@ private:
     
     const int totalXVals = 10; //number of columns in the board (total x values)
     const int totalYVals = 10; // number of rows in the board (total y values)
-    const int totalRocks = 2;
+    const int totalRocks = 2; // total Rocks
     const int totalPapers = 5; // total Papers
     const int totalScissors = 1; // total Scissors
     const int totalBombs = 2; // total Bombs
     const int totalJokers = 2; // total Jokers
     const int totalFlags = 1; // total Flags
-    
+    const int maxMoves = 100; //maximum moves until a tie is declared
     
     
     bool isLegalCommandLine;

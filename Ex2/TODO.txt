@@ -2,10 +2,10 @@ for Game:
 1. complete pieces operators >,<,= - DONE!
 2. complete getFightInfo method and generate the FightInfo - DONE!
 3. on initPlayerOnBoard, use getFightInfo and add the result to the fights vector,
-    update board, and players vectors according to the winner.
-4. call initPlayerOnBoard from initBoard on both players
-5. on gameInit check for flag counts.
-6. on runGame notify players on board and fights
+    update board, and players vectors according to the winner. - DONE!
+4. call initPlayerOnBoard from initBoard on both players - DONE!
+5. on gameInit check for flag counts. - DONE!
+6. on runGame notify players on board and fights - DONE!
 7. on runGame get moves from players
 8. check move validity
 9. check for fight and conduct fight and notify fight (if necessary)

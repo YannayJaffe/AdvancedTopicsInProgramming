@@ -137,6 +137,9 @@
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PointImpl.h">
 			<Option target="Ex2"/>
 		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/WinReason.h">
+			<Option target="Ex2"/>
+		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/main.cpp">
 			<Option target="Ex2"/>
 		</Unit>
