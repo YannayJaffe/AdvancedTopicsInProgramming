@@ -230,6 +230,33 @@ Game.cpp.s:
 	$(MAKE) -f CMakeFiles\Ex2.dir\build.make CMakeFiles/Ex2.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
+PieceCounter.obj: PieceCounter.cpp.obj
+
+.PHONY : PieceCounter.obj
+
+# target to build an object file
+PieceCounter.cpp.obj:
+	$(MAKE) -f CMakeFiles\Ex2.dir\build.make CMakeFiles/Ex2.dir/PieceCounter.cpp.obj
+.PHONY : PieceCounter.cpp.obj
+
+PieceCounter.i: PieceCounter.cpp.i
+
+.PHONY : PieceCounter.i
+
+# target to preprocess a source file
+PieceCounter.cpp.i:
+	$(MAKE) -f CMakeFiles\Ex2.dir\build.make CMakeFiles/Ex2.dir/PieceCounter.cpp.i
+.PHONY : PieceCounter.cpp.i
+
+PieceCounter.s: PieceCounter.cpp.s
+
+.PHONY : PieceCounter.s
+
+# target to generate assembly for a file
+PieceCounter.cpp.s:
+	$(MAKE) -f CMakeFiles\Ex2.dir\build.make CMakeFiles/Ex2.dir/PieceCounter.cpp.s
+.PHONY : PieceCounter.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -278,6 +305,9 @@ help:
 	@echo ... Game.obj
 	@echo ... Game.i
 	@echo ... Game.s
+	@echo ... PieceCounter.obj
+	@echo ... PieceCounter.i
+	@echo ... PieceCounter.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

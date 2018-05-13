@@ -1,6 +1,6 @@
 #ifndef EX2_POINT_IMPL
 #define EX2_POINT_IMPL
-#include "C:\Git\AdvancedTopicsInProgramming\Ex2\Point.h"
+#include "Point.h"
 class PointImpl :
 	public Point
 {

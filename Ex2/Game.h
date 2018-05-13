@@ -14,9 +14,9 @@
 #include "AutoPlayerAlgorithm.h"
 #include "Board.h"
 #include "BoardImpl.h"
-#include "Ex2\Ex2\PieceCounter.h"
+#include "PieceCounter.h"
 #include "FightInfo.h"
-#include "Ex2\Ex2\FightInfoImpl.h"
+#include "FightInfoImpl.h"
 
 
 

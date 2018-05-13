@@ -1,8 +1,8 @@
 #ifndef EX2_FIGHT_INFO_IMPL
 #define EX2_FIGHT_INFO_IMPL
 
-#include "C:\Git\AdvancedTopicsInProgramming\Ex2\FightInfo.h"
-#include "C:\Git\AdvancedTopicsInProgramming\Ex2\Ex2\Ex2\PointImpl.h"
+#include "FightInfo.h"
+#include "PointImpl.h"
 class FightInfoImpl :
 	public FightInfo
 {

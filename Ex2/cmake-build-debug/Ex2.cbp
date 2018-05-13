@@ -98,6 +98,9 @@
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/FightInfo.h">
 			<Option target="Ex2"/>
 		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/FightInfoImpl.h">
+			<Option target="Ex2"/>
+		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/FilePlayerAlgorithm.cpp">
 			<Option target="Ex2"/>
 		</Unit>
@@ -116,6 +119,12 @@
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/Move.h">
 			<Option target="Ex2"/>
 		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PieceCounter.cpp">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PieceCounter.h">
+			<Option target="Ex2"/>
+		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PiecePosition.h">
 			<Option target="Ex2"/>
 		</Unit>
@@ -123,6 +132,9 @@
 			<Option target="Ex2"/>
 		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/Point.h">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PointImpl.h">
 			<Option target="Ex2"/>
 		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/main.cpp">
