@@ -128,6 +128,9 @@
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PiecePosition.h">
 			<Option target="Ex2"/>
 		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PiecePositionImpl.h">
+			<Option target="Ex2"/>
+		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PlayerAlgorithm.h">
 			<Option target="Ex2"/>
 		</Unit>
@@ -135,9 +138,6 @@
 			<Option target="Ex2"/>
 		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PointImpl.h">
-			<Option target="Ex2"/>
-		</Unit>
-		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/WinReason.h">
 			<Option target="Ex2"/>
 		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/main.cpp">

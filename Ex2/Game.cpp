@@ -4,8 +4,9 @@
 
 #include "Game.h"
 
-Game::Game(int argc, char** argv) : player1Algo(AlgoType::FILE), player2Algo(AlgoType::FILE), player1(nullptr), player2(nullptr),
-                                    board(totalXVals, totalYVals), totalMoves(0)
+Game::Game(int argc, char** argv, const std::string& outFile) : player1Algo(AlgoType::FILE), player2Algo(AlgoType::FILE), player1(nullptr),
+                                                                player2(nullptr), board(totalXVals, totalYVals), totalMoves(0), player1Moves(0),
+                                                                player2Moves(0), player1Points(0), player2Points(0), outFileName(outFile)
 {
     if (argc < 2)
     {
@@ -69,6 +70,7 @@ bool Game::initPlayersPtrs()
     return (player1 != nullptr && player2 != nullptr);
 }
 
+
 void Game::runGame()
 {
     if (!gameInit())
@@ -83,49 +85,94 @@ void Game::runGame()
     //now both players know the initial board and fight history, can start getting moves from each player and run the game
     
     std::unique_ptr<Move> move;
+    int currentPlayer = PLAYER1;
+    int otherPlayer = PLAYER2;
     while (totalMoves < maxMoves)
     {
-        /////////////////////////////
-        //do entire move from player1:
-        // get move
-        move = player1->getMove();
-        // check move is legal
-        // play move
-        // conduct fight
-        // notify other player on move and fight
-        // play joker change
-        // check if won (no more flags)
-        /////////////////////////////
         totalMoves++;
-    
-        /////////////////////////////
-        //do entire move from player2:
-        // get move
-        move = player2->getMove();
-        // check move is legal
-        // play move
-        // conduct fight
-        // notify other player on move and fight
-        // play joker change
-        // check if won (no more flags)
-        /////////////////////////////
-        totalMoves++;
+        if (currentPlayer == PLAYER1)
+            player1Moves++;
+        else
+            player2Moves++;
+        
+        if (!doFullMove(currentPlayer))
+        { // illegal move
+            declareWinner(otherPlayer, WinReason::Reason::ILLEGAL_MOVE);
+            return;
+        }
+        
+        // check if any player lost all of his flags
+        int winDueFlags = winConditionFlags();
+        if (winDueFlags != -1)
+        {
+            declareWinner(winDueFlags, WinReason::Reason::NO_MORE_FLAGS_MOVES);
+            return;
+        }
+        
+        auto tmp = otherPlayer;
+        otherPlayer = currentPlayer;
+        currentPlayer = tmp;
     }
-    declareWinner(BOTH,WinReason::Reason::MAX_MOVES_REACHED);//tie because maxed out the moves
-    
-    // TODO: implement game moves etc.. look again at winner conditions
-    // play the game in turns (player 1 moves first):
-    // 1. check how many moves played so far, if more than the max, declare tie.
-    // 2. get a play from player, and check validity: first try to move the requested piece, if no more movable pieces, than declare winner
-    // 3. when moving the piece, check if a fight happens.
-    // 4. update both players pieces vectors, notify both players on the fight, and update the fights vector and board placement.
-    // 5. notify other player on the move.
-    // 6. after moved the piece, check for a joker change (again, check validity).
-    // 7. if a joker change occured, update the player piece vector.
-    // 8. check for remaining flags, declare winner if neccessary
-    // 9. update moves counter
-    
+    declareWinner(BOTH, WinReason::Reason::MAX_MOVES_REACHED);//tie because maxed out the moves
 }
+
+bool Game::doFullMove(int playerId)
+{
+    std::unique_ptr<Move> move;
+    PlayerAlgorithm* thisPlayer = (playerId == PLAYER1) ? player1.get() : player2.get();
+    PlayerAlgorithm* otherPlayer = (playerId == PLAYER1) ? player2.get() : player1.get();
+    move = thisPlayer->getMove();
+    int otherPlayerId = (playerId == PLAYER1) ? PLAYER2 : PLAYER1;
+    if (!isLegalMove(*move, playerId)) // check legal
+    {
+        return false;
+    }
+    std::unique_ptr<FightInfo> fightInfo = playMove(*move, playerId);//actually do the move
+    if (fightInfo != nullptr)
+        thisPlayer->notifyFightResult(*fightInfo);
+    
+    std::unique_ptr<JokerChange> jokerChange = thisPlayer->getJokerChange();
+    if (jokerChange != nullptr && !doJokerChange(playerId, *jokerChange))
+    { //got a bad joker change
+        return false;
+    }
+    
+    otherPlayer->notifyOnOpponentMove(*move); // notify other player on move
+    if (fightInfo != nullptr)
+        otherPlayer->notifyFightResult(*fightInfo);
+    return true;
+}
+
+bool Game::doJokerChange(int playerId, const JokerChange& jokerChange)
+{
+    if (board.getPlayer(jokerChange.getJokerChangePosition()) != playerId)
+        return false; // this position is not owned by the player
+    
+    auto& piece = getPlayerPiece(playerId, jokerChange.getJokerChangePosition());
+    if (piece == nullptr) // just a sanity check
+        return false;
+    
+    if (static_cast<char>(std::toupper(piece->getPiece())) != 'J')
+        return false; // requested piece is not joker
+    
+    auto jokerRep = static_cast<char>(std::toupper(jokerChange.getJokerNewRep()));
+    
+    switch (jokerRep)
+    {
+        case 'R':
+        case 'P':
+        case 'S':
+        case 'B':
+            break;
+        default:
+            return false; // requested joker representation is illegal
+    }
+    
+    std::unique_ptr<PiecePosition> changedPiece = std::make_unique<PiecePositionImpl>(piece->getPosition(), 'J', jokerRep);
+    piece.swap(changedPiece);
+    return true;
+}
+
 
 bool
 Game::checkInitialLegalPieces(const std::vector<std::unique_ptr<PiecePosition>>& playerPieces) const // checks that the initial placement is legal
@@ -373,39 +420,28 @@ bool Game::gameInit()
     if (player1InitialLegal && !player2InitialLegal)
     {
         // player1 initialization is legal, but player2 initialization is illegal
-        declareWinner(PLAYER1,WinReason::Reason::ILLEGAL_INIT);
+        declareWinner(PLAYER1, WinReason::Reason::ILLEGAL_INIT);
         return false;
     }
     if (!player1InitialLegal && player2InitialLegal)
     {
         // player1 initialization is illegal, but player2 initialization is legal
-        declareWinner(PLAYER2,WinReason::Reason::ILLEGAL_INIT);
+        declareWinner(PLAYER2, WinReason::Reason::ILLEGAL_INIT);
         return false;
     }
     if (!player1InitialLegal && !player2InitialLegal)
     {
         // both players initializations are illegal
-        declareWinner(BOTH,WinReason::Reason::ILLEGAL_INIT);
+        declareWinner(BOTH, WinReason::Reason::ILLEGAL_INIT);
         return false;
     }
     initBoard();
     //check both players flag count
     // if any of the players dont have flags, and the other does, declare winner. if both lost all flags, declare tie
-    int player1Flags = getPieceCount(PLAYER1, 'F');
-    int player2Flags = getPieceCount(PLAYER2, 'F');
-    if (player1Flags > 0 && player2Flags == 0)
+    int winDueFlags = winConditionFlags();
+    if (winDueFlags != -1)
     {
-        declareWinner(PLAYER1,WinReason::Reason::NO_MORE_FLAGS_INIT);
-        return false;
-    }
-    if (player1Flags == 0 && player2Flags > 0)
-    {
-        declareWinner(PLAYER2,WinReason::Reason::NO_MORE_FLAGS_INIT);
-        return false;
-    }
-    if (player1Flags == 0 && player2Flags == 0)
-    {
-        declareWinner(BOTH,WinReason::Reason::NO_MORE_FLAGS_INIT);
+        declareWinner(winDueFlags, WinReason::Reason::NO_MORE_FLAGS_INIT);
         return false;
     }
     return true;//board init completed, can start on getting player moves
@@ -439,3 +475,181 @@ int Game::getPieceCount(int playerId,
     
     return cnt;
 }
+
+bool Game::isLegalMove(const Move& move, int playerId)
+{
+    if (!pointInBoard(move.getFrom()))
+        return false;
+    
+    if (!pointInBoard(move.getTo()))
+        return false;
+    
+    if (board.getPlayer(move.getFrom()) != playerId)
+        return false;
+    
+    if (board.getPlayer(move.getTo()) == playerId)
+        return false;
+    
+    auto& piece = getPlayerPiece(playerId, move.getFrom());
+    if (!isMovable(*piece))
+        return false;
+    
+    return true;
+    
+}
+
+bool Game::isMovable(const PiecePosition& piece)
+{
+    auto pieceChar = static_cast<char>(std::toupper(piece.getPiece()));
+    if (pieceChar == 'J')
+        pieceChar = static_cast<char>(std::toupper(piece.getJokerRep()));
+    
+    return (pieceChar == 'R' || pieceChar == 'P' || pieceChar == 'S');
+    
+}
+
+std::unique_ptr<FightInfo> Game::playMove(const Move& move, int playerId)
+{
+    // in here it is certain that the move is legal
+    std::unique_ptr<FightInfo> fightInfo;
+    board.setPlayer(move.getFrom(), 0); // mark the board empty at this piece location
+    auto& pieceOldLoc = getPlayerPiece(playerId, move.getFrom());
+    if (pieceOldLoc == nullptr)
+        return nullptr;
+    std::unique_ptr<PiecePosition> movedPiece = std::make_unique<PiecePositionImpl>(move.getTo(), pieceOldLoc->getPiece(),
+                                                                                    pieceOldLoc->getJokerRep());
+    pieceOldLoc.swap(movedPiece); // change the piece in the vector to the new location
+    
+    if (board.getPlayer(move.getTo()) == 0)
+    {// there will be no fight because the spot is empty
+        board.setPlayer(move.getTo(), playerId);
+        fightInfo = nullptr;
+    } else
+    {
+        // the board is occupied by the other player, pieces should fight.
+        fightInfo = getFightInfo(*getPlayerPiece(PLAYER1, move.getTo()), *getPlayerPiece(PLAYER2, move.getTo()));
+        if (fightInfo != nullptr)
+        {
+            board.setPlayer(fightInfo->getPosition(), fightInfo->getWinner()); // sets the winner on board
+            if (fightInfo->getWinner() == BOTH)
+            { // remove both pieces
+                getPlayerPiece(PLAYER1, fightInfo->getPosition()) = nullptr;
+                getPlayerPiece(PLAYER2, fightInfo->getPosition()) = nullptr;
+            } else
+            {
+                int loser = (fightInfo->getWinner() == PLAYER1) ? PLAYER2 : PLAYER1; // defines the loser
+                // remove the loser's piece
+                getPlayerPiece(loser, fightInfo->getPosition()) = nullptr;
+            }
+        }
+    }
+    return fightInfo;
+}
+
+int Game::winConditionFlags()
+{
+    int player1Flags = getPieceCount(PLAYER1, 'F');
+    int player2Flags = getPieceCount(PLAYER2, 'F');
+    
+    if (player1Flags > 0 && player2Flags == 0)
+        return PLAYER1;
+    
+    if (player1Flags == 0 && player2Flags > 0)
+        return PLAYER2;
+    
+    if (player1Flags == 0 && player2Flags == 0)
+        return BOTH;
+    
+    return -1;
+}
+
+void Game::declareWinner(int winnerId, WinReason::Reason reason)
+{
+    std::ofstream outFile(outFileName);
+    int loserId = 0;
+    bool tie = false;
+    if (winnerId == PLAYER1)
+    {
+        player1Points++;
+        loserId = PLAYER2;
+    } else if (winnerId == PLAYER2)
+    {
+        player2Points++;
+        loserId = PLAYER1;
+    } else
+        tie = true;
+    
+    if (!outFile.good())
+        return;
+    
+    outFile << "Winner: " << winnerId << std::endl;
+    outFile << "Reason: ";
+    
+    if (!tie)
+    {
+        switch (reason)
+        {
+            case WinReason::Reason::ILLEGAL_INIT:
+                outFile << "Bad Positioning input for player " << loserId << std::endl;
+                break;
+            case WinReason::Reason::NO_MORE_FLAGS_INIT:
+                outFile << "All flags of opponent are captured during initialization" << std::endl;
+                break;
+            case WinReason::Reason::ILLEGAL_MOVE:
+                outFile << "Bad move for player " << loserId << " - move number " << (loserId == PLAYER1 ? player1Moves : player2Moves) << std::endl;
+                break;
+            case WinReason::Reason::NO_MORE_FLAGS_MOVES:
+                outFile << "All flags of opponent are captured during moves" << std::endl;
+                break;
+            case WinReason::Reason::MAX_MOVES_REACHED:
+                break;
+        }
+    } else
+    {
+        switch (reason)
+        {
+            case WinReason::Reason::ILLEGAL_INIT:
+                outFile << "Bad Positioning input for both players" << std::endl;
+                break;
+            case WinReason::Reason::NO_MORE_FLAGS_INIT:
+                outFile << "A tie - all flags are eaten by both players in the position stage" << std::endl;
+                break;
+            case WinReason::Reason::ILLEGAL_MOVE:
+                break;
+            case WinReason::Reason::NO_MORE_FLAGS_MOVES:
+                break;
+            case WinReason::Reason::MAX_MOVES_REACHED:
+                outFile << "A tie - reached max moves in game without a winner" << std::endl;
+                break;
+        }
+    }
+    
+    outFile << std::endl;
+    printBoard(outFile);
+    
+}
+
+void Game::printBoard(std::ostream& os)
+{
+    for (int y = 1; y <= totalYVals; y++)
+    {
+        for (int x = 1; x <= totalXVals; x++)
+        {
+            PointImpl currPoint(x, y);
+            if (board.getPlayer(currPoint) == 0)
+            {
+                os << " ";
+            } else if (board.getPlayer(currPoint) == PLAYER1)
+            {
+                os << static_cast<char>(std::toupper(getPlayerPiece(PLAYER1, currPoint)->getPiece()));
+            } else
+            {
+                os << static_cast<char>(std::tolower(getPlayerPiece(PLAYER2, currPoint)->getPiece()));
+            }
+        }
+        os << std::endl;
+    }
+    
+}
+
+

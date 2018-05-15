@@ -6,13 +6,13 @@ for Game:
 4. call initPlayerOnBoard from initBoard on both players - DONE!
 5. on gameInit check for flag counts. - DONE!
 6. on runGame notify players on board and fights - DONE!
-7. on runGame get moves from players
-8. check move validity
-9. check for fight and conduct fight and notify fight (if necessary)
-10. check for joker change and change joker rep
-11. notify oponnent on move
-12. check flags
-13. update move counter
+7. on runGame get moves from players - DONE!
+8. check move validity - DONE!
+9. check for fight and conduct fight and notify fight (if necessary) - DONE!
+10. check for joker change and change joker rep - DONE!
+11. notify oponnent on move - DONE!
+12. check flags - DONE!
+13. update move counter - DONE!
 14. implement the winner method, add a win reason argument
 
 for FilePlayerAlgorithm:
