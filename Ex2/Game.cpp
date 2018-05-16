@@ -14,7 +14,7 @@ Game::Game(int argc, char** argv, const std::string& outFile) : player1Algo(Algo
     } else
     {
         isLegalCommandLine = true;
-        std::string commandLine(argv[2]);
+        std::string commandLine(argv[1]);
         if (commandLine == "auto-vs-file")
         {
             player1Algo = AlgoType::AUTO;
@@ -194,6 +194,12 @@ Game::checkInitialLegalPieces(const std::vector<std::unique_ptr<PiecePosition>>&
         if (tempBoard.getPlayer(piece->getPosition()) != 0)
             return false;//trying to add piece to an already occupied spot by the same player
         
+        if (static_cast<char>(std::toupper(piece->getPiece()) == 'J'))
+        {
+            auto jokerRep = static_cast<char>(std::toupper(piece->getJokerRep()));
+            if (jokerRep != 'R' && jokerRep != 'P' && jokerRep != 'S' && jokerRep != 'B')
+                return false;// bad joker representation
+        }
         tempBoard.setPlayer(piece->getPosition(), id);
     }
     return (tempPieceCounter.getRemaining('F') == 0); // need to use all flags
@@ -488,10 +494,16 @@ bool Game::isLegalMove(const Move& move, int playerId)
         return false;
     
     if (board.getPlayer(move.getTo()) == playerId)
-        return false;
+    {
+        if (move.getFrom().getX() != move.getTo().getX() || move.getFrom().getY() != move.getTo().getY())//check that not stays in the same spot
+            return false;
+    }
     
     auto& piece = getPlayerPiece(playerId, move.getFrom());
     if (!isMovable(*piece))
+        return false;
+    
+    if (!isSingleStep(move))
         return false;
     
     return true;
@@ -593,13 +605,13 @@ void Game::declareWinner(int winnerId, WinReason::Reason reason)
                 outFile << "Bad Positioning input for player " << loserId << std::endl;
                 break;
             case WinReason::Reason::NO_MORE_FLAGS_INIT:
-                outFile << "All flags of opponent are captured during initialization" << std::endl;
+                outFile << "All flags of the opponent are captured during initialization" << std::endl;
                 break;
             case WinReason::Reason::ILLEGAL_MOVE:
                 outFile << "Bad move for player " << loserId << " - move number " << (loserId == PLAYER1 ? player1Moves : player2Moves) << std::endl;
                 break;
             case WinReason::Reason::NO_MORE_FLAGS_MOVES:
-                outFile << "All flags of opponent are captured during moves" << std::endl;
+                outFile << "All flags of the opponent are captured during moves" << std::endl;
                 break;
             case WinReason::Reason::MAX_MOVES_REACHED:
                 break;
@@ -626,6 +638,7 @@ void Game::declareWinner(int winnerId, WinReason::Reason reason)
     
     outFile << std::endl;
     printBoard(outFile);
+    outFile.close();
     
 }
 
@@ -650,6 +663,25 @@ void Game::printBoard(std::ostream& os)
         os << std::endl;
     }
     
+}
+
+bool Game::isSingleStep(const Move& move)
+{
+    int prevX = move.getFrom().getX();
+    int prevY = move.getFrom().getY();
+    int newX = move.getTo().getX();
+    int newY = move.getTo().getY();
+    
+    int dx = prevX - newX;
+    if (dx < 0)
+        dx = -1 * dx;
+    
+    int dy = prevY - newY;
+    if (dy < 0)
+        dy = -1 * dy;
+    
+    
+    return (dx + dy == 1);
 }
 
 

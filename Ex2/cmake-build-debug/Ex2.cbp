@@ -116,7 +116,13 @@
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/JokerChange.h">
 			<Option target="Ex2"/>
 		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/JokerChangeImpl.h">
+			<Option target="Ex2"/>
+		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/Move.h">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/MoveImpl.h">
 			<Option target="Ex2"/>
 		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PieceCounter.cpp">

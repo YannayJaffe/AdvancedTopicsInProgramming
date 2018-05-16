@@ -77,6 +77,8 @@ private:
     
     bool isMovable(const PiecePosition& piece);//returns true if the piece can be moved
     
+    bool isSingleStep(const Move& move); // this method returns true only when the move is one step up/down/left/right.
+    
     std::unique_ptr<FightInfo>
     playMove(const Move& move, int playerId); //plays the move and updates player's piece vectors accordingly. returns the fight info
     

@@ -13,15 +13,15 @@ for Game:
 11. notify oponnent on move - DONE!
 12. check flags - DONE!
 13. update move counter - DONE!
-14. implement the winner method, add a win reason argument
+14. implement the winner method, add a win reason argument - DONE!
 
 for FilePlayerAlgorithm:
-1. open init file and create initial vector.
-2. for any illegal placement in file, create illegal PiecePosition
-3. open moves file
-4. for every move ask provide the next move
-5. if no moves are left, provid illegal move
-6. note that the implementations for the different notify methods are empty
+1. open init file and create initial vector. - DONE!
+2. for any illegal placement in file, create illegal PiecePosition - DONE!
+3. open moves file - DONE!
+4. for every move ask provide the next move - DONE!
+5. if no moves are left, provid illegal move - DONE!
+6. note that the implementations for the different notify methods are empty - DONE!
 
 for AutoPlayerAlgorithm:
 1. generate a dumb but legal board placement (for example, generate the locations in random, but check that the placement is legal)

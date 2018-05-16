@@ -23,14 +23,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Game.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game.h">
+      <file leaf-file-name="Game.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="90" column="14" selection-start-line="90" selection-start-column="14" selection-end-line="90" selection-end-column="14" />
-              <folding>
-                <element signature="e#129#146#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="437">
+              <caret line="683" column="24" selection-start-line="683" selection-start-column="24" selection-end-line="683" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -38,8 +35,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+            <state relative-caret-position="154">
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -47,70 +44,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Game.cpp">
+      <file leaf-file-name="Game.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Game.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="627" column="24" selection-start-line="627" selection-start-column="24" selection-end-line="627" selection-end-column="24" />
+            <state relative-caret-position="407">
+              <caret line="79" column="119" selection-start-line="79" selection-start-column="119" selection-end-line="79" selection-end-column="119" />
               <folding>
-                <element signature="e#59#1160#0" />
-                <element signature="e#1162#1828#0" />
-                <element signature="e#1889#4665#0" />
-                <element signature="e#4619#5777#0" />
-                <element signature="e#5679#5771#0" />
-                <element signature="e#4766#5829#0" />
-                <element signature="e#5737#5933#0" />
-                <element signature="e#5935#6307#0" />
-                <element signature="e#6309#8394#0" />
-                <element signature="e#8396#9124#0" />
-                <element signature="e#9126#10166#0" />
-                <element signature="e#10168#11615#0" />
-                <element signature="e#11617#12054#0" />
-                <element signature="e#12056#12187#0" />
-                <element signature="e#12189#14263#0" />
-                <element signature="e#14265#15201#0" />
-                <element signature="e#15203#15686#0" />
-                <element signature="e#15688#15993#0" />
-                <element signature="e#16466#18092#0" />
-                <element signature="e#17986#18033#0" />
-                <element signature="e#20496#20544#0" />
+                <element signature="e#129#146#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FilePlayerAlgorithm.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FilePlayerAlgorithm.h">
+      <file leaf-file-name="Board.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Board.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FilePlayerAlgorithm.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FilePlayerAlgorithm.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="36" column="126" selection-start-line="36" selection-start-column="126" selection-end-line="36" selection-end-column="126" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AutoPlayerAlgorithm.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AutoPlayerAlgorithm.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AutoPlayerAlgorithm.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AutoPlayerAlgorithm.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="462">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -124,15 +74,17 @@
         <option value="$PROJECT_DIR$/PointImpl.h" />
         <option value="$PROJECT_DIR$/PieceCounter.cpp" />
         <option value="$PROJECT_DIR$/FightInfoImpl.h" />
-        <option value="$PROJECT_DIR$/FilePlayerAlgorithm.h" />
         <option value="$PROJECT_DIR$/AutoPlayerAlgorithm.cpp" />
-        <option value="$PROJECT_DIR$/FilePlayerAlgorithm.cpp" />
         <option value="$PROJECT_DIR$/PiecePositionImpl.cpp" />
         <option value="$PROJECT_DIR$/PiecePositionImpl.h" />
         <option value="$PROJECT_DIR$/WinReason.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/Game.h" />
+        <option value="$PROJECT_DIR$/MoveImpl.h" />
+        <option value="$PROJECT_DIR$/JokerChangeImpl.h" />
+        <option value="$PROJECT_DIR$/FilePlayerAlgorithm.h" />
+        <option value="$PROJECT_DIR$/FilePlayerAlgorithm.cpp" />
         <option value="$PROJECT_DIR$/Game.cpp" />
+        <option value="$PROJECT_DIR$/Game.h" />
       </list>
     </option>
   </component>
@@ -144,10 +96,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="164" />
-    <option name="y" value="-16" />
-    <option name="width" value="1400" />
-    <option name="height" value="1020" />
+    <option name="x" value="-552" />
+    <option name="y" value="527" />
+    <option name="width" value="1274" />
+    <option name="height" value="871" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -187,8 +139,8 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Ex2">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all" />
-    <configuration name="Ex2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Ex2" TARGET_NAME="Ex2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Ex2" RUN_TARGET_NAME="Ex2" />
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Ex2" RUN_TARGET_NAME="Ex2" EXPLICIT_BUILD_TARGET_NAME="all" />
+    <configuration name="Ex2" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="file-vs-file" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Ex2" TARGET_NAME="Ex2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Ex2" RUN_TARGET_NAME="Ex2" />
     <list>
       <item itemvalue="Application.Build All" />
       <item itemvalue="Application.Ex2" />
@@ -204,29 +156,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526240480015</updated>
-      <workItem from="1526240482214" duration="29843000" />
+      <workItem from="1526240482214" duration="42989000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29843000" />
+    <option name="totallyTimeSpent" value="42989000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" id="Messages" order="1" sideWeight="0.49947917" weight="0.25398514" />
+      <window_info anchor="bottom" id="Messages" order="1" sideWeight="0.49947917" weight="0.25107297" />
       <window_info anchor="bottom" id="CMake" order="5" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5005208" side_tool="true" weight="0.25398514" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.32943678" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.26992562" />
       <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32943678" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2" />
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32965517" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32943678" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.34218916" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -244,29 +196,45 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Game.cpp</url>
+          <line>179</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Game.cpp</url>
+          <line>184</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>piece-&gt;getPosition()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ss.eofbit</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ss.eof()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Board.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoardImpl.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JokerChange.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Move.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/PieceCounter.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Point.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PieceCounter.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/AutoPlayerAlgorithm.cpp">
@@ -283,22 +251,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FilePlayerAlgorithm.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PlayerAlgorithm.h">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilePlayerAlgorithm.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="126" selection-start-line="36" selection-start-column="126" selection-end-line="36" selection-end-column="126" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -309,13 +263,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FightInfo.h">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PointImpl.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PiecePosition.h">
       <provider selected="true" editor-type-id="text-editor" />
@@ -337,16 +284,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PiecePositionImpl.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-          <folding>
-            <element signature="e#105#131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WinReason.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -354,52 +291,198 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Program Files/mingw-w64/x86_64-7.3.0-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="6311" column="4" selection-start-line="6311" selection-start-column="4" selection-end-line="6311" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/mingw-w64/x86_64-7.3.0-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/istream.tcc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="930" column="12" selection-start-line="930" selection-start-column="12" selection-end-line="930" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MoveImpl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="e#88#105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JokerChange.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Move.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JokerChangeImpl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <element signature="e#101#125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilePlayerAlgorithm.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1094">
+          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+          <folding>
+            <element signature="e#109#126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilePlayerAlgorithm.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="100" column="9" lean-forward="true" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/mingw-w64/x86_64-7.3.0-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="803" selection-start-line="803" selection-end-line="803" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/mingw-w64/x86_64-7.3.0-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tuple">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/mingw-w64/x86_64-7.3.0-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/unique_ptr.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="331" selection-start-line="331" selection-end-line="331" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PiecePositionImpl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#105#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PointImpl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardImpl.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PieceCounter.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardImpl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/mingw-w64/x86_64-7.3.0-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/alloc_traits.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="461" selection-start-line="461" selection-end-line="461" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/mingw-w64/x86_64-7.3.0-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="138" selection-start-line="138" selection-end-line="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/mingw-w64/x86_64-7.3.0-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/new_allocator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/mingw-w64/x86_64-7.3.0-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/ios_base.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/mingw-w64/x86_64-7.3.0-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_construct.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="206" selection-start-line="206" selection-end-line="206" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/mingw-w64/x86_64-7.3.0-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="434" selection-start-line="434" selection-end-line="434" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Board.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        <state relative-caret-position="154">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game.h">
+    <entry file="file://$PROJECT_DIR$/Game.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="90" column="14" selection-start-line="90" selection-start-column="14" selection-end-line="90" selection-end-column="14" />
-          <folding>
-            <element signature="e#129#146#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="437">
+          <caret line="683" column="24" selection-start-line="683" selection-start-column="24" selection-end-line="683" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game.cpp">
+    <entry file="file://$PROJECT_DIR$/Game.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="627" column="24" selection-start-line="627" selection-start-column="24" selection-end-line="627" selection-end-column="24" />
+        <state relative-caret-position="407">
+          <caret line="79" column="119" selection-start-line="79" selection-start-column="119" selection-end-line="79" selection-end-column="119" />
           <folding>
-            <element signature="e#59#1160#0" />
-            <element signature="e#1162#1828#0" />
-            <element signature="e#1889#4665#0" />
-            <element signature="e#4619#5777#0" />
-            <element signature="e#5679#5771#0" />
-            <element signature="e#4766#5829#0" />
-            <element signature="e#5737#5933#0" />
-            <element signature="e#5935#6307#0" />
-            <element signature="e#6309#8394#0" />
-            <element signature="e#8396#9124#0" />
-            <element signature="e#9126#10166#0" />
-            <element signature="e#10168#11615#0" />
-            <element signature="e#11617#12054#0" />
-            <element signature="e#12056#12187#0" />
-            <element signature="e#12189#14263#0" />
-            <element signature="e#14265#15201#0" />
-            <element signature="e#15203#15686#0" />
-            <element signature="e#15688#15993#0" />
-            <element signature="e#16466#18092#0" />
-            <element signature="e#17986#18033#0" />
-            <element signature="e#20496#20544#0" />
+            <element signature="e#129#146#0" expanded="true" />
           </folding>
         </state>
       </provider>
