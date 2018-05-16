@@ -31,8 +31,6 @@
 *.out
 *.app
 
-Ex2/cmake-build-debug/
-
 *.tlog
 *.idb
 *.vcxproj
