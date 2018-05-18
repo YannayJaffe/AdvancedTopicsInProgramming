@@ -1,30 +1,98 @@
-for Game:
-1. complete pieces operators >,<,= - DONE!
-2. complete getFightInfo method and generate the FightInfo - DONE!
-3. on initPlayerOnBoard, use getFightInfo and add the result to the fights vector,
-    update board, and players vectors according to the winner. - DONE!
-4. call initPlayerOnBoard from initBoard on both players - DONE!
-5. on gameInit check for flag counts. - DONE!
-6. on runGame notify players on board and fights - DONE!
-7. on runGame get moves from players - DONE!
-8. check move validity - DONE!
-9. check for fight and conduct fight and notify fight (if necessary) - DONE!
-10. check for joker change and change joker rep - DONE!
-11. notify oponnent on move - DONE!
-12. check flags - DONE!
-13. update move counter - DONE!
-14. implement the winner method, add a win reason argument - DONE!
-
-for FilePlayerAlgorithm:
-1. open init file and create initial vector. - DONE!
-2. for any illegal placement in file, create illegal PiecePosition - DONE!
-3. open moves file - DONE!
-4. for every move ask provide the next move - DONE!
-5. if no moves are left, provid illegal move - DONE!
-6. note that the implementations for the different notify methods are empty - DONE!
-
 for AutoPlayerAlgorithm:
-1. generate a dumb but legal board placement (for example, generate the locations in random, but check that the placement is legal)
-2. keep track on board, and other player known and unknown pieces
-3. from each oponnent move, update board, known pieces and unknown pieces
-4. maintain an assumed flag, and generate a move that attemps to attack this pieces
+
+1.  have the following fields:
+	1.1 board - representing the current board placement
+	1.2 myPieces - a vector of my current pieces (unique_ptrs), a dead piece is marked by nullptr
+	
+	the following fields represent the opponent's pieces. represent using the following:
+	- an unknown piece char is marked by '?'
+	- if piece detected a joker, mark piece char by J and mark the joker REP
+	- for each piece keep track on the actual location
+	
+	1.3 nonFlags - a vector of opponent pieces which are definitely not flags. removed pieces will be marked by nullptr
+	1.4 assumedFlags - a vector of unknown pieces. any piece in here could be flag. removed pieces will be marked by nullptr.
+	1.5 myId - an int for my player ID
+	1.6 opponentId - an int for the other player's ID
+	
+	
+2. have the following public methods:
+
+	2.1 void getInitialPositions(int player, vector<unique_ptr<PiecePosition>>& vectorToFill);	
+		This method generates the initial positioning of my pieces.
+		a. assign myId with player.
+		b. create a temporary board object for collision resolution.
+		c. create a temporary PieceCounter object, to track on remaining pieces of each type.
+		d. call newPiece = generatePiece(tempBoard, tempPieceCounter);
+			d.a. if newPiece is null stop
+			d.b. otherwise, add the piece to vectorToFill, add piece to myPieces, update tempBoard and tempPieceCounter.
+			
+	2.2 void notifyOnInitialBoard(const Board&b, const vector<unique_ptr<FightInfo>& fights);
+		This method initializes the data structures for the opponent's pieces, and updates myPieces.
+		a. copy b's contents into board.
+		b. scan board. for each location in board with an opponent piece, add an unknown piece to assumedFlags.
+		c. scan fights. for each FightInfo call notifyFightResult.
+		
+	2.3 void notifyOnOpponentMove(const Move& move);
+		This method updates board, nonFlags and assumedFlags
+		a. update board: put 0 in "from", put opponentId in "to" (even if "to" location is occupied)
+		b. search for the from location in assumedFlags. if found, put nullptr in assumedFlags, change the location to "to",
+			and add the piece to nonFlags.
+		c. search for the piece in the nonFlags vector (note that if not found before, it must be here).
+			update the location to "to". if the current piece char is 'B', change to 'J' and unknown joker rep.
+			
+	2.4 void notifyFightResult(const FightInfo& fightInfo);
+		This method updates board, nonFlags, assumedFlags, myPieces according to fightInfo.
+		a. puts in board the ID of the winner.
+		b. if i am the winner, remove the piece in the fight location from opponent's vectors (will be in one of them)
+		c. if opponent is the winner, remove the piece in the fight location from myPieces.
+			and read the char of the winning piece.
+				c.a if the piece is unknown, set the piece char to the one found.
+				c.b if the piece is known, and is a joker, change the joker rep to the one in fightInfo.
+				c.c if the piece char is known, but marked non joker, and the piece char in the fight info
+					is a different char, switch the piece char to 'J', and the joker rep to the one in the fight info.
+	
+	2.5 unique_ptr<Move> getMove();
+		This method generates a new move, using the current information that is known by the player.
+		a. call auto& piece = choosePiece();
+		b. call unique_ptr<Move> move = chooseMove(piece);
+		c. update board: put 0 in "from", and put myId in "to".
+		d. update the location of piece with the new location.
+		e. return move
+		
+	2.6 unique_ptr<JokerChange> getJokerChange();
+		This method returns a chosen joker change or nullptr for no change.
+		
+		
+3. have the following private/protected methods (proteceted will be marked with virtual).
+
+	3.1 virtual unique_ptr<PiecePosition> generatePiece(const Board& board, const PieceCounter& counter);
+		This method generates a new piece to place on the board legally. it is marked virtual in case in a future release
+		there will be a smarter algorithm that inherits from this algorithm.
+		a. select a piece type to add, start with the flags.
+		b. choose a vacant spot for that piece, for now select a spot at random.
+		c. generate a PiecePosition object and return
+		
+	3.2 virtual unique_ptr<PiecePosition>& choosePiece();
+		This method chooses the next piece to move. for now a simple algorithm will be used.
+		a. choose a movable piece at random.
+		note:
+		if there will be time the following will be implemented:
+		a. divide my movable pieces to the following (non exclusive) groups - a piece might be in more than one group:
+			* pieces who are neighbours of any assumed flag
+			* pieces with (at least one) unknown non-flag neighbour.
+			* pieces with (at least one) known neighbour.
+			* pieces without neighbours at all (this group is exclusive to the others).
+		b. if there are [NUMBER_OF_FLAGS] assumed flags and I have a neighbour piece, choose that piece.
+		c. if there is an opponent piece neighbouring a flag of mine, and I have a neighbour to the opponent's piece, choose that piece.
+			if the opponent's piece is known, choose a piece that can win, else choose an equal piece, or any piece.
+		d. if there is a known weak piece neighbouring a piece of mine, choose that piece.
+		e. if there is a known strong piece neighbouring a piece of mine, choose that piece.
+		f. if there is a piece of mine neighbouring an assumed flag piece, choose that piece.
+		g. if there is a piece of mine neighbouring an unknown non-flag piece, choose that.
+		h. choose the closest piece of mine to an assumed flag.
+		note2: might add more rules, maybe some defending rules...
+	
+	3.3 virtual unique_ptr<Move> move = chooseMove(piece);
+		This method chooses a move to play for given piece.
+		a. look at the rules for 3.2 and choose a move that guarantees the attck/defence/escape
+	

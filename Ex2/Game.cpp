@@ -122,7 +122,6 @@ bool Game::doFullMove(int playerId)
     PlayerAlgorithm* thisPlayer = (playerId == PLAYER1) ? player1.get() : player2.get();
     PlayerAlgorithm* otherPlayer = (playerId == PLAYER1) ? player2.get() : player1.get();
     move = thisPlayer->getMove();
-    int otherPlayerId = (playerId == PLAYER1) ? PLAYER2 : PLAYER1;
     if (!isLegalMove(*move, playerId)) // check legal
     {
         return false;
