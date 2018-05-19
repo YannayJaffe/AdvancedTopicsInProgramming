@@ -9,6 +9,7 @@
 #include "Board.h"
 #include "Point.h"
 #include "PiecePosition.h"
+#include "PointImpl.h"
 
 class BoardImpl : public Board
 {
@@ -17,6 +18,8 @@ public:
     int getPlayer(const Point& pos) const override;
     
     void setPlayer(const Point& pos, int playerID); // places a player on the board, assume all checks for legal placing happens outside
+    
+    Board& operator=(const Board& b);
 
 private:
     

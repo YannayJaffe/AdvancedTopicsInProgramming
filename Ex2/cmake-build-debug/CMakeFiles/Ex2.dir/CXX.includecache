@@ -13,6 +13,16 @@ C:/Git/AdvancedTopicsInProgramming/Ex2/AutoPlayerAlgorithm.h
 C:/Git/AdvancedTopicsInProgramming/Ex2/AutoPlayerAlgorithm.h
 PlayerAlgorithm.h
 C:/Git/AdvancedTopicsInProgramming/Ex2/PlayerAlgorithm.h
+BoardImpl.h
+C:/Git/AdvancedTopicsInProgramming/Ex2/BoardImpl.h
+PieceCounter.h
+C:/Git/AdvancedTopicsInProgramming/Ex2/PieceCounter.h
+PiecePositionImpl.h
+C:/Git/AdvancedTopicsInProgramming/Ex2/PiecePositionImpl.h
+PointImpl.h
+C:/Git/AdvancedTopicsInProgramming/Ex2/PointImpl.h
+RandomGenerator.h
+C:/Git/AdvancedTopicsInProgramming/Ex2/RandomGenerator.h
 
 C:/Git/AdvancedTopicsInProgramming/Ex2/Board.h
 
@@ -29,6 +39,8 @@ Point.h
 C:/Git/AdvancedTopicsInProgramming/Ex2/Point.h
 PiecePosition.h
 C:/Git/AdvancedTopicsInProgramming/Ex2/PiecePosition.h
+PointImpl.h
+C:/Git/AdvancedTopicsInProgramming/Ex2/PointImpl.h
 
 C:/Git/AdvancedTopicsInProgramming/Ex2/FightInfo.h
 
@@ -158,9 +170,17 @@ C:/Git/AdvancedTopicsInProgramming/Ex2/PointImpl.h
 Point.h
 C:/Git/AdvancedTopicsInProgramming/Ex2/Point.h
 
+C:/Git/AdvancedTopicsInProgramming/Ex2/RandomGenerator.h
+stdlib.h
+-
+time.h
+-
+
 C:/Git/AdvancedTopicsInProgramming/Ex2/main.cpp
 iostream
 -
 Game.h
 C:/Git/AdvancedTopicsInProgramming/Ex2/Game.h
+RandomGenerator.h
+C:/Git/AdvancedTopicsInProgramming/Ex2/RandomGenerator.h
 

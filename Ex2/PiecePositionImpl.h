@@ -14,6 +14,8 @@ class PiecePositionImpl : public PiecePosition
 public:
     PiecePositionImpl(const Point& point, char pieceChar, char jokerRep):point(point),pieceChar(pieceChar),jokerRep(jokerRep){}
     
+    PiecePositionImpl(const PiecePosition& other):point(other.getPosition()),pieceChar(other.getPiece()),jokerRep(other.getJokerRep()){}
+    
     const Point& getPosition() const override {return point;}
     
     char getPiece() const override {return pieceChar;}

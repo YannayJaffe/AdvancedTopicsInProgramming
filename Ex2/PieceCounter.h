@@ -6,7 +6,7 @@ public:
 	PieceCounter(int maxRocks, int maxPapers, int maxScissors, int maxBombs, int maxJokers, int maxFlags);
 	~PieceCounter();
 	bool addPiece(char pieceChar);//adds selected piece, returns true if addition was successful or false if not
-	int getRemaining(char pieceChar); // returns the remaining ammount of selected piece type
+	int getRemaining(char pieceChar) const; // returns the remaining ammount of selected piece type
 private:
 	const int maxRocks;
 	const int maxPapers;

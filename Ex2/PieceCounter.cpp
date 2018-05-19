@@ -52,7 +52,7 @@ bool PieceCounter::addPiece(char pieceChar)
 	return true;
 }
 
-int PieceCounter::getRemaining(char pieceChar)
+int PieceCounter::getRemaining(char pieceChar) const
 {
 	switch (pieceChar)
 	{

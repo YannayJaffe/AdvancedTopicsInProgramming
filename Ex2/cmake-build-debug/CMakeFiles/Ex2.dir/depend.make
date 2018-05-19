@@ -4,18 +4,24 @@
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../AutoPlayerAlgorithm.cpp
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../AutoPlayerAlgorithm.h
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../Board.h
+CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../BoardImpl.h
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../FightInfo.h
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../JokerChange.h
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../Move.h
+CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../PieceCounter.h
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../PiecePosition.h
+CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../PiecePositionImpl.h
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../PlayerAlgorithm.h
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../Point.h
+CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../PointImpl.h
+CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../RandomGenerator.h
 
 CMakeFiles/Ex2.dir/BoardImpl.cpp.obj: ../Board.h
 CMakeFiles/Ex2.dir/BoardImpl.cpp.obj: ../BoardImpl.cpp
 CMakeFiles/Ex2.dir/BoardImpl.cpp.obj: ../BoardImpl.h
 CMakeFiles/Ex2.dir/BoardImpl.cpp.obj: ../PiecePosition.h
 CMakeFiles/Ex2.dir/BoardImpl.cpp.obj: ../Point.h
+CMakeFiles/Ex2.dir/BoardImpl.cpp.obj: ../PointImpl.h
 
 CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj: ../Board.h
 CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj: ../FightInfo.h
@@ -49,6 +55,7 @@ CMakeFiles/Ex2.dir/Game.cpp.obj: ../PiecePositionImpl.h
 CMakeFiles/Ex2.dir/Game.cpp.obj: ../PlayerAlgorithm.h
 CMakeFiles/Ex2.dir/Game.cpp.obj: ../Point.h
 CMakeFiles/Ex2.dir/Game.cpp.obj: ../PointImpl.h
+CMakeFiles/Ex2.dir/Game.cpp.obj: ../RandomGenerator.h
 
 CMakeFiles/Ex2.dir/PieceCounter.cpp.obj: ../PieceCounter.cpp
 CMakeFiles/Ex2.dir/PieceCounter.cpp.obj: ../PieceCounter.h
@@ -70,5 +77,6 @@ CMakeFiles/Ex2.dir/main.cpp.obj: ../PiecePositionImpl.h
 CMakeFiles/Ex2.dir/main.cpp.obj: ../PlayerAlgorithm.h
 CMakeFiles/Ex2.dir/main.cpp.obj: ../Point.h
 CMakeFiles/Ex2.dir/main.cpp.obj: ../PointImpl.h
+CMakeFiles/Ex2.dir/main.cpp.obj: ../RandomGenerator.h
 CMakeFiles/Ex2.dir/main.cpp.obj: ../main.cpp
 

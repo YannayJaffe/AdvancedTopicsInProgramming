@@ -98,18 +98,19 @@ private:
     };
     
     static const int BOTH = 0;
+    static const int NONE = 0;
     static const int PLAYER1 = 1;
     static const int PLAYER2 = 2;
     
-    const int totalXVals = 10; //number of columns in the board (total x values)
-    const int totalYVals = 10; // number of rows in the board (total y values)
-    const int totalRocks = 2; // total Rocks
-    const int totalPapers = 5; // total Papers
-    const int totalScissors = 1; // total Scissors
-    const int totalBombs = 2; // total Bombs
-    const int totalJokers = 2; // total Jokers
-    const int totalFlags = 1; // total Flags
-    const int maxMoves = 100; //maximum moves until a tie is declared
+    static const int totalXVals = 10; //number of columns in the board (total x values)
+    static const int totalYVals = 10; // number of rows in the board (total y values)
+    static const int totalRocks = 2; // total Rocks
+    static const int totalPapers = 5; // total Papers
+    static const int totalScissors = 1; // total Scissors
+    static const int totalBombs = 2; // total Bombs
+    static const int totalJokers = 2; // total Jokers
+    static const int totalFlags = 1; // total Flags
+    static const int maxMoves = 100; //maximum moves until a tie is declared
     
     
     bool isLegalCommandLine;

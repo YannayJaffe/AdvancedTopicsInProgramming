@@ -4,6 +4,20 @@
 
 #include "Game.h"
 
+const int Game::PLAYER1;
+const int Game::PLAYER2;
+const int Game::NONE;
+const int Game::BOTH;
+const int Game::totalXVals;
+const int Game::totalYVals;
+const int Game::totalRocks;
+const int Game::totalPapers;
+const int Game::totalScissors;
+const int Game::totalBombs;
+const int Game::totalJokers;
+const int Game::totalFlags;
+const int Game::maxMoves;
+
 Game::Game(int argc, char** argv, const std::string& outFile) : player1Algo(AlgoType::FILE), player2Algo(AlgoType::FILE), player1(nullptr),
                                                                 player2(nullptr), board(totalXVals, totalYVals), totalMoves(0), player1Moves(0),
                                                                 player2Moves(0), player1Points(0), player2Points(0), outFileName(outFile)
@@ -190,7 +204,7 @@ Game::checkInitialLegalPieces(const std::vector<std::unique_ptr<PiecePosition>>&
         if (!tempPieceCounter.addPiece(piece->getPiece()))
             return false;//bad piece char or trying to add to many pieces
         
-        if (tempBoard.getPlayer(piece->getPosition()) != 0)
+        if (tempBoard.getPlayer(piece->getPosition()) != NONE)
             return false;//trying to add piece to an already occupied spot by the same player
         
         if (static_cast<char>(std::toupper(piece->getPiece()) == 'J'))
@@ -237,7 +251,7 @@ void Game::initPlayerOnBoard(int playerId) // places player on board, conducts a
         if (piece == nullptr)
             continue;
         
-        if (board.getPlayer(piece->getPosition()) == 0)
+        if (board.getPlayer(piece->getPosition()) == NONE)
         { // the board location is empty, can safely place the piece
             board.setPlayer(piece->getPosition(), playerId);
         } else if (board.getPlayer(piece->getPosition()) == otherPlayerId)
@@ -279,10 +293,10 @@ void Game::initPlayerOnBoard(int playerId) // places player on board, conducts a
 std::unique_ptr<PiecePosition>& Game::getPlayerPiece(int playerId, const Point& point) // returns the wanted piece in the vector
 {
     std::vector<std::unique_ptr<PiecePosition>>* playerPieces;
-    if (playerId == 1)
+    if (playerId == PLAYER1)
     {
         playerPieces = &player1Pieces;
-    } else if (playerId == 2)
+    } else if (playerId == PLAYER2)
     {
         playerPieces = &player2Pieces;
     } else
@@ -313,13 +327,13 @@ Game::getFightInfo(const PiecePosition& player1Piece, const PiecePosition& playe
         piece2 = player2Piece.getJokerRep();
     
     if (player1Piece == player2Piece)
-        return std::make_unique<FightInfoImpl>(piece1, piece2, player1Piece.getPosition(), 0);
+        return std::make_unique<FightInfoImpl>(piece1, piece2, player1Piece.getPosition(), BOTH);
     
     if (player1Piece > player2Piece)
-        return std::make_unique<FightInfoImpl>(piece1, piece2, player1Piece.getPosition(), 1);
+        return std::make_unique<FightInfoImpl>(piece1, piece2, player1Piece.getPosition(), PLAYER1);
     
     if (player2Piece > player1Piece)
-        return std::make_unique<FightInfoImpl>(piece1, piece2, player1Piece.getPosition(), 2);
+        return std::make_unique<FightInfoImpl>(piece1, piece2, player1Piece.getPosition(), PLAYER2);
     
     return nullptr;
 }
@@ -523,7 +537,7 @@ std::unique_ptr<FightInfo> Game::playMove(const Move& move, int playerId)
 {
     // in here it is certain that the move is legal
     std::unique_ptr<FightInfo> fightInfo;
-    board.setPlayer(move.getFrom(), 0); // mark the board empty at this piece location
+    board.setPlayer(move.getFrom(), NONE); // mark the board empty at this piece location
     auto& pieceOldLoc = getPlayerPiece(playerId, move.getFrom());
     if (pieceOldLoc == nullptr)
         return nullptr;
@@ -531,7 +545,7 @@ std::unique_ptr<FightInfo> Game::playMove(const Move& move, int playerId)
                                                                                     pieceOldLoc->getJokerRep());
     pieceOldLoc.swap(movedPiece); // change the piece in the vector to the new location
     
-    if (board.getPlayer(move.getTo()) == 0)
+    if (board.getPlayer(move.getTo()) == NONE)
     {// there will be no fight because the spot is empty
         board.setPlayer(move.getTo(), playerId);
         fightInfo = nullptr;
@@ -577,7 +591,7 @@ int Game::winConditionFlags()
 void Game::declareWinner(int winnerId, WinReason::Reason reason)
 {
     std::ofstream outFile(outFileName);
-    int loserId = 0;
+    int loserId = BOTH;
     bool tie = false;
     if (winnerId == PLAYER1)
     {
@@ -648,7 +662,7 @@ void Game::printBoard(std::ostream& os)
         for (int x = 1; x <= totalXVals; x++)
         {
             PointImpl currPoint(x, y);
-            if (board.getPlayer(currPoint) == 0)
+            if (board.getPlayer(currPoint) == NONE)
             {
                 os << " ";
             } else if (board.getPlayer(currPoint) == PLAYER1)

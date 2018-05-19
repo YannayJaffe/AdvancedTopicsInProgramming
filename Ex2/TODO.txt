@@ -1,6 +1,6 @@
 for AutoPlayerAlgorithm:
 
-1.  have the following fields:
+1.  have the following fields: - DONE!
 	1.1 board - representing the current board placement
 	1.2 myPieces - a vector of my current pieces (unique_ptrs), a dead piece is marked by nullptr
 	
@@ -17,7 +17,7 @@ for AutoPlayerAlgorithm:
 	
 2. have the following public methods:
 
-	2.1 void getInitialPositions(int player, vector<unique_ptr<PiecePosition>>& vectorToFill);	
+	2.1 void getInitialPositions(int player, vector<unique_ptr<PiecePosition>>& vectorToFill); - DONE!
 		This method generates the initial positioning of my pieces.
 		a. assign myId with player.
 		b. create a temporary board object for collision resolution.
@@ -26,13 +26,13 @@ for AutoPlayerAlgorithm:
 			d.a. if newPiece is null stop
 			d.b. otherwise, add the piece to vectorToFill, add piece to myPieces, update tempBoard and tempPieceCounter.
 			
-	2.2 void notifyOnInitialBoard(const Board&b, const vector<unique_ptr<FightInfo>& fights);
+	2.2 void notifyOnInitialBoard(const Board&b, const vector<unique_ptr<FightInfo>& fights); - DONE!
 		This method initializes the data structures for the opponent's pieces, and updates myPieces.
 		a. copy b's contents into board.
 		b. scan board. for each location in board with an opponent piece, add an unknown piece to assumedFlags.
 		c. scan fights. for each FightInfo call notifyFightResult.
 		
-	2.3 void notifyOnOpponentMove(const Move& move);
+	2.3 void notifyOnOpponentMove(const Move& move); - DONE!
 		This method updates board, nonFlags and assumedFlags
 		a. update board: put 0 in "from", put opponentId in "to" (even if "to" location is occupied)
 		b. search for the from location in assumedFlags. if found, put nullptr in assumedFlags, change the location to "to",
@@ -62,11 +62,12 @@ for AutoPlayerAlgorithm:
 	2.6 unique_ptr<JokerChange> getJokerChange();
 		This method returns a chosen joker change or nullptr for no change.
 		a. if a joker is neighbouring a known piece, change to a stronger type.
+		b. if no more movable pieces change joker type to a movable type
 		
 		
 3. have the following private/protected methods (proteceted will be marked with virtual).
 
-	3.1 virtual unique_ptr<PiecePosition> generatePiece(const Board& board, const PieceCounter& counter);
+	3.1 virtual unique_ptr<PiecePosition> generatePiece(const Board& board, const PieceCounter& counter); - DONE!
 		This method generates a new piece to place on the board legally. it is marked virtual in case in a future release
 		there will be a smarter algorithm that inherits from this algorithm.
 		a. select a piece type to add, start with the flags.
