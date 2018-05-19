@@ -61,6 +61,7 @@ for AutoPlayerAlgorithm:
 		
 	2.6 unique_ptr<JokerChange> getJokerChange();
 		This method returns a chosen joker change or nullptr for no change.
+		a. if a joker is neighbouring a known piece, change to a stronger type.
 		
 		
 3. have the following private/protected methods (proteceted will be marked with virtual).
@@ -89,10 +90,11 @@ for AutoPlayerAlgorithm:
 		e. if there is a known strong piece neighbouring a piece of mine, choose that piece.
 		f. if there is a piece of mine neighbouring an assumed flag piece, choose that piece.
 		g. if there is a piece of mine neighbouring an unknown non-flag piece, choose that.
-		h. choose the closest piece of mine to an assumed flag.
+		h. if I have a joker with distance of 2 from a known piece, choose that piece.
+		i. choose the closest piece of mine to an assumed flag.
 		note2: might add more rules, maybe some defending rules...
 	
 	3.3 virtual unique_ptr<Move> move = chooseMove(piece);
 		This method chooses a move to play for given piece.
-		a. look at the rules for 3.2 and choose a move that guarantees the attck/defence/escape
+		a. look at the rules for 3.2 and choose a move that guarantees the attack/defence/escape
 	
