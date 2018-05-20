@@ -89,7 +89,15 @@ void AutoPlayerAlgorithm::notifyFightResult(const FightInfo& fightInfo)
     } else if (fightInfo.getWinner() == opponentId)
     {
         removePiece(myPieces, fightInfo.getPosition());
-        //update
+        setNoFlag(fightInfo.getPosition());
+        auto& piece = getPiece(nonFlags, fightInfo.getPosition());
+        if (piece != nullptr && piece->getPiece() != '?' && piece->getPiece() != fightInfo.getPiece(opponentId))
+        {// known piece with different type -> its a joker
+            updatePieceType(nonFlags, fightInfo.getPosition(), 'J', fightInfo.getPiece(opponentId));
+        } else if (piece != nullptr)
+        {
+            updatePieceType(nonFlags, fightInfo.getPosition(), fightInfo.getPiece(opponentId));
+        }
     } else if (fightInfo.getWinner() == BOTH)
     {
         removePiece(myPieces, fightInfo.getPosition());
@@ -100,12 +108,63 @@ void AutoPlayerAlgorithm::notifyFightResult(const FightInfo& fightInfo)
 
 unique_ptr<Move> AutoPlayerAlgorithm::getMove()
 {
-    return unique_ptr<Move>();
+    const auto& from = chooseFrom();
+    const auto& to = chooseTo(*from);
+    
+    board.setPlayer(*from, NONE);
+    board.setPlayer(*to, myId);
+    
+    std::unique_ptr<Move> move = std::make_unique<MoveImpl>(*from, *to);
+    
+    updatePosition(myPieces, *move);
+    return move;
 }
 
 unique_ptr<JokerChange> AutoPlayerAlgorithm::getJokerChange()
 {
-    return unique_ptr<JokerChange>();
+    std::vector<const PiecePosition*> jokers;
+    bool movableRemaining = false;
+    
+    for (const auto& piece:myPieces)
+    {
+        if (piece == nullptr)
+            continue;
+        
+        if (isMovable(*piece))
+        {
+            movableRemaining = true;
+        }
+        
+        if (piece->getPiece() != 'J')
+            continue;
+        
+        // in here we hold a joker
+        jokers.push_back(piece.get());
+        
+        auto neighbours = getAvailableMoves(piece->getPosition());
+        for (const auto& neighbour:neighbours)
+        {// look for an opponent neighbour with known type, switch to a stronger type
+            if (neighbour.getOwner() == opponentId)
+            {
+                if (isMovable(neighbour.getPieceType(), neighbour.getJokerRep()))
+                {
+                    char neighbourType = neighbour.getPieceType();
+                    if (neighbourType == 'J')
+                        neighbourType = neighbour.getJokerRep();
+                    char newType = getStrongerType(neighbourType);
+                    return std::make_unique<JokerChangeImpl>(piece->getPosition(), newType);
+                }
+            }
+        }
+    }
+    
+    // no opponent neighbours with known type
+    std::vector<char> movable{'R', 'P', 'S'};
+    if (!jokers.empty() && !movableRemaining)
+    {
+        return std::make_unique<JokerChangeImpl>(jokers[0]->getPosition(), movable[generator.getRange(0, 2)]);
+    }
+    return nullptr;
 }
 
 
@@ -205,6 +264,229 @@ void AutoPlayerAlgorithm::removePiece(std::vector<std::unique_ptr<PiecePosition>
 {
     auto& piece = getPiece(pieces, point);
     piece = nullptr;
+}
+
+std::unique_ptr<Point> AutoPlayerAlgorithm::chooseFrom() const
+{
+    std::vector<PointImpl> availableFromLocations;
+    for (const auto& piece:myPieces)
+    {
+        if (piece == nullptr)
+            continue;
+        
+        if (!isMovable(*piece))
+            continue;
+        
+        auto neighbours = getAvailableMoves(piece->getPosition());
+        if (!neighbours.empty())
+            availableFromLocations.emplace_back(piece->getPosition());
+    }
+    
+    if (availableFromLocations.empty())
+        return std::make_unique<PointImpl>(-1, -1);
+    
+    
+    return std::make_unique<PointImpl>(availableFromLocations[generator.getRange(0, static_cast<int>(availableFromLocations.size() - 1))]);
+}
+
+std::unique_ptr<Point> AutoPlayerAlgorithm::chooseTo(const Point& from) const
+{
+    if (!inBoard(from))
+        return std::make_unique<PointImpl>(-1, -1);
+    
+    const auto neighbours = getAvailableMoves(from);
+    if (neighbours.empty())
+        return std::make_unique<PointImpl>(-1, -1);
+    
+    const auto& myPiece = getPiece(myPieces, from);
+    if (myPiece == nullptr)
+        return std::make_unique<PointImpl>(-1, -1);
+    char myPieceType = getEffectiveType(myPiece->getPiece(), myPiece->getJokerRep());
+    
+    auto onlyFlagRemaining = testOnlyFlagsRemaining(neighbours);
+    if (onlyFlagRemaining != nullptr)
+        return onlyFlagRemaining;
+    
+    auto weakerOpponent = testWeakerNeighbour(neighbours, myPieceType);
+    if (weakerOpponent != nullptr)
+        return weakerOpponent;
+    
+    auto nearAssumedFlag = testAssumedFlagNeighbour(neighbours);
+    if (nearAssumedFlag != nullptr)
+        return nearAssumedFlag;
+    
+    auto nonFlagUnknownNeighbour = testUnknownNonFlagNeighbour(neighbours);
+    if (nonFlagUnknownNeighbour != nullptr)
+        return nonFlagUnknownNeighbour;
+    
+    auto freeSpot = testFreeSpot(neighbours);
+    if (freeSpot != nullptr)
+        return freeSpot;
+    
+    return std::make_unique<PointImpl>(-1, -1);
+}
+
+std::vector<BoardSpot> AutoPlayerAlgorithm::getAvailableMoves(const Point& from) const
+{
+    PointImpl above(from.getX(), from.getY() - 1);
+    PointImpl below(from.getX(), from.getY() + 1);
+    PointImpl left(from.getX() - 1, from.getY());
+    PointImpl right(from.getX() + 1, from.getY());
+    
+    std::vector<PointImpl> directions{above, below, left, right};
+    
+    std::vector<BoardSpot> availableMoves;
+    
+    for (const auto& direction:directions)
+    {
+        if (!inBoard(direction))
+            continue;
+        
+        const auto& myPiece = getPiece(myPieces, direction);
+        if (myPiece != nullptr)
+            continue;
+        
+        const auto& assumedFlagPiece = getPiece(assumedFlags, direction);
+        if (assumedFlagPiece != nullptr)
+        {
+            availableMoves.emplace_back(direction, opponentId, assumedFlagPiece->getPiece(), assumedFlagPiece->getJokerRep(), true);
+            continue;
+        }
+        const auto& nonFlagPiece = getPiece(nonFlags, direction);
+        if (nonFlagPiece != nullptr)
+        {
+            availableMoves.emplace_back(direction, opponentId, nonFlagPiece->getPiece(), nonFlagPiece->getJokerRep(), false);
+            continue;
+        }
+        
+        availableMoves.emplace_back(direction, NONE, '#');
+    }
+    return availableMoves;
+}
+
+bool AutoPlayerAlgorithm::inBoard(const Point& p) const
+{
+    return (p.getX() >= 1 && p.getX() <= totalXVals && p.getY() >= 1 && p.getY() <= totalYVals);
+}
+
+bool AutoPlayerAlgorithm::isMovable(const PiecePosition& piece) const
+{
+    return isMovable(piece.getPiece(), piece.getJokerRep());
+}
+
+char AutoPlayerAlgorithm::getStrongerType(char type) const
+{
+    switch (type)
+    {
+        case 'R':
+            return 'P';
+        case 'P':
+            return 'S';
+        case 'S':
+            return 'R';
+        default:
+            return '#';
+    }
+}
+
+bool AutoPlayerAlgorithm::isMovable(char type, char jokerRep) const
+{
+    type = getEffectiveType(type, jokerRep);
+    return (type == 'R' || type == 'P' || type == 'S');
+}
+
+const std::unique_ptr<PiecePosition>&
+AutoPlayerAlgorithm::getPiece(const std::vector<std::unique_ptr<PiecePosition>>& pieces, const Point& location) const
+{
+    
+    for (const auto& piece:pieces)
+    {
+        if (piece == nullptr)
+            continue;
+        if (piece->getPosition().getX() == location.getX() && piece->getPosition().getY() == location.getY())
+            return piece;
+        
+    }
+    return nullPiece;
+}
+
+int AutoPlayerAlgorithm::getRemaining(const std::vector<std::unique_ptr<PiecePosition>>& pieces) const
+{
+    int cnt = 0;
+    for (const auto& piece:pieces)
+    {
+        if (piece != nullptr)
+            cnt++;
+    }
+    return cnt;
+}
+
+char AutoPlayerAlgorithm::getEffectiveType(char type, char jokerRep) const
+{
+    if (type == 'J')
+        return jokerRep;
+    return type;
+}
+
+std::unique_ptr<Point> AutoPlayerAlgorithm::testAssumedFlagNeighbour(const std::vector<BoardSpot>& neighbours) const
+{
+    for (const auto& neighbour:neighbours)
+    {
+        if (neighbour.getOwner() == opponentId && neighbour.getAssumedFlag())
+            return std::make_unique<PointImpl>(neighbour.getLocation());
+    }
+    return nullptr;
+}
+
+std::unique_ptr<Point> AutoPlayerAlgorithm::testOnlyFlagsRemaining(const std::vector<BoardSpot>& neighbours) const
+{
+    // only flags are left, attack a neighbour flag
+    if (getRemaining(assumedFlags) <= totalFlags && getRemaining(nonFlags) == 0)
+    {
+        for (const auto& neighbour:neighbours)
+        {
+            if (neighbour.getOwner() == opponentId)
+            {
+                return std::make_unique<PointImpl>(neighbour.getLocation());
+            }
+        }
+    }
+    
+    return nullptr;
+}
+
+std::unique_ptr<Point> AutoPlayerAlgorithm::testWeakerNeighbour(const std::vector<BoardSpot>& neighbours, char myPieceType) const
+{
+    for (const auto& neighbour:neighbours)
+    {
+        if (neighbour.getOwner() != opponentId)
+            continue;
+        
+        if (getStrongerType(getEffectiveType(neighbour.getPieceType(), neighbour.getJokerRep())) == myPieceType)
+            return std::make_unique<PointImpl>(neighbour.getLocation());
+        
+    }
+    return nullptr;
+}
+
+std::unique_ptr<Point> AutoPlayerAlgorithm::testUnknownNonFlagNeighbour(const std::vector<BoardSpot>& neighbours) const
+{
+    for (const auto& neighbour:neighbours)
+    {
+        if (neighbour.getOwner() == opponentId && !neighbour.getAssumedFlag() && (neighbour.getPieceType() == '?' || neighbour.getPieceType() == '#'))
+            return std::make_unique<PointImpl>(neighbour.getLocation());
+    }
+    return nullptr;
+}
+
+std::unique_ptr<Point> AutoPlayerAlgorithm::testFreeSpot(const std::vector<BoardSpot>& neighbours) const
+{
+    for (const auto& neighbour:neighbours)
+    {
+        if (neighbour.getOwner() == NONE)
+            return std::make_unique<PointImpl>(neighbour.getLocation());
+    }
+    return nullptr;
 }
 
 

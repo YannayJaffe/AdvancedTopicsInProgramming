@@ -5,9 +5,12 @@ CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../AutoPlayerAlgorithm.cpp
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../AutoPlayerAlgorithm.h
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../Board.h
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../BoardImpl.h
+CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../BoardSpot.h
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../FightInfo.h
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../JokerChange.h
+CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../JokerChangeImpl.h
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../Move.h
+CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../MoveImpl.h
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../PieceCounter.h
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../PiecePosition.h
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../PiecePositionImpl.h
@@ -40,6 +43,7 @@ CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj: ../PointImpl.h
 CMakeFiles/Ex2.dir/Game.cpp.obj: ../AutoPlayerAlgorithm.h
 CMakeFiles/Ex2.dir/Game.cpp.obj: ../Board.h
 CMakeFiles/Ex2.dir/Game.cpp.obj: ../BoardImpl.h
+CMakeFiles/Ex2.dir/Game.cpp.obj: ../BoardSpot.h
 CMakeFiles/Ex2.dir/Game.cpp.obj: ../FightInfo.h
 CMakeFiles/Ex2.dir/Game.cpp.obj: ../FightInfoImpl.h
 CMakeFiles/Ex2.dir/Game.cpp.obj: ../FilePlayerAlgorithm.h
@@ -63,6 +67,7 @@ CMakeFiles/Ex2.dir/PieceCounter.cpp.obj: ../PieceCounter.h
 CMakeFiles/Ex2.dir/main.cpp.obj: ../AutoPlayerAlgorithm.h
 CMakeFiles/Ex2.dir/main.cpp.obj: ../Board.h
 CMakeFiles/Ex2.dir/main.cpp.obj: ../BoardImpl.h
+CMakeFiles/Ex2.dir/main.cpp.obj: ../BoardSpot.h
 CMakeFiles/Ex2.dir/main.cpp.obj: ../FightInfo.h
 CMakeFiles/Ex2.dir/main.cpp.obj: ../FightInfoImpl.h
 CMakeFiles/Ex2.dir/main.cpp.obj: ../FilePlayerAlgorithm.h

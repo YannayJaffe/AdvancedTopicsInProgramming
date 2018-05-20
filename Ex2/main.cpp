@@ -4,10 +4,8 @@
 
 int main(int argc, char** argv)
 {
-    /* Game game(argc, argv,"rps.output");
-     game.runGame();*/
-    RandomGenerator rg;
+    Game game(argc, argv, "rps.output");
+    game.runGame();
     
-    std::cout << rg.getRange(4, 6) << " " << rg.getRange(4, 6) << " " << rg.getRange(4, 6) << std::endl;
     
 }

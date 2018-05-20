@@ -6,9 +6,12 @@ CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj
  C:/Git/AdvancedTopicsInProgramming/Ex2/AutoPlayerAlgorithm.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/Board.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/BoardImpl.h
+ C:/Git/AdvancedTopicsInProgramming/Ex2/BoardSpot.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/FightInfo.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/JokerChange.h
+ C:/Git/AdvancedTopicsInProgramming/Ex2/JokerChangeImpl.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/Move.h
+ C:/Git/AdvancedTopicsInProgramming/Ex2/MoveImpl.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/PieceCounter.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/PiecePosition.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/PiecePositionImpl.h
@@ -41,6 +44,7 @@ CMakeFiles/Ex2.dir/Game.cpp.obj
  C:/Git/AdvancedTopicsInProgramming/Ex2/AutoPlayerAlgorithm.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/Board.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/BoardImpl.h
+ C:/Git/AdvancedTopicsInProgramming/Ex2/BoardSpot.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/FightInfo.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/FightInfoImpl.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/FilePlayerAlgorithm.h
@@ -64,6 +68,7 @@ CMakeFiles/Ex2.dir/main.cpp.obj
  C:/Git/AdvancedTopicsInProgramming/Ex2/AutoPlayerAlgorithm.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/Board.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/BoardImpl.h
+ C:/Git/AdvancedTopicsInProgramming/Ex2/BoardSpot.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/FightInfo.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/FightInfoImpl.h
  C:/Git/AdvancedTopicsInProgramming/Ex2/FilePlayerAlgorithm.h

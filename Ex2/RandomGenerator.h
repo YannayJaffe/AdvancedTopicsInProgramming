@@ -5,15 +5,15 @@
 #ifndef EX2_RANDOMGENERATOR_H
 #define EX2_RANDOMGENERATOR_H
 
-#include <stdlib.h>
-#include <time.h>
+#include <cstdlib>
+#include <ctime>
 
 class RandomGenerator
 {
 public:
     RandomGenerator()
     {
-        srand(time(NULL));
+        srand(static_cast<unsigned int>(time(nullptr)));
     }
     
     int getRange(int min, int max)

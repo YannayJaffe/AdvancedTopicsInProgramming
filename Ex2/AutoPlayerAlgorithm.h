@@ -11,6 +11,9 @@
 #include "PiecePositionImpl.h"
 #include "PointImpl.h"
 #include "RandomGenerator.h"
+#include "MoveImpl.h"
+#include "BoardSpot.h"
+#include "JokerChangeImpl.h"
 
 class AutoPlayerAlgorithm : public PlayerAlgorithm
 {
@@ -34,11 +37,17 @@ public:
 protected:
     
     virtual std::unique_ptr<PiecePosition> generatePiece(const Board& board, const PieceCounter& counter);
+    
+    virtual std::unique_ptr<Point> chooseFrom() const;
+    
+    virtual std::unique_ptr<Point> chooseTo(const Point& from) const;
 
 private:
     
     PointImpl findEmptySpot(const Board& board); // finds an empty spot on the given board
     std::unique_ptr<PiecePosition>& getPiece(std::vector<std::unique_ptr<PiecePosition>>& pieces, const Point& location); // return a piece
+    
+    const std::unique_ptr<PiecePosition>& getPiece(const std::vector<std::unique_ptr<PiecePosition>>& pieces, const Point& location) const; // return a piece
     
     bool setNoFlag(const Point& point);// this method declares that piece in spot point is non flag
     
@@ -47,6 +56,30 @@ private:
     bool updatePieceType(std::vector<std::unique_ptr<PiecePosition>>& pieces, const Point& point, char type, char jokerType = '#');
     
     void removePiece(std::vector<std::unique_ptr<PiecePosition>>& pieces, const Point& point);
+    
+    std::vector<BoardSpot> getAvailableMoves(const Point& from) const;
+    
+    bool inBoard(const Point& p) const;
+    
+    bool isMovable(const PiecePosition& piece) const;
+    
+    bool isMovable(char type, char jokerRep = '#') const;
+    
+    char getStrongerType(char type) const;
+    
+    int getRemaining(const std::vector<std::unique_ptr<PiecePosition>>& pieces) const; // returns the amount of pieces in the vector
+    
+    char getEffectiveType(char type, char jokerRep) const;
+    
+    std::unique_ptr<Point> testOnlyFlagsRemaining(const std::vector<BoardSpot>& neighbours) const;
+    
+    std::unique_ptr<Point> testWeakerNeighbour(const std::vector<BoardSpot>& neighbours, char myPieceType) const;
+    
+    std::unique_ptr<Point> testAssumedFlagNeighbour(const std::vector<BoardSpot>& neighbours) const;
+    
+    std::unique_ptr<Point> testUnknownNonFlagNeighbour(const std::vector<BoardSpot>& neighbours) const;
+    
+    std::unique_ptr<Point> testFreeSpot(const std::vector<BoardSpot>& neighbours) const;
     
     BoardImpl board;
     std::vector<std::unique_ptr<PiecePosition>> myPieces;
@@ -66,7 +99,7 @@ private:
     static const int totalBombs = 2; // total Bombs
     static const int totalJokers = 2; // total Jokers
     static const int totalFlags = 1; // total Flags
-    RandomGenerator generator;
+    mutable RandomGenerator generator;
     std::unique_ptr<PiecePosition> nullPiece = nullptr; // a null piece to return if piece not found
     
     

@@ -23,6 +23,12 @@ PointImpl.h
 C:/Git/AdvancedTopicsInProgramming/Ex2/PointImpl.h
 RandomGenerator.h
 C:/Git/AdvancedTopicsInProgramming/Ex2/RandomGenerator.h
+MoveImpl.h
+C:/Git/AdvancedTopicsInProgramming/Ex2/MoveImpl.h
+BoardSpot.h
+C:/Git/AdvancedTopicsInProgramming/Ex2/BoardSpot.h
+JokerChangeImpl.h
+C:/Git/AdvancedTopicsInProgramming/Ex2/JokerChangeImpl.h
 
 C:/Git/AdvancedTopicsInProgramming/Ex2/Board.h
 
@@ -39,6 +45,10 @@ Point.h
 C:/Git/AdvancedTopicsInProgramming/Ex2/Point.h
 PiecePosition.h
 C:/Git/AdvancedTopicsInProgramming/Ex2/PiecePosition.h
+PointImpl.h
+C:/Git/AdvancedTopicsInProgramming/Ex2/PointImpl.h
+
+C:/Git/AdvancedTopicsInProgramming/Ex2/BoardSpot.h
 PointImpl.h
 C:/Git/AdvancedTopicsInProgramming/Ex2/PointImpl.h
 
@@ -171,9 +181,9 @@ Point.h
 C:/Git/AdvancedTopicsInProgramming/Ex2/Point.h
 
 C:/Git/AdvancedTopicsInProgramming/Ex2/RandomGenerator.h
-stdlib.h
+cstdlib
 -
-time.h
+ctime
 -
 
 C:/Git/AdvancedTopicsInProgramming/Ex2/main.cpp

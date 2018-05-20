@@ -95,6 +95,9 @@
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/BoardImpl.h">
 			<Option target="Ex2"/>
 		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/BoardSpot.h">
+			<Option target="Ex2"/>
+		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/FightInfo.h">
 			<Option target="Ex2"/>
 		</Unit>
