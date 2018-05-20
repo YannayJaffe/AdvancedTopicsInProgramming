@@ -14,6 +14,12 @@ public:
     RandomGenerator()
     {
         srand(static_cast<unsigned int>(time(nullptr)));
+        
+    }
+    
+    RandomGenerator(unsigned int seed)
+    {
+        srand(seed);
     }
     
     int getRange(int min, int max)

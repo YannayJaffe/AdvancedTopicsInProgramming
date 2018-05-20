@@ -43,7 +43,7 @@ namespace WinReason
 class Game
 {
 public:
-    Game(int argc, char** argv, const std::string& outFile); // provide the inputs from the command line in order to determine the game mode
+    Game(int argc, char** argv, const std::string& outFile, unsigned int seed); // provide the inputs from the command line in order to determine the game mode
     
     void runGame();
 
@@ -53,6 +53,8 @@ private:
     void declareWinner(int winnerId, WinReason::Reason reason); // this method is called when the game should end, and declares the winner.
     
     bool initPlayersPtrs(); // this method initializes the players unique_ptrs. returns false if could not init
+    
+    bool initPlayersPtrs(unsigned int seed);
     
     bool gameInit(); //this method performs all initialization and returns whether the game can continue or should be finished
     
@@ -129,6 +131,8 @@ private:
     int player2Points;
     
     const std::string outFileName;
+    
+    const unsigned int seed;
     
     
 };
