@@ -58,7 +58,7 @@ private:
     std::string movesFileName;
     std::vector<std::unique_ptr<Move>> moves;
     std::vector<std::unique_ptr<JokerChange>> jokerChanges;
-    int moveCount;
+    unsigned int moveCount;
 };
 
 

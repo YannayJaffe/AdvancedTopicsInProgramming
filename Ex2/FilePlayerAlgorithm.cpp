@@ -17,24 +17,24 @@ void FilePlayerAlgorithm::getInitialPositions(int player, std::vector<unique_ptr
     
 }
 
-void FilePlayerAlgorithm::notifyOnInitialBoard(const Board& b, const std::vector<unique_ptr<FightInfo>>& fights)
+void FilePlayerAlgorithm::notifyOnInitialBoard(const Board& , const std::vector<unique_ptr<FightInfo>>& )
 {
     // leave empty on purpose
 }
 
-void FilePlayerAlgorithm::notifyOnOpponentMove(const Move& move)
+void FilePlayerAlgorithm::notifyOnOpponentMove(const Move& )
 {
     // leave empty on purpose
 }
 
-void FilePlayerAlgorithm::notifyFightResult(const FightInfo& fightInfo)
+void FilePlayerAlgorithm::notifyFightResult(const FightInfo& )
 {
     // leave empty on purpose
 }
 
 unique_ptr<Move> FilePlayerAlgorithm::getMove()
 {
-    if (moveCount >= moves.size())
+    if (moveCount >= static_cast<unsigned int>(moves.size()))
         return illegalMove();
     
     return std::move(moves[moveCount]);
@@ -42,7 +42,7 @@ unique_ptr<Move> FilePlayerAlgorithm::getMove()
 
 unique_ptr<JokerChange> FilePlayerAlgorithm::getJokerChange()
 {
-    if (moveCount >= jokerChanges.size())
+    if (moveCount >= static_cast<unsigned int>(jokerChanges.size()))
         return illegalJokerChange();
     
     return std::move(jokerChanges[moveCount++]);
