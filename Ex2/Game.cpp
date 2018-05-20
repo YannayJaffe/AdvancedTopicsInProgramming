@@ -302,7 +302,7 @@ std::unique_ptr<PiecePosition>& Game::getPlayerPiece(int playerId, const Point& 
     } else
         return nullPiecePosition;
     
-    for (int i = 0; i < playerPieces->size(); i++)
+    for (unsigned int i = 0; i < static_cast<unsigned int>(playerPieces->size()); i++)
     {
         if (playerPieces->at(i) == nullptr)
             continue;

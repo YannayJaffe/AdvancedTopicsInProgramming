@@ -38,7 +38,7 @@ namespace WinReason
         NO_MORE_FLAGS_MOVES, // took over the last remaining flag during a move
         MAX_MOVES_REACHED // played the total maximum moves
     };
-};
+}
 
 class Game
 {
