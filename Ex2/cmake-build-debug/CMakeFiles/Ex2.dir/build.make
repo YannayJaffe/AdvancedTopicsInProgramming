@@ -80,57 +80,9 @@ CMakeFiles/Ex2.dir/main.cpp.obj.provides: CMakeFiles/Ex2.dir/main.cpp.obj.requir
 CMakeFiles/Ex2.dir/main.cpp.obj.provides.build: CMakeFiles/Ex2.dir/main.cpp.obj
 
 
-CMakeFiles/Ex2.dir/Game.cpp.obj: CMakeFiles/Ex2.dir/flags.make
-CMakeFiles/Ex2.dir/Game.cpp.obj: ../Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Ex2.dir/Game.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Ex2.dir\Game.cpp.obj -c C:\Git\AdvancedTopicsInProgramming\Ex2\Game.cpp
-
-CMakeFiles/Ex2.dir/Game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ex2.dir/Game.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Git\AdvancedTopicsInProgramming\Ex2\Game.cpp > CMakeFiles\Ex2.dir\Game.cpp.i
-
-CMakeFiles/Ex2.dir/Game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex2.dir/Game.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Git\AdvancedTopicsInProgramming\Ex2\Game.cpp -o CMakeFiles\Ex2.dir\Game.cpp.s
-
-CMakeFiles/Ex2.dir/Game.cpp.obj.requires:
-
-.PHONY : CMakeFiles/Ex2.dir/Game.cpp.obj.requires
-
-CMakeFiles/Ex2.dir/Game.cpp.obj.provides: CMakeFiles/Ex2.dir/Game.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\Ex2.dir\build.make CMakeFiles/Ex2.dir/Game.cpp.obj.provides.build
-.PHONY : CMakeFiles/Ex2.dir/Game.cpp.obj.provides
-
-CMakeFiles/Ex2.dir/Game.cpp.obj.provides.build: CMakeFiles/Ex2.dir/Game.cpp.obj
-
-
-CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj: CMakeFiles/Ex2.dir/flags.make
-CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj: ../FilePlayerAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Ex2.dir\FilePlayerAlgorithm.cpp.obj -c C:\Git\AdvancedTopicsInProgramming\Ex2\FilePlayerAlgorithm.cpp
-
-CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Git\AdvancedTopicsInProgramming\Ex2\FilePlayerAlgorithm.cpp > CMakeFiles\Ex2.dir\FilePlayerAlgorithm.cpp.i
-
-CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Git\AdvancedTopicsInProgramming\Ex2\FilePlayerAlgorithm.cpp -o CMakeFiles\Ex2.dir\FilePlayerAlgorithm.cpp.s
-
-CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.requires:
-
-.PHONY : CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.requires
-
-CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.provides: CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\Ex2.dir\build.make CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.provides.build
-.PHONY : CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.provides
-
-CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.provides.build: CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj
-
-
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: CMakeFiles/Ex2.dir/flags.make
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj: ../AutoPlayerAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Ex2.dir\AutoPlayerAlgorithm.cpp.obj -c C:\Git\AdvancedTopicsInProgramming\Ex2\AutoPlayerAlgorithm.cpp
 
 CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.i: cmake_force
@@ -154,7 +106,7 @@ CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj.provides.build: CMakeFiles/Ex2.di
 
 CMakeFiles/Ex2.dir/BoardImpl.cpp.obj: CMakeFiles/Ex2.dir/flags.make
 CMakeFiles/Ex2.dir/BoardImpl.cpp.obj: ../BoardImpl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Ex2.dir/BoardImpl.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Ex2.dir/BoardImpl.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Ex2.dir\BoardImpl.cpp.obj -c C:\Git\AdvancedTopicsInProgramming\Ex2\BoardImpl.cpp
 
 CMakeFiles/Ex2.dir/BoardImpl.cpp.i: cmake_force
@@ -176,27 +128,101 @@ CMakeFiles/Ex2.dir/BoardImpl.cpp.obj.provides: CMakeFiles/Ex2.dir/BoardImpl.cpp.
 CMakeFiles/Ex2.dir/BoardImpl.cpp.obj.provides.build: CMakeFiles/Ex2.dir/BoardImpl.cpp.obj
 
 
+CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj: CMakeFiles/Ex2.dir/flags.make
+CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj: ../FilePlayerAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Ex2.dir\FilePlayerAlgorithm.cpp.obj -c C:\Git\AdvancedTopicsInProgramming\Ex2\FilePlayerAlgorithm.cpp
+
+CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Git\AdvancedTopicsInProgramming\Ex2\FilePlayerAlgorithm.cpp > CMakeFiles\Ex2.dir\FilePlayerAlgorithm.cpp.i
+
+CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Git\AdvancedTopicsInProgramming\Ex2\FilePlayerAlgorithm.cpp -o CMakeFiles\Ex2.dir\FilePlayerAlgorithm.cpp.s
+
+CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.requires:
+
+.PHONY : CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.requires
+
+CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.provides: CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\Ex2.dir\build.make CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.provides.build
+.PHONY : CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.provides
+
+CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.provides.build: CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj
+
+
+CMakeFiles/Ex2.dir/Game.cpp.obj: CMakeFiles/Ex2.dir/flags.make
+CMakeFiles/Ex2.dir/Game.cpp.obj: ../Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Ex2.dir/Game.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Ex2.dir\Game.cpp.obj -c C:\Git\AdvancedTopicsInProgramming\Ex2\Game.cpp
+
+CMakeFiles/Ex2.dir/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ex2.dir/Game.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Git\AdvancedTopicsInProgramming\Ex2\Game.cpp > CMakeFiles\Ex2.dir\Game.cpp.i
+
+CMakeFiles/Ex2.dir/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex2.dir/Game.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Git\AdvancedTopicsInProgramming\Ex2\Game.cpp -o CMakeFiles\Ex2.dir\Game.cpp.s
+
+CMakeFiles/Ex2.dir/Game.cpp.obj.requires:
+
+.PHONY : CMakeFiles/Ex2.dir/Game.cpp.obj.requires
+
+CMakeFiles/Ex2.dir/Game.cpp.obj.provides: CMakeFiles/Ex2.dir/Game.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\Ex2.dir\build.make CMakeFiles/Ex2.dir/Game.cpp.obj.provides.build
+.PHONY : CMakeFiles/Ex2.dir/Game.cpp.obj.provides
+
+CMakeFiles/Ex2.dir/Game.cpp.obj.provides.build: CMakeFiles/Ex2.dir/Game.cpp.obj
+
+
+CMakeFiles/Ex2.dir/PieceCounter.cpp.obj: CMakeFiles/Ex2.dir/flags.make
+CMakeFiles/Ex2.dir/PieceCounter.cpp.obj: ../PieceCounter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Ex2.dir/PieceCounter.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Ex2.dir\PieceCounter.cpp.obj -c C:\Git\AdvancedTopicsInProgramming\Ex2\PieceCounter.cpp
+
+CMakeFiles/Ex2.dir/PieceCounter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ex2.dir/PieceCounter.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Git\AdvancedTopicsInProgramming\Ex2\PieceCounter.cpp > CMakeFiles\Ex2.dir\PieceCounter.cpp.i
+
+CMakeFiles/Ex2.dir/PieceCounter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex2.dir/PieceCounter.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Git\AdvancedTopicsInProgramming\Ex2\PieceCounter.cpp -o CMakeFiles\Ex2.dir\PieceCounter.cpp.s
+
+CMakeFiles/Ex2.dir/PieceCounter.cpp.obj.requires:
+
+.PHONY : CMakeFiles/Ex2.dir/PieceCounter.cpp.obj.requires
+
+CMakeFiles/Ex2.dir/PieceCounter.cpp.obj.provides: CMakeFiles/Ex2.dir/PieceCounter.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\Ex2.dir\build.make CMakeFiles/Ex2.dir/PieceCounter.cpp.obj.provides.build
+.PHONY : CMakeFiles/Ex2.dir/PieceCounter.cpp.obj.provides
+
+CMakeFiles/Ex2.dir/PieceCounter.cpp.obj.provides.build: CMakeFiles/Ex2.dir/PieceCounter.cpp.obj
+
+
 # Object files for target Ex2
 Ex2_OBJECTS = \
 "CMakeFiles/Ex2.dir/main.cpp.obj" \
-"CMakeFiles/Ex2.dir/Game.cpp.obj" \
-"CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj" \
 "CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj" \
-"CMakeFiles/Ex2.dir/BoardImpl.cpp.obj"
+"CMakeFiles/Ex2.dir/BoardImpl.cpp.obj" \
+"CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj" \
+"CMakeFiles/Ex2.dir/Game.cpp.obj" \
+"CMakeFiles/Ex2.dir/PieceCounter.cpp.obj"
 
 # External object files for target Ex2
 Ex2_EXTERNAL_OBJECTS =
 
 Ex2.exe: CMakeFiles/Ex2.dir/main.cpp.obj
-Ex2.exe: CMakeFiles/Ex2.dir/Game.cpp.obj
-Ex2.exe: CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj
 Ex2.exe: CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj
 Ex2.exe: CMakeFiles/Ex2.dir/BoardImpl.cpp.obj
+Ex2.exe: CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj
+Ex2.exe: CMakeFiles/Ex2.dir/Game.cpp.obj
+Ex2.exe: CMakeFiles/Ex2.dir/PieceCounter.cpp.obj
 Ex2.exe: CMakeFiles/Ex2.dir/build.make
 Ex2.exe: CMakeFiles/Ex2.dir/linklibs.rsp
 Ex2.exe: CMakeFiles/Ex2.dir/objects1.rsp
 Ex2.exe: CMakeFiles/Ex2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Ex2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Git\AdvancedTopicsInProgramming\Ex2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Ex2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Ex2.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -205,10 +231,11 @@ CMakeFiles/Ex2.dir/build: Ex2.exe
 .PHONY : CMakeFiles/Ex2.dir/build
 
 CMakeFiles/Ex2.dir/requires: CMakeFiles/Ex2.dir/main.cpp.obj.requires
-CMakeFiles/Ex2.dir/requires: CMakeFiles/Ex2.dir/Game.cpp.obj.requires
-CMakeFiles/Ex2.dir/requires: CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.requires
 CMakeFiles/Ex2.dir/requires: CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj.requires
 CMakeFiles/Ex2.dir/requires: CMakeFiles/Ex2.dir/BoardImpl.cpp.obj.requires
+CMakeFiles/Ex2.dir/requires: CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj.requires
+CMakeFiles/Ex2.dir/requires: CMakeFiles/Ex2.dir/Game.cpp.obj.requires
+CMakeFiles/Ex2.dir/requires: CMakeFiles/Ex2.dir/PieceCounter.cpp.obj.requires
 
 .PHONY : CMakeFiles/Ex2.dir/requires
 

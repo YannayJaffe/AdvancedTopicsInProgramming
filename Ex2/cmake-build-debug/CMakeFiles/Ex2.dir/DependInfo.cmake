@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Git/AdvancedTopicsInProgramming/Ex2/BoardImpl.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/BoardImpl.cpp.obj"
   "C:/Git/AdvancedTopicsInProgramming/Ex2/FilePlayerAlgorithm.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj"
   "C:/Git/AdvancedTopicsInProgramming/Ex2/Game.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/Game.cpp.obj"
+  "C:/Git/AdvancedTopicsInProgramming/Ex2/PieceCounter.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/PieceCounter.cpp.obj"
   "C:/Git/AdvancedTopicsInProgramming/Ex2/main.cpp" "C:/Git/AdvancedTopicsInProgramming/Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

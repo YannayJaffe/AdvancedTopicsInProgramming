@@ -95,7 +95,13 @@
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/BoardImpl.h">
 			<Option target="Ex2"/>
 		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/BoardSpot.h">
+			<Option target="Ex2"/>
+		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/FightInfo.h">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/FightInfoImpl.h">
 			<Option target="Ex2"/>
 		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/FilePlayerAlgorithm.cpp">
@@ -113,16 +119,37 @@
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/JokerChange.h">
 			<Option target="Ex2"/>
 		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/JokerChangeImpl.h">
+			<Option target="Ex2"/>
+		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/Move.h">
 			<Option target="Ex2"/>
 		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/MoveImpl.h">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PieceCounter.cpp">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PieceCounter.h">
+			<Option target="Ex2"/>
+		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PiecePosition.h">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PiecePositionImpl.h">
 			<Option target="Ex2"/>
 		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PlayerAlgorithm.h">
 			<Option target="Ex2"/>
 		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/Point.h">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/PointImpl.h">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/RandomGenerator.h">
 			<Option target="Ex2"/>
 		</Unit>
 		<Unit filename="C:/Git/AdvancedTopicsInProgramming/Ex2/main.cpp">

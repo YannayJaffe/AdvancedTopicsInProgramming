@@ -1,9 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Ex2.dir/main.cpp.obj"
-  "CMakeFiles/Ex2.dir/Game.cpp.obj"
-  "CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj"
   "CMakeFiles/Ex2.dir/AutoPlayerAlgorithm.cpp.obj"
   "CMakeFiles/Ex2.dir/BoardImpl.cpp.obj"
+  "CMakeFiles/Ex2.dir/FilePlayerAlgorithm.cpp.obj"
+  "CMakeFiles/Ex2.dir/Game.cpp.obj"
+  "CMakeFiles/Ex2.dir/PieceCounter.cpp.obj"
   "Ex2.pdb"
   "Ex2.exe"
   "Ex2.exe.manifest"
