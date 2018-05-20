@@ -2,7 +2,7 @@
 
 
 
-PieceCounter::PieceCounter(int maxRocks, int maxPapers, int maxScissors, int maxBombs, int maxJokers, int maxFlags) :maxRocks(maxBombs), maxPapers(maxPapers), maxScissors(maxScissors), maxBombs(maxBombs), maxJokers(maxJokers), maxFlags(maxFlags)
+PieceCounter::PieceCounter(int maxRocks, int maxPapers, int maxScissors, int maxBombs, int maxJokers, int maxFlags) :maxRocks(maxRocks), maxPapers(maxPapers), maxScissors(maxScissors), maxBombs(maxBombs), maxJokers(maxJokers), maxFlags(maxFlags)
 {
 	rocks = 0;
 	papers = 0;

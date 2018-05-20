@@ -26,7 +26,7 @@
       <file leaf-file-name="Game.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
+            <state relative-caret-position="-1232">
               <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
               <folding>
                 <element signature="e#129#146#0" expanded="true" />
@@ -35,11 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Game.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="167">
-              <caret line="304" column="79" selection-start-line="304" selection-start-column="79" selection-end-line="304" selection-end-column="79" />
+              <caret line="421" column="1" lean-forward="true" selection-start-line="421" selection-start-column="1" selection-end-line="421" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PieceCounter.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PieceCounter.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="134" selection-start-line="4" selection-start-column="134" selection-end-line="4" selection-end-column="134" />
             </state>
           </provider>
         </entry>
@@ -58,7 +67,6 @@
         <option value="$PROJECT_DIR$/JokerChangeImpl.h" />
         <option value="$PROJECT_DIR$/PiecePositionImpl.h" />
         <option value="$PROJECT_DIR$/PieceCounter.h" />
-        <option value="$PROJECT_DIR$/PieceCounter.cpp" />
         <option value="$PROJECT_DIR$/BoardImpl.h" />
         <option value="$PROJECT_DIR$/BoardImpl.cpp" />
         <option value="$PROJECT_DIR$/AutoPlayerAlgorithm.h" />
@@ -70,6 +78,7 @@
         <option value="$PROJECT_DIR$/FilePlayerAlgorithm.cpp" />
         <option value="$PROJECT_DIR$/Game.h" />
         <option value="$PROJECT_DIR$/Game.cpp" />
+        <option value="$PROJECT_DIR$/PieceCounter.cpp" />
       </list>
     </option>
   </component>
@@ -141,12 +150,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526240480015</updated>
-      <workItem from="1526240482214" duration="70914000" />
+      <workItem from="1526240482214" duration="71054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70914000" />
+    <option name="totallyTimeSpent" value="71054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="-7" width="1550" height="838" extended-state="6" />
@@ -315,20 +324,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RandomGenerator.cpp">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PieceCounter.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="70" column="13" lean-forward="true" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PieceCounter.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BoardImpl.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -504,9 +499,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Game.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="421" column="1" lean-forward="true" selection-start-line="421" selection-start-column="1" selection-end-line="421" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PieceCounter.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Game.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="-1232">
           <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
           <folding>
             <element signature="e#129#146#0" expanded="true" />
@@ -514,10 +523,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game.cpp">
+    <entry file="file://$PROJECT_DIR$/PieceCounter.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="304" column="79" selection-start-line="304" selection-start-column="79" selection-end-line="304" selection-end-column="79" />
+        <state relative-caret-position="88">
+          <caret line="4" column="134" selection-start-line="4" selection-start-column="134" selection-end-line="4" selection-end-column="134" />
         </state>
       </provider>
     </entry>
