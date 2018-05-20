@@ -11,9 +11,9 @@ class BoardSpot
 {
 public:
     BoardSpot(const Point& location, int owner, char pieceType, char jokerRep = '#', bool assumedFlag = false) : location(location), owner(owner),
-                                                                                                                 assumedFlag(assumedFlag),
                                                                                                                  pieceType(pieceType),
-                                                                                                                 jokerRep(jokerRep)
+                                                                                                                 jokerRep(jokerRep),
+                                                                                                                 assumedFlag(assumedFlag)
     {}
     
     const Point& getLocation() const
@@ -21,22 +21,22 @@ public:
         return location;
     }
     
-    const int getOwner() const
+    int getOwner() const
     {
         return owner;
     }
     
-    const char getPieceType() const
+    char getPieceType() const
     {
         return pieceType;
     }
     
-    const char getJokerRep() const
+    char getJokerRep() const
     {
         return jokerRep;
     }
     
-    const bool getAssumedFlag() const
+    bool getAssumedFlag() const
     {
         return assumedFlag;
     }

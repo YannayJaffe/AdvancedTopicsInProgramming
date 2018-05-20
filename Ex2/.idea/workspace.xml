@@ -61,14 +61,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RandomGenerator.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RandomGenerator.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RandomGenerator.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+            <state relative-caret-position="94">
+              <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
               <folding>
                 <element signature="e#101#120#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoardSpot.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BoardSpot.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="137" selection-start-line="15" selection-start-column="137" selection-end-line="15" selection-end-column="137" />
             </state>
           </provider>
         </entry>
@@ -145,11 +154,11 @@
         <option value="$PROJECT_DIR$/BoardImpl.h" />
         <option value="$PROJECT_DIR$/Game.h" />
         <option value="$PROJECT_DIR$/BoardImpl.cpp" />
-        <option value="$PROJECT_DIR$/BoardSpot.h" />
         <option value="$PROJECT_DIR$/AutoPlayerAlgorithm.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/AutoPlayerAlgorithm.cpp" />
         <option value="$PROJECT_DIR$/RandomGenerator.h" />
+        <option value="$PROJECT_DIR$/BoardSpot.h" />
       </list>
     </option>
   </component>
@@ -160,11 +169,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-552" />
-    <option name="y" value="527" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1996" />
+    <option name="y" value="-8" />
     <option name="width" value="1274" />
-    <option name="height" value="871" />
+    <option name="height" value="872" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -221,25 +230,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526240480015</updated>
-      <workItem from="1526240482214" duration="69278000" />
+      <workItem from="1526240482214" duration="70096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69278000" />
+    <option name="totallyTimeSpent" value="70096000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1913" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info active="true" anchor="bottom" id="Messages" order="1" sideWeight="0.49947917" visible="true" weight="0.25079703" />
+      <window_info anchor="bottom" id="Messages" order="1" sideWeight="0.49947917" weight="0.25079703" />
       <window_info anchor="bottom" id="CMake" order="5" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5005208" side_tool="true" weight="0.25398514" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.26992562" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.35034484" />
       <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32943678" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32943678" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32943678" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
@@ -470,13 +479,6 @@
     <entry file="file://$PROJECT_DIR$/BoardSpot.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoardSpot.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AutoPlayerAlgorithm.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
@@ -622,11 +624,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RandomGenerator.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        <state relative-caret-position="94">
+          <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
           <folding>
             <element signature="e#101#120#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardSpot.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="137" selection-start-line="15" selection-start-column="137" selection-end-line="15" selection-end-column="137" />
         </state>
       </provider>
     </entry>
