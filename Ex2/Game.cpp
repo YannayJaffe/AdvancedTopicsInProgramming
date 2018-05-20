@@ -18,10 +18,9 @@ const int Game::totalJokers;
 const int Game::totalFlags;
 const int Game::maxMoves;
 
-Game::Game(int argc, char** argv, const std::string& outFile, unsigned int seed) : player1Algo(AlgoType::FILE), player2Algo(AlgoType::FILE),
-                                                                                   player1(nullptr), player2(nullptr), board(totalXVals, totalYVals),
-                                                                                   totalMoves(0), player1Moves(0), player2Moves(0), player1Points(0),
-                                                                                   player2Points(0), outFileName(outFile), seed(seed)
+Game::Game(int argc, char** argv, const std::string& outFile) : player1Algo(AlgoType::FILE), player2Algo(AlgoType::FILE), player1(nullptr),
+                                                                player2(nullptr), board(totalXVals, totalYVals), totalMoves(0), player1Moves(0),
+                                                                player2Moves(0), player1Points(0), player2Points(0), outFileName(outFile)
 {
     if (argc < 2)
     {
@@ -80,35 +79,6 @@ bool Game::initPlayersPtrs()
             break;
         case AlgoType::AUTO:
             player2 = std::make_unique<AutoPlayerAlgorithm>();
-            break;
-    }
-    return (player1 != nullptr && player2 != nullptr);
-}
-
-
-
-bool Game::initPlayersPtrs(unsigned int seed)
-{
-    if (!isLegalCommandLine)
-        return false;
-    
-    switch (player1Algo)
-    {
-        case AlgoType::FILE:
-            player1 = std::make_unique<FilePlayerAlgorithm>();
-            break;
-        case AlgoType::AUTO:
-            player1 = std::make_unique<AutoPlayerAlgorithm>(seed);
-            break;
-    }
-    
-    switch (player2Algo)
-    {
-        case AlgoType::FILE:
-            player2 = std::make_unique<FilePlayerAlgorithm>();
-            break;
-        case AlgoType::AUTO:
-            player2 = std::make_unique<AutoPlayerAlgorithm>(seed+1);
             break;
     }
     return (player1 != nullptr && player2 != nullptr);
@@ -453,7 +423,7 @@ bool operator<(const PiecePosition& p1, const PiecePosition& p2)
 
 bool Game::gameInit()
 {
-    if (!initPlayersPtrs(seed))
+    if (!initPlayersPtrs())
     {
         std::cout
                 << "could not initialize players, check command line argument. should be: <player1>-vs-<player2>. player1 and player2 can be either of file or auto.";

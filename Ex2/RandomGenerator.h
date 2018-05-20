@@ -17,11 +17,6 @@ public:
         
     }
     
-    RandomGenerator(unsigned int seed)
-    {
-        srand(seed);
-    }
-    
     int getRange(int min, int max)
     {
         return rand() % (max + 1 - min) + min;

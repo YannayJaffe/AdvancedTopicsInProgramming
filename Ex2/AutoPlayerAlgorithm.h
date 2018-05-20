@@ -19,7 +19,6 @@ class AutoPlayerAlgorithm : public PlayerAlgorithm
 {
 public:
     AutoPlayerAlgorithm();
-    AutoPlayerAlgorithm(unsigned int seed);
     
     void getInitialPositions(int player, std::vector<unique_ptr<PiecePosition>>& vectorToFill) override;
     

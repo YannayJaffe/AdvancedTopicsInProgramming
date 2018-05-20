@@ -489,9 +489,5 @@ std::unique_ptr<Point> AutoPlayerAlgorithm::testFreeSpot(const std::vector<Board
     return nullptr;
 }
 
-AutoPlayerAlgorithm::AutoPlayerAlgorithm(unsigned int seed):board(totalXVals,totalYVals),generator(seed)
-{
-
-}
 
 
