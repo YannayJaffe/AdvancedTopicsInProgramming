@@ -2,8 +2,8 @@
 // Created by yanna on 05/07/18.
 //
 
-#ifndef EX2_AUTOPLAYERALGORITHM_H
-#define EX2_AUTOPLAYERALGORITHM_H
+#ifndef EX2_RSPPLAYER_123456789_H
+#define EX2_RSPPLAYER_123456789_H
 
 #include "PlayerAlgorithm.h"
 #include "BoardImpl.h"
@@ -14,11 +14,12 @@
 #include "MoveImpl.h"
 #include "BoardSpot.h"
 #include "JokerChangeImpl.h"
+#include "AlgorithmRegistration.h"
 
-class AutoPlayerAlgorithm : public PlayerAlgorithm
+class RSPPlayer_123456789 : public PlayerAlgorithm
 {
 public:
-    AutoPlayerAlgorithm();
+    RSPPlayer_123456789();
     
     void getInitialPositions(int player, std::vector<unique_ptr<PiecePosition>>& vectorToFill) override;
     
@@ -32,7 +33,7 @@ public:
     
     unique_ptr<JokerChange> getJokerChange() override;
     
-    ~AutoPlayerAlgorithm() override = default;
+    ~RSPPlayer_123456789() override = default;
 
 protected:
     
@@ -87,18 +88,18 @@ private:
     std::vector<std::unique_ptr<PiecePosition>> assumedFlags;
     int myId;
     int opponentId;
-    static const int PLAYER1 = 1;
-    static const int PLAYER2 = 2;
-    static const int BOTH = 0;
-    static const int NONE = 0;
-    static const int totalXVals = 10; //number of columns in the board (total x values)
-    static const int totalYVals = 10; // number of rows in the board (total y values)
-    static const int totalRocks = 2; // total Rocks
-    static const int totalPapers = 5; // total Papers
-    static const int totalScissors = 1; // total Scissors
-    static const int totalBombs = 2; // total Bombs
-    static const int totalJokers = 2; // total Jokers
-    static const int totalFlags = 1; // total Flags
+    const int PLAYER1 = 1;
+    const int PLAYER2 = 2;
+    const int BOTH = 0;
+    const int NONE = 0;
+    const int totalXVals = 10; //number of columns in the board (total x values)
+    const int totalYVals = 10; // number of rows in the board (total y values)
+    const int totalRocks = 2; // total Rocks
+    const int totalPapers = 5; // total Papers
+    const int totalScissors = 1; // total Scissors
+    const int totalBombs = 2; // total Bombs
+    const int totalJokers = 2; // total Jokers
+    const int totalFlags = 1; // total Flags
     mutable RandomGenerator generator;
     std::unique_ptr<PiecePosition> nullPiece = nullptr; // a null piece to return if piece not found
     

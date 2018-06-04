@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="PlayerAlgorithm"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PlayerAlgorithm">
+				<Option output="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/libPlayerAlgorithm.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 PlayerAlgorithm"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PlayerAlgorithm/fast">
+				<Option output="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/libPlayerAlgorithm.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 PlayerAlgorithm/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/AlgorithmRegistration.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/BoardImpl.cpp">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/BoardImpl.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/BoardSpot.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/FightInfo.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/FightInfoImpl.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/JokerChange.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/JokerChangeImpl.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/Move.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/MoveImpl.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/PieceCounter.cpp">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/PieceCounter.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/PiecePosition.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/PiecePositionImpl.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/PlayerAlgorithm.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/Point.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/PointImpl.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/RSPPlayer_204621304.cpp">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/RSPPlayer_204621304.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/RandomGenerator.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/library.cpp">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/library.h">
+			<Option target="PlayerAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/PlayerAlgorithm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

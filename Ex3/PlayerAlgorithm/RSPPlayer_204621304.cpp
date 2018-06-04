@@ -2,23 +2,14 @@
 // Created by yanna on 05/07/18.
 //
 
-#include "AutoPlayerAlgorithm.h"
-
-const int AutoPlayerAlgorithm::PLAYER1;
-const int AutoPlayerAlgorithm::PLAYER2;
-const int AutoPlayerAlgorithm::NONE;
-const int AutoPlayerAlgorithm::BOTH;
-const int AutoPlayerAlgorithm::totalXVals;
-const int AutoPlayerAlgorithm::totalYVals;
-const int AutoPlayerAlgorithm::totalRocks;
-const int AutoPlayerAlgorithm::totalPapers;
-const int AutoPlayerAlgorithm::totalScissors;
-const int AutoPlayerAlgorithm::totalBombs;
-const int AutoPlayerAlgorithm::totalJokers;
-const int AutoPlayerAlgorithm::totalFlags;
+#include "RSPPlayer_204621304.h"
 
 
-void AutoPlayerAlgorithm::getInitialPositions(int player, std::vector<unique_ptr<PiecePosition>>& vectorToFill)
+
+
+REGISTER_ALGORITHM(204621304)
+
+void RSPPlayer_204621304::getInitialPositions(int player, std::vector<unique_ptr<PiecePosition>>& vectorToFill)
 {
     myId = player;
     opponentId = (myId == PLAYER1) ? PLAYER2 : PLAYER1;
@@ -40,7 +31,7 @@ void AutoPlayerAlgorithm::getInitialPositions(int player, std::vector<unique_ptr
     }
 }
 
-void AutoPlayerAlgorithm::notifyOnInitialBoard(const Board& b, const std::vector<unique_ptr<FightInfo>>& fights)
+void RSPPlayer_204621304::notifyOnInitialBoard(const Board& b, const std::vector<unique_ptr<FightInfo>>& fights)
 {
     board = b;
     for (int x = 1; x < totalYVals; x++)
@@ -61,7 +52,7 @@ void AutoPlayerAlgorithm::notifyOnInitialBoard(const Board& b, const std::vector
     }
 }
 
-void AutoPlayerAlgorithm::notifyOnOpponentMove(const Move& move)
+void RSPPlayer_204621304::notifyOnOpponentMove(const Move& move)
 {
     board.setPlayer(move.getFrom(), NONE);
     board.setPlayer((move.getTo()), opponentId); // anyway update with opponent id, maybe will be updated again after a fight
@@ -77,7 +68,7 @@ void AutoPlayerAlgorithm::notifyOnOpponentMove(const Move& move)
     }
 }
 
-void AutoPlayerAlgorithm::notifyFightResult(const FightInfo& fightInfo)
+void RSPPlayer_204621304::notifyFightResult(const FightInfo& fightInfo)
 {
     board.setPlayer(fightInfo.getPosition(), fightInfo.getWinner());
     
@@ -106,7 +97,7 @@ void AutoPlayerAlgorithm::notifyFightResult(const FightInfo& fightInfo)
     }
 }
 
-unique_ptr<Move> AutoPlayerAlgorithm::getMove()
+unique_ptr<Move> RSPPlayer_204621304::getMove()
 {
     const auto& from = chooseFrom();
     const auto& to = chooseTo(*from);
@@ -120,7 +111,7 @@ unique_ptr<Move> AutoPlayerAlgorithm::getMove()
     return move;
 }
 
-unique_ptr<JokerChange> AutoPlayerAlgorithm::getJokerChange()
+unique_ptr<JokerChange> RSPPlayer_204621304::getJokerChange()
 {
     std::vector<const PiecePosition*> jokers;
     bool movableRemaining = false;
@@ -168,12 +159,12 @@ unique_ptr<JokerChange> AutoPlayerAlgorithm::getJokerChange()
 }
 
 
-AutoPlayerAlgorithm::AutoPlayerAlgorithm() : board(totalXVals, totalYVals)
+RSPPlayer_204621304::RSPPlayer_204621304() : board(totalXVals, totalYVals)
 {
 
 }
 
-std::unique_ptr<PiecePosition> AutoPlayerAlgorithm::generatePiece(const Board& board, const PieceCounter& counter)
+std::unique_ptr<PiecePosition> RSPPlayer_204621304::generatePiece(const Board& board, const PieceCounter& counter)
 {
     const std::vector<char> pieceTypes{'F', 'J', 'B', 'S', 'P', 'R'};
     for (auto pType:pieceTypes)
@@ -192,7 +183,7 @@ std::unique_ptr<PiecePosition> AutoPlayerAlgorithm::generatePiece(const Board& b
     return nullptr;
 }
 
-PointImpl AutoPlayerAlgorithm::findEmptySpot(const Board& board)
+PointImpl RSPPlayer_204621304::findEmptySpot(const Board& board)
 {
     std::vector<PointImpl> emptySpots;
     // find all empty spots on board
@@ -213,7 +204,7 @@ PointImpl AutoPlayerAlgorithm::findEmptySpot(const Board& board)
     
 }
 
-std::unique_ptr<PiecePosition>& AutoPlayerAlgorithm::getPiece(std::vector<std::unique_ptr<PiecePosition>>& pieces, const Point& location)
+std::unique_ptr<PiecePosition>& RSPPlayer_204621304::getPiece(std::vector<std::unique_ptr<PiecePosition>>& pieces, const Point& location)
 {
     for (auto& piece:pieces)
     {
@@ -226,7 +217,7 @@ std::unique_ptr<PiecePosition>& AutoPlayerAlgorithm::getPiece(std::vector<std::u
     return nullPiece;
 }
 
-bool AutoPlayerAlgorithm::setNoFlag(const Point& point)
+bool RSPPlayer_204621304::setNoFlag(const Point& point)
 {
     auto& piece = getPiece(assumedFlags, point);
     if (piece == nullptr)
@@ -238,7 +229,7 @@ bool AutoPlayerAlgorithm::setNoFlag(const Point& point)
     return true;
 }
 
-bool AutoPlayerAlgorithm::updatePosition(std::vector<std::unique_ptr<PiecePosition>>& pieces, const Move& move)
+bool RSPPlayer_204621304::updatePosition(std::vector<std::unique_ptr<PiecePosition>>& pieces, const Move& move)
 {
     auto& piece = getPiece(pieces, move.getFrom());
     if (piece == nullptr)
@@ -249,7 +240,7 @@ bool AutoPlayerAlgorithm::updatePosition(std::vector<std::unique_ptr<PiecePositi
     return true;
 }
 
-bool AutoPlayerAlgorithm::updatePieceType(std::vector<std::unique_ptr<PiecePosition>>& pieces, const Point& point, char type, char jokerType)
+bool RSPPlayer_204621304::updatePieceType(std::vector<std::unique_ptr<PiecePosition>>& pieces, const Point& point, char type, char jokerType)
 {
     auto& piece = getPiece(pieces, point);
     if (piece == nullptr)
@@ -260,13 +251,13 @@ bool AutoPlayerAlgorithm::updatePieceType(std::vector<std::unique_ptr<PiecePosit
     return true;
 }
 
-void AutoPlayerAlgorithm::removePiece(std::vector<std::unique_ptr<PiecePosition>>& pieces, const Point& point)
+void RSPPlayer_204621304::removePiece(std::vector<std::unique_ptr<PiecePosition>>& pieces, const Point& point)
 {
     auto& piece = getPiece(pieces, point);
     piece = nullptr;
 }
 
-std::unique_ptr<Point> AutoPlayerAlgorithm::chooseFrom() const
+std::unique_ptr<Point> RSPPlayer_204621304::chooseFrom() const
 {
     std::vector<PointImpl> availableFromLocations;
     for (const auto& piece:myPieces)
@@ -289,7 +280,7 @@ std::unique_ptr<Point> AutoPlayerAlgorithm::chooseFrom() const
     return std::make_unique<PointImpl>(availableFromLocations[generator.getRange(0, static_cast<int>(availableFromLocations.size() - 1))]);
 }
 
-std::unique_ptr<Point> AutoPlayerAlgorithm::chooseTo(const Point& from) const
+std::unique_ptr<Point> RSPPlayer_204621304::chooseTo(const Point& from) const
 {
     if (!inBoard(from))
         return std::make_unique<PointImpl>(-1, -1);
@@ -326,7 +317,7 @@ std::unique_ptr<Point> AutoPlayerAlgorithm::chooseTo(const Point& from) const
     return std::make_unique<PointImpl>(-1, -1);
 }
 
-std::vector<BoardSpot> AutoPlayerAlgorithm::getAvailableMoves(const Point& from) const
+std::vector<BoardSpot> RSPPlayer_204621304::getAvailableMoves(const Point& from) const
 {
     PointImpl above(from.getX(), from.getY() - 1);
     PointImpl below(from.getX(), from.getY() + 1);
@@ -364,17 +355,17 @@ std::vector<BoardSpot> AutoPlayerAlgorithm::getAvailableMoves(const Point& from)
     return availableMoves;
 }
 
-bool AutoPlayerAlgorithm::inBoard(const Point& p) const
+bool RSPPlayer_204621304::inBoard(const Point& p) const
 {
     return (p.getX() >= 1 && p.getX() <= totalXVals && p.getY() >= 1 && p.getY() <= totalYVals);
 }
 
-bool AutoPlayerAlgorithm::isMovable(const PiecePosition& piece) const
+bool RSPPlayer_204621304::isMovable(const PiecePosition& piece) const
 {
     return isMovable(piece.getPiece(), piece.getJokerRep());
 }
 
-char AutoPlayerAlgorithm::getStrongerType(char type) const
+char RSPPlayer_204621304::getStrongerType(char type) const
 {
     switch (type)
     {
@@ -389,14 +380,14 @@ char AutoPlayerAlgorithm::getStrongerType(char type) const
     }
 }
 
-bool AutoPlayerAlgorithm::isMovable(char type, char jokerRep) const
+bool RSPPlayer_204621304::isMovable(char type, char jokerRep) const
 {
     type = getEffectiveType(type, jokerRep);
     return (type == 'R' || type == 'P' || type == 'S');
 }
 
 const std::unique_ptr<PiecePosition>&
-AutoPlayerAlgorithm::getPiece(const std::vector<std::unique_ptr<PiecePosition>>& pieces, const Point& location) const
+RSPPlayer_204621304::getPiece(const std::vector<std::unique_ptr<PiecePosition>>& pieces, const Point& location) const
 {
     
     for (const auto& piece:pieces)
@@ -410,7 +401,7 @@ AutoPlayerAlgorithm::getPiece(const std::vector<std::unique_ptr<PiecePosition>>&
     return nullPiece;
 }
 
-int AutoPlayerAlgorithm::getRemaining(const std::vector<std::unique_ptr<PiecePosition>>& pieces) const
+int RSPPlayer_204621304::getRemaining(const std::vector<std::unique_ptr<PiecePosition>>& pieces) const
 {
     int cnt = 0;
     for (const auto& piece:pieces)
@@ -421,14 +412,14 @@ int AutoPlayerAlgorithm::getRemaining(const std::vector<std::unique_ptr<PiecePos
     return cnt;
 }
 
-char AutoPlayerAlgorithm::getEffectiveType(char type, char jokerRep) const
+char RSPPlayer_204621304::getEffectiveType(char type, char jokerRep) const
 {
     if (type == 'J')
         return jokerRep;
     return type;
 }
 
-std::unique_ptr<Point> AutoPlayerAlgorithm::testAssumedFlagNeighbour(const std::vector<BoardSpot>& neighbours) const
+std::unique_ptr<Point> RSPPlayer_204621304::testAssumedFlagNeighbour(const std::vector<BoardSpot>& neighbours) const
 {
     for (const auto& neighbour:neighbours)
     {
@@ -438,7 +429,7 @@ std::unique_ptr<Point> AutoPlayerAlgorithm::testAssumedFlagNeighbour(const std::
     return nullptr;
 }
 
-std::unique_ptr<Point> AutoPlayerAlgorithm::testOnlyFlagsRemaining(const std::vector<BoardSpot>& neighbours) const
+std::unique_ptr<Point> RSPPlayer_204621304::testOnlyFlagsRemaining(const std::vector<BoardSpot>& neighbours) const
 {
     // only flags are left, attack a neighbour flag
     if (getRemaining(assumedFlags) <= totalFlags && getRemaining(nonFlags) == 0)
@@ -455,7 +446,7 @@ std::unique_ptr<Point> AutoPlayerAlgorithm::testOnlyFlagsRemaining(const std::ve
     return nullptr;
 }
 
-std::unique_ptr<Point> AutoPlayerAlgorithm::testWeakerNeighbour(const std::vector<BoardSpot>& neighbours, char myPieceType) const
+std::unique_ptr<Point> RSPPlayer_204621304::testWeakerNeighbour(const std::vector<BoardSpot>& neighbours, char myPieceType) const
 {
     for (const auto& neighbour:neighbours)
     {
@@ -469,7 +460,7 @@ std::unique_ptr<Point> AutoPlayerAlgorithm::testWeakerNeighbour(const std::vecto
     return nullptr;
 }
 
-std::unique_ptr<Point> AutoPlayerAlgorithm::testUnknownNonFlagNeighbour(const std::vector<BoardSpot>& neighbours) const
+std::unique_ptr<Point> RSPPlayer_204621304::testUnknownNonFlagNeighbour(const std::vector<BoardSpot>& neighbours) const
 {
     for (const auto& neighbour:neighbours)
     {
@@ -479,7 +470,7 @@ std::unique_ptr<Point> AutoPlayerAlgorithm::testUnknownNonFlagNeighbour(const st
     return nullptr;
 }
 
-std::unique_ptr<Point> AutoPlayerAlgorithm::testFreeSpot(const std::vector<BoardSpot>& neighbours) const
+std::unique_ptr<Point> RSPPlayer_204621304::testFreeSpot(const std::vector<BoardSpot>& neighbours) const
 {
     for (const auto& neighbour:neighbours)
     {

@@ -1,0 +1,1 @@
+/usr/bin/c++   -rdynamic -g   CMakeFiles/TournamentManager.dir/main.cpp.o CMakeFiles/TournamentManager.dir/TournamentManager.cpp.o CMakeFiles/TournamentManager.dir/AlgorithmRegistration.cpp.o  -o TournamentManager -ldl 

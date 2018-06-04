@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="dummyAlgorithm"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dummyAlgorithm">
+				<Option output="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/dummyAlgorithm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 dummyAlgorithm"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dummyAlgorithm/fast">
+				<Option output="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/dummyAlgorithm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 dummyAlgorithm/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/AlgorithmRegistration.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/Board.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/BoardImpl.cpp">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/BoardImpl.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/BoardSpot.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/FightInfo.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/FightInfoImpl.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/JokerChange.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/JokerChangeImpl.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/Move.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/MoveImpl.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/PieceCounter.cpp">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/PieceCounter.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/PiecePosition.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/PiecePositionImpl.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/PlayerAlgorithm.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/Point.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/PointImpl.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/RSPPlayer_204621304.cpp">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/RSPPlayer_204621304.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/RandomGenerator.h">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/main.cpp">
+			<Option target="dummyAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/dummyAlgorithm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

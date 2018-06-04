@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libPlayerAlgorithm.so -o libPlayerAlgorithm.so CMakeFiles/PlayerAlgorithm.dir/library.cpp.o CMakeFiles/PlayerAlgorithm.dir/RSPPlayer_204621304.cpp.o CMakeFiles/PlayerAlgorithm.dir/BoardImpl.cpp.o CMakeFiles/PlayerAlgorithm.dir/PieceCounter.cpp.o 
