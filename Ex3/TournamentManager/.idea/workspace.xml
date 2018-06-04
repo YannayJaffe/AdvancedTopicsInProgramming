@@ -23,37 +23,44 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TournamentManager.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TournamentManager.cpp">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="127" column="5" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
-                <element signature="e#41#59#0" expanded="true" />
-                <element signature="e#73#1686#0" />
-                <element signature="e#711#765#0" />
-                <element signature="e#667#914#0" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TournamentManager.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TournamentManager.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TournamentManager.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+            <state relative-caret-position="504">
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
+              <folding>
+                <element signature="e#134#151#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
+      <file leaf-file-name="TournamentManager.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TournamentManager.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="459">
+              <caret line="191" column="134" selection-start-line="191" selection-start-column="134" selection-end-line="191" selection-end-column="134" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#41#59#0" expanded="true" />
+                <element signature="e#142#1796#0" />
+                <element signature="e#1798#2098#0" />
+                <element signature="e#2100#2502#0" />
+                <element signature="e#2504#2943#0" />
+                <element signature="e#2945#3754#0" />
+                <element signature="e#3756#3858#0" />
+                <element signature="e#3860#4784#0" />
               </folding>
             </state>
           </provider>
@@ -66,10 +73,10 @@
       <list>
         <option value="$PROJECT_DIR$/AlgorithmRegistration.cpp" />
         <option value="$PROJECT_DIR$/AlgorithmRegistration.h" />
-        <option value="$PROJECT_DIR$/TournamentManager.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/TournamentManager.h" />
+        <option value="$PROJECT_DIR$/TournamentManager.cpp" />
       </list>
     </option>
   </component>
@@ -144,28 +151,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528101874257</updated>
-      <workItem from="1528101876997" duration="11123000" />
+      <workItem from="1528101876997" duration="17722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11123000" />
+    <option name="totallyTimeSpent" value="17722000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="987" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959569" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959569" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" weight="0.3298969" />
       <window_info anchor="bottom" id="CMake" weight="0.3298969" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3298969" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19129439" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39977092" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.29896906" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -183,7 +190,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>5</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -217,19 +231,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TournamentManager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="127" column="5" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
-          <folding>
-            <element signature="e#41#59#0" expanded="true" />
-            <element signature="e#73#1686#0" />
-            <element signature="e#711#765#0" />
-            <element signature="e#667#914#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -237,20 +238,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Game.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9225" />
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/stl_algo.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="1964" column="24" lean-forward="true" selection-start-line="1964" selection-start-column="24" selection-end-line="1964" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/include/c++/5/functional">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="1829" selection-start-line="1829" selection-end-line="1829" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TournamentManager.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        <state relative-caret-position="504">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="e#134#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TournamentManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="191" column="134" selection-start-line="191" selection-start-column="134" selection-end-line="191" selection-end-column="134" />
+          <folding>
+            <element signature="e#41#59#0" expanded="true" />
+            <element signature="e#142#1796#0" />
+            <element signature="e#1798#2098#0" />
+            <element signature="e#2100#2502#0" />
+            <element signature="e#2504#2943#0" />
+            <element signature="e#2945#3754#0" />
+            <element signature="e#3756#3858#0" />
+            <element signature="e#3860#4784#0" />
+          </folding>
         </state>
       </provider>
     </entry>

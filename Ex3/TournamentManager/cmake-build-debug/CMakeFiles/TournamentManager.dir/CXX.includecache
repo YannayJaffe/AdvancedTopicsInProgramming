@@ -81,6 +81,14 @@ cstring
 -
 dlfcn.h
 -
+thread
+-
+mutex
+-
+vector
+-
+algorithm
+-
 
 /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/main.cpp
 iostream

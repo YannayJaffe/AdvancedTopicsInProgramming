@@ -1,5 +1,5 @@
 COMP = g++
-CPP_COMP_FLAG = -std=c++14 -Wall -Wextra -Werror -pedantic-errors -DNDEBUG
+CPP_COMP_FLAG = -std=c++14 -Wall -Wextra -Werror -pedantic-errors -DNDEBUG -fPIC
 LIB = libRSPPlayer_123456789.so
 OBJS = RSPPlayer_123456789.o BoardImpl.o PieceCounter.o
 

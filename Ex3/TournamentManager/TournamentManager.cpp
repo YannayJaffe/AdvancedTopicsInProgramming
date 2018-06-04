@@ -109,6 +109,7 @@ void TournamentManager::registerAlgorithm(const std::string &id,
         std::cout << "player ID: " << id << " is already loaded, overwriting previous instance..." << std::endl;
     }
     id2factory[id] = factoryMethod;
+    scoreBoard[id] = TournamentManager::PlayerInfo();
 }
 
 bool TournamentManager::loadPlayers()
@@ -135,8 +136,69 @@ bool TournamentManager::loadPlayers()
             std::cout << "could not load so: " << inBuff << std::endl;
             return false;
         }
-        libs.insert(libs.end(),dlib); // add the so to the list of so's
+        libs.insert(libs.end(), dlib); // add the so to the list of so's
+    }
+    if (id2factory.size() < 2)
+    {
+        std::cout<<"Not enough players, needed at least 2!" << std::endl;
+        return false;
+    }
+    return true;
+}
+
+void TournamentManager::cleanResources()
+{
+    for (auto dl:libs)
+    {
+        //dlclose(dl);
+    }
+}
+
+void TournamentManager::printScoreBoard()
+{
+    using Comparator =  std::function<bool(const std::pair<std::string, TournamentManager::PlayerInfo> &,
+                                           const std::pair<std::string, TournamentManager::PlayerInfo> &)>;
+
+    Comparator compFunc = [](const std::pair<std::string, TournamentManager::PlayerInfo> &p1,
+                             const std::pair<std::string, TournamentManager::PlayerInfo> &p2)
+    {
+        return p1.second.score >= p2.second.score;
+    };
+    std::vector<std::pair<std::string, TournamentManager::PlayerInfo>> tempScoreBoard;
+    for (const auto &p:scoreBoard)
+    {
+        tempScoreBoard.emplace_back(p);
     }
 
-    return false;
+    std::sort(tempScoreBoard.begin(), tempScoreBoard.end(), compFunc);
+    std::cout << "Score Board:" << std::endl;
+    for (const auto &p:tempScoreBoard)
+    {
+        std::cout << p.first << " " << p.second.score << std::endl;
+    }
+
+}
+
+void TournamentManager::runTournament()
+{
+
+}
+
+void TournamentManager::runMatches()
+{
+    {
+        std::lock_guard<std::mutex> lg(scoreBoardLock); // acquire lock
+
+        //pick 2 players if any. if none are left, exit, if only one pick him and a random player, remember not to set score for the other player
+        //update matches the players have played
+        //if any of the players now played 30 matches, remove from unfinished list
+    }//release lock
+
+    // set up a game manager and both players
+    // run match
+    {
+        std::lock_guard<std::mutex> lg(scoreBoardLock); // acquire lock
+        //update scores
+    }
+
 }
