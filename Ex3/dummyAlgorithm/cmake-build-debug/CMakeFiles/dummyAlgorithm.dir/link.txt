@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/dummyAlgorithm.dir/main.cpp.o CMakeFiles/dummyAlgorithm.dir/BoardImpl.cpp.o CMakeFiles/dummyAlgorithm.dir/PieceCounter.cpp.o CMakeFiles/dummyAlgorithm.dir/RSPPlayer_204621304.cpp.o  -o dummyAlgorithm 

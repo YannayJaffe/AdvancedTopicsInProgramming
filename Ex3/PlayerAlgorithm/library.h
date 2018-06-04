@@ -1,0 +1,6 @@
+#ifndef PLAYERALGORITHM_LIBRARY_H
+#define PLAYERALGORITHM_LIBRARY_H
+
+void hello();
+
+#endif
