@@ -1,4 +1,4 @@
-COMP = g++
+COMP = g++-5.3.0
 
 EXE_OBJS = main.o AlgorithmRegistration.o BoardImpl.o PieceCounter.o \
 Game.o TournamentManager.o
