@@ -20,6 +20,7 @@
 #include <mutex>
 #include <vector>
 #include <algorithm>
+#include "RandomGenerator.h"
 
 class TournamentManager
 {
@@ -71,6 +72,10 @@ private:
 
     void runMatches();
 
+    bool choosePlayers(std::unique_ptr<PlayerAlgorithm>& player1, std::string& player1Id, std::unique_ptr<PlayerAlgorithm>& player2, std::string& player2Id, bool& updateScoreForPlayer2);
+
+    void updateMatchesPlayed(const std::string& player1Id, const std::string& player2Id);
+
     friend class AlgorithmRegistration;
 
     std::string soPath;
@@ -80,6 +85,7 @@ private:
     std::list<void *> libs; // save all the loaded so's in here
     std::map<std::string,TournamentManager::PlayerInfo> scoreBoard;
     std::list<std::string> unfinishedPlayers; // a list of unfinished players
+    RandomGenerator rng;
 
     std::vector<std::thread> workers;
     std::mutex scoreBoardLock;

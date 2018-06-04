@@ -110,6 +110,7 @@ void TournamentManager::registerAlgorithm(const std::string &id,
     }
     id2factory[id] = factoryMethod;
     scoreBoard[id] = TournamentManager::PlayerInfo();
+    unfinishedPlayers.push_back(id);
 }
 
 bool TournamentManager::loadPlayers()
@@ -140,7 +141,7 @@ bool TournamentManager::loadPlayers()
     }
     if (id2factory.size() < 2)
     {
-        std::cout<<"Not enough players, needed at least 2!" << std::endl;
+        std::cout << "Not enough players, needed at least 2!" << std::endl;
         return false;
     }
     return true;
@@ -172,33 +173,113 @@ void TournamentManager::printScoreBoard()
 
     std::sort(tempScoreBoard.begin(), tempScoreBoard.end(), compFunc);
     std::cout << "Score Board:" << std::endl;
+    std::cout << "Player Id\tMatches Played\tScore" << std::endl;
     for (const auto &p:tempScoreBoard)
     {
-        std::cout << p.first << " " << p.second.score << std::endl;
+        std::cout << p.first << "\t\t" << p.second.matchesPlayed << "\t\t\t" << p.second.score << std::endl;
     }
 
 }
 
 void TournamentManager::runTournament()
 {
+    for (int i = 0; i < totalThreads - 1; i++)
+    {
+        // set up all threads to run the matches
+        workers.emplace_back([this]()
+                             { this->runMatches(); });
+    }
+    runMatches(); // also run matches from this thread
+    for (auto &t:workers)
+    {
+        if (t.joinable())
+            t.join();
+    }
 
 }
 
 void TournamentManager::runMatches()
 {
-    {
-        std::lock_guard<std::mutex> lg(scoreBoardLock); // acquire lock
+    std::unique_ptr<PlayerAlgorithm> player1;
+    std::unique_ptr<PlayerAlgorithm> player2;
+    bool updateScoreForPlayer2;
+    std::string player1Id;
+    std::string player2Id;
 
-        //pick 2 players if any. if none are left, exit, if only one pick him and a random player, remember not to set score for the other player
-        //update matches the players have played
-        //if any of the players now played 30 matches, remove from unfinished list
-    }//release lock
-
-    // set up a game manager and both players
-    // run match
+    while (true)
     {
-        std::lock_guard<std::mutex> lg(scoreBoardLock); // acquire lock
-        //update scores
+        {
+            std::lock_guard<std::mutex> lg(scoreBoardLock); // acquire lock
+
+            //pick 2 players if any. if none are left, exit.
+            if (!choosePlayers(player1, player1Id, player2, player2Id, updateScoreForPlayer2))
+                return;
+
+            updateMatchesPlayed(player1Id,player2Id);
+        }//release lock
+
+        // set up a game manager and both players
+        // run match
+        {
+            std::lock_guard<std::mutex> lg(scoreBoardLock); // acquire lock
+            //update scores
+        }
     }
 
+}
+
+bool TournamentManager::choosePlayers(std::unique_ptr<PlayerAlgorithm> &player1, std::string &player1Id,
+                                      std::unique_ptr<PlayerAlgorithm> &player2, std::string &player2Id,
+                                      bool &updateScoreForPlayer2)
+{
+    if (unfinishedPlayers.empty())
+        return false;
+
+    if (unfinishedPlayers.size() == 1)
+    {
+        player1Id = unfinishedPlayers.front();
+        player1 = id2factory[player1Id]();
+        updateScoreForPlayer2 = false;
+        std::vector<std::string> tempPlayers;
+        for (const auto &p:scoreBoard)
+        {
+            if (p.first != player1Id)
+                tempPlayers.emplace_back(p.first);
+        }
+        player2Id = tempPlayers[rng.getRange(0, static_cast<int>(tempPlayers.size() - 1))];
+        player2 = id2factory[player2Id]();
+    } else
+    {
+        int player1Idx = rng.getRange(0, static_cast<int>(unfinishedPlayers.size()) - 1);
+        std::vector<std::string> tempPlayers;
+
+        auto itr = unfinishedPlayers.begin();
+        for (int i = 0; i < unfinishedPlayers.size(); i++)
+        {
+            if (i != player1Idx)
+            {
+                tempPlayers.emplace_back(*itr);
+            } else
+            {
+                player1Id = std::string(*itr);
+            }
+            itr++;
+        }
+        player2Id = tempPlayers[rng.getRange(0, static_cast<int>(tempPlayers.size() - 1))];
+        player1 = id2factory[player1Id]();
+        player2 = id2factory[player2Id]();
+        updateScoreForPlayer2 = true;
+    }
+    return true;
+}
+
+void TournamentManager::updateMatchesPlayed(const std::string &player1Id, const std::string &player2Id)
+{
+    if (scoreBoard[player1Id].matchesPlayed < totalGames)
+        scoreBoard[player1Id].matchesPlayed++;
+    if (scoreBoard[player2Id].matchesPlayed < totalGames)
+        scoreBoard[player2Id].matchesPlayed++;
+
+    unfinishedPlayers.remove_if([this](const std::string &s) -> bool
+                                { return this->scoreBoard[s].matchesPlayed >= totalGames; });
 }

@@ -11,6 +11,7 @@ CMakeFiles/TournamentManager.dir/AlgorithmRegistration.cpp.o
  /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/PiecePosition.h
  /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/PlayerAlgorithm.h
  /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/Point.h
+ /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/RandomGenerator.h
  /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/TournamentManager.h
 CMakeFiles/TournamentManager.dir/TournamentManager.cpp.o
  /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/AlgorithmRegistration.h
@@ -21,6 +22,7 @@ CMakeFiles/TournamentManager.dir/TournamentManager.cpp.o
  /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/PiecePosition.h
  /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/PlayerAlgorithm.h
  /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/Point.h
+ /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/RandomGenerator.h
  /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/TournamentManager.cpp
  /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/TournamentManager.h
 CMakeFiles/TournamentManager.dir/main.cpp.o
@@ -32,5 +34,6 @@ CMakeFiles/TournamentManager.dir/main.cpp.o
  /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/PiecePosition.h
  /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/PlayerAlgorithm.h
  /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/Point.h
+ /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/RandomGenerator.h
  /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/TournamentManager.h
  /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/main.cpp

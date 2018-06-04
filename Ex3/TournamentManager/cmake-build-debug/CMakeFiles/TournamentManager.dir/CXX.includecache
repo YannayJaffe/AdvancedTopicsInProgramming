@@ -52,6 +52,12 @@ JokerChange.h
 
 /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/Point.h
 
+/home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/RandomGenerator.h
+cstdlib
+-
+ctime
+-
+
 /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/TournamentManager.cpp
 cstring
 -
@@ -89,6 +95,8 @@ vector
 -
 algorithm
 -
+RandomGenerator.h
+/home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/RandomGenerator.h
 
 /home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/main.cpp
 iostream

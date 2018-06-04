@@ -10,6 +10,7 @@ CMakeFiles/TournamentManager.dir/AlgorithmRegistration.cpp.o: ../Move.h
 CMakeFiles/TournamentManager.dir/AlgorithmRegistration.cpp.o: ../PiecePosition.h
 CMakeFiles/TournamentManager.dir/AlgorithmRegistration.cpp.o: ../PlayerAlgorithm.h
 CMakeFiles/TournamentManager.dir/AlgorithmRegistration.cpp.o: ../Point.h
+CMakeFiles/TournamentManager.dir/AlgorithmRegistration.cpp.o: ../RandomGenerator.h
 CMakeFiles/TournamentManager.dir/AlgorithmRegistration.cpp.o: ../TournamentManager.h
 
 CMakeFiles/TournamentManager.dir/TournamentManager.cpp.o: ../AlgorithmRegistration.h
@@ -20,6 +21,7 @@ CMakeFiles/TournamentManager.dir/TournamentManager.cpp.o: ../Move.h
 CMakeFiles/TournamentManager.dir/TournamentManager.cpp.o: ../PiecePosition.h
 CMakeFiles/TournamentManager.dir/TournamentManager.cpp.o: ../PlayerAlgorithm.h
 CMakeFiles/TournamentManager.dir/TournamentManager.cpp.o: ../Point.h
+CMakeFiles/TournamentManager.dir/TournamentManager.cpp.o: ../RandomGenerator.h
 CMakeFiles/TournamentManager.dir/TournamentManager.cpp.o: ../TournamentManager.cpp
 CMakeFiles/TournamentManager.dir/TournamentManager.cpp.o: ../TournamentManager.h
 
@@ -31,6 +33,7 @@ CMakeFiles/TournamentManager.dir/main.cpp.o: ../Move.h
 CMakeFiles/TournamentManager.dir/main.cpp.o: ../PiecePosition.h
 CMakeFiles/TournamentManager.dir/main.cpp.o: ../PlayerAlgorithm.h
 CMakeFiles/TournamentManager.dir/main.cpp.o: ../Point.h
+CMakeFiles/TournamentManager.dir/main.cpp.o: ../RandomGenerator.h
 CMakeFiles/TournamentManager.dir/main.cpp.o: ../TournamentManager.h
 CMakeFiles/TournamentManager.dir/main.cpp.o: ../main.cpp
 

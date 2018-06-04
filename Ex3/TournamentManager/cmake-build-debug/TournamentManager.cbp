@@ -93,6 +93,9 @@
 		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/PlayerAlgorithm.h">
 			<Option target="TournamentManager"/>
 		</Unit>
+		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/RandomGenerator.h">
+			<Option target="TournamentManager"/>
+		</Unit>
 		<Unit filename="/home/yannay/Desktop/AdvancedTopics/Ex3/TournamentManager/TournamentManager.cpp">
 			<Option target="TournamentManager"/>
 		</Unit>

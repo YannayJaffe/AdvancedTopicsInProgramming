@@ -10,6 +10,9 @@ int main(int argc, char **argv)
     if (!tournamentManager.loadPlayers())
         return -1;
 
+
+    tournamentManager.runTournament();
+
     tournamentManager.printScoreBoard();
 
     return 0;
