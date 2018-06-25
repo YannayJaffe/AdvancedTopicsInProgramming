@@ -6,7 +6,7 @@ int main()
 {
 	GameBoard<7, 8, char> b;
 
-	auto i = b.board[0].begin();
+	
 	for (auto i : b)
 	{
 	}
