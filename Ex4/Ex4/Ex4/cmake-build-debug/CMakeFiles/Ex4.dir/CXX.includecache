@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Git/AdvancedTopicsInProgramming/Ex4/Ex4/Ex4/GameBoard.h
+memory
+-
+array
+-
+
+C:/Git/AdvancedTopicsInProgramming/Ex4/Ex4/Ex4/ex4_header.h
+GameBoard.h
+C:/Git/AdvancedTopicsInProgramming/Ex4/Ex4/Ex4/GameBoard.h
+
+C:/Git/AdvancedTopicsInProgramming/Ex4/Ex4/Ex4/main.cpp
+string
+-
+utility
+-
+ex4_header.h
+C:/Git/AdvancedTopicsInProgramming/Ex4/Ex4/Ex4/ex4_header.h
+unit_test_util.h
+C:/Git/AdvancedTopicsInProgramming/Ex4/Ex4/Ex4/unit_test_util.h
+
+C:/Git/AdvancedTopicsInProgramming/Ex4/Ex4/Ex4/unit_test_util.h
+iostream
+-
+
